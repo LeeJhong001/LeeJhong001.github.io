@@ -1014,152 +1014,11 @@
     
     <!-- 首页座右铭 -->
     
-  <div class="motto">
-      <h3 class="motto-title">座右铭</h3>
-      <div class="motto-content">
-        <p>
-          沉淀后我愿意做个温暖的人，有自己的喜好，有自己的原则，有自己的信仰，不急功近利，不浮夸轻薄。宠辱不惊，淡定安逸，心静如水，不忘初心，方得始终。——凌茜  
-        </p> 
-      </div>
-  </div>
-
     <!-- 首页公告 -->
     
-<style>
-  .index-notice-content {
-    margin-top: 10px;
-  }
-  .warp {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .index-notice-content__ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .index-notice-content__ul li,
-  .index-notice-content__ul a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-  .index-notice-content__title {
-    flex: 1;
-    overflow: hidden;
-  }
-  .index-notice-content__title a,
-  .index-notice-content__title span {
-    overflow: hidden;
-    display: block;
-    text-overflow:ellipsis; 
-    white-space: nowrap;
-    height: 100%;
-    width: 100%;
-    color: #000;
-  }
-  .index-notice-content__title a:hover,
-  .index-notice-content__title span:hover {
-    text-decoration: underline;
-  }
-  .index-notice-content__date {
-    min-width: 80px;
-    margin-left: 5px;
-    color: #000;
-  }
-</style>
-<div class="index-notice" id="appIndexNotice">
-    <h3>
-      <i class="fas fa-bullhorn index-notice-icon"></i>公告
-    </h3>
-    <div class="index-notice-content">
-      
-      <vue-seamless-scroll
-        :data="listData"
-        :class-option="classOption"
-        class="warp"
-        style="height: 0px"
-      >
-        <ul class="index-notice-content__ul">
-          
-           
-        </ul>
-      </vue-seamless-scroll>
-    </div>
-</div>
-<script src="/js/vue-seamless-scroll/index.js"></script>
-
-<!-- 滚动插件采用 vue-seamless-scroll
-  https://chenxuan0000.github.io/vue-seamless-scroll/zh/guide/06-singleStop.html 
--->
-
-<script>
-  var seamless = JSON.parse('false');
-  seamless = seamless ? 0 : 30;
-  var listData = '' || '';
-  listData = listData.split(',');
-  var vm = new Vue({
-    el: '#appIndexNotice',
-    data: {
-      listData: listData,
-      moveNum: 2,
-      classOption: {
-        singleHeight: seamless,
-        limitMoveNum: listData.length
-      },
-    },
-    computed: {
-    },
-    mounted() {
-    },
-    methods: {
-    },
-    created() {
-      this.moveNum = parseInt(this.listData.length);
-    }
-  })
-</script>
-
-
-
     <!-- 首页文章置顶 -->
     
 
-
-<div class="topArticle reveal">
-	<h3><i class="fas fa-thumbs-o-up" aria-hidden="true"></i>推荐文章</h3>
-	<div class="articles">
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-	</div>
-</div>
 
 
     <div class="bg-floor" id="home-bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
@@ -1174,416 +1033,10 @@
         <div class="post-info">
           <div class="post-time">
             <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-28</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/28/%E6%8A%93%E5%8F%96m3u8%E8%A7%86%E9%A2%91/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/28/%E6%8A%93%E5%8F%96m3u8%E8%A7%86%E9%A2%91/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            抓取m3u8视频1、思路分析视频url：https://www.9meiju.cc/mohuankehuan/shandianxiadibaji/1-1.html
-
-打开网址分析当前视频是由多个片段组成还是单独一个视频 如果是一个单独视频，
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/28/%E6%8A%93%E5%8F%96m3u8%E8%A7%86%E9%A2%91/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/28/%E6%8A%93%E5%8F%96m3u8%E8%A7%86%E9%A2%91/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-28</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/28/%E5%8D%8F%E7%A8%8B/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/28/%E5%8D%8F%E7%A8%8B/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            一、协程概念
-协程
-又称微线程(纤程)，是一种用户态的轻量级线程
-
-子程序
-在所有的语言中都是层级调用的，比如A中调用B，B在执行过程中调用C，C执行完返回，B执行完返回，最后是A执行完毕。这是通过栈实现的，一个函数就是一个执行的子程序，子
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/28/%E5%8D%8F%E7%A8%8B/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/28/%E5%8D%8F%E7%A8%8B/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-23</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/23/%E7%BA%BF%E7%A8%8B/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/23/%E7%BA%BF%E7%A8%8B/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            一、线程1、概念
-线程
-在一个进程的内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”叫做线程
-是操作系统能够进行运算调度的最小单位。它被包含在进程之中，是进程中的实际运作单位。一条线程指的是进程中一个单一顺序
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/23/%E7%BA%BF%E7%A8%8B/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/23/%E7%BA%BF%E7%A8%8B/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-23</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/23/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/23/%E5%A4%9A%E8%BF%9B%E7%A8%8B/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            高效编程一、多任务原理
-概念
-现代操作系统比如Mac OS X，UNIX，Linux，Windows等，都是支持“多任务”的操作系统
-
-什么叫多任务？
-就是操作系统可以同时运行多个任务
-
-单核CPU实现多任务原理
-操作系统轮流让各个任务交替
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/23/%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/23/%E5%A4%9A%E8%BF%9B%E7%A8%8B/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-18</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/18/urllib%E4%B8%8Erequests2/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/18/urllib%E4%B8%8Erequests2/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            三、requests模块处理cookie相关的请求学习目标
-掌握requests处理cookie的三种方法
-1 爬虫中使用cookie
-为了能够通过爬虫获取到登录后的页面，或者是解决通过cookie的反扒，需要使用request来处理coo
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/18/urllib%E4%B8%8Erequests2/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/18/urllib%E4%B8%8Erequests2/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/12/day06%20xpath/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/12/day06%20xpath/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            xpath1、xpath安装与使用安装
-
-安装lxml库
-pip install lxml  -i pip源
-
-
-2、解析流程与使用解析流程
-
-实例化一个etree的对象，把即将被解析的页面源码加载到该对象
-调用该对象的xpath方法结合着
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/12/day06%20xpath/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/12/day06%20xpath/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/12/%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8Eurllib&requests/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/12/%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8Eurllib&requests/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            前情摘要一、web请求全过程剖析我们浏览器在输入完网址到我们看到网页的整体内容, 这个过程中究竟发生了些什么?
-我们看一下一个浏览器请求的全过程
-
-
-
-接下来就是一个比较重要的事情了. 所有的数据都在页面源代码里么? 非也~ 这里要介绍一个
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/12/%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8Eurllib&requests/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/12/%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8Eurllib&requests/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-08-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/08/12/urllib%E4%B8%8Erequests1/"></a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/08/12/urllib%E4%B8%8Erequests1/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            urllib与requests一、urllib的学习学习目标了解urllib的基本使用 
-
-1、urllib介绍除了requests模块可以发送请求之外, urllib模块也可以实现请求的发送,只是操作方法略有不同!
-urllib在pyth
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/08/12/urllib%E4%B8%8Erequests1/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/08/12/urllib%E4%B8%8Erequests1/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
             <span class="post-time">2022-08-09</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/2022/08/09/%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/"></a>
+            <a class="post-title-link" href="/2022/08/09/%E6%AD%A3%E5%88%99/"></a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -1597,23 +1050,31 @@ urllib在pyth
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/2022/08/09/%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/" style="background-size: cover; 
+            <a href="/2022/08/09/%E6%AD%A3%E5%88%99/" style="background-size: cover; 
               background-position: center center;">
               <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
-            第一节,  python基础内容回顾一. 关于上课通常情况下, 周一, 周三, 周五 晚上8点上课.  但是为了课程完整性, 以及一些特殊情况. 会有调整. 各位一定要注意群公告. 有些人习惯性把群屏蔽.  请把”樵夫”设置为关注的群成员.
+            一、正则基础1、为什么使用正则
+需求
+判断一个字符串是否是手机号
+
+解决
+编写一个函数，给函数一个字符串，如果是手机号则返回True，否则返回False
+
+代码
+12345678910def isPhone(phone):    # 长度为
           </div>
         </div>
         <div class="post-more">
-          <a href="/2022/08/09/%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/">
+          <a href="/2022/08/09/%E6%AD%A3%E5%88%99/">
             <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2022/08/09/%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/" style="background-size: cover; 
+        <a href="/2022/08/09/%E6%AD%A3%E5%88%99/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
@@ -1629,7 +1090,7 @@ urllib在pyth
             <span class="post-time">2022-08-09</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/2022/08/09/BS4%E7%AC%94%E8%AE%B0/"></a>
+            <a class="post-title-link" href="/2022/08/09/CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8/"></a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -1643,24 +1104,35 @@ urllib在pyth
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/2022/08/09/BS4%E7%AC%94%E8%AE%B0/" style="background-size: cover; 
+            <a href="/2022/08/09/CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8/" style="background-size: cover; 
               background-position: center center;">
               <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
-            beautifulsoup一、beautifulsoup的简单使用简单来说，Beautiful Soup是python的一个库，最主要的功能是从网页抓取数据。官方解释如下：
-Beautiful Soup提供一些简单的、python式的函数用
+            CSS层叠样式表一、css的语法
+什么是css？
+层叠样式表
+
+命名规则：
+使用字母、数字或下划线和减号构成，不要以数字开头
+
+格式： 
+选择器{属性:值;属性:值;属性:值;….}
+其中选择器也叫选择符
+
+CSS中注释
+1/* ... *
           </div>
         </div>
         <div class="post-more">
-          <a href="/2022/08/09/BS4%E7%AC%94%E8%AE%B0/">
+          <a href="/2022/08/09/CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8/">
             <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2022/08/09/BS4%E7%AC%94%E8%AE%B0/" style="background-size: cover; 
+        <a href="/2022/08/09/CSS%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="/medias/1.jpg" class="lazyload placeholder" data-srcset="/medias/1.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
@@ -1671,19 +1143,19 @@ Beautiful Soup提供一些简单的、python式的函数用
     <!-- 翻页 -->
     
   <!-- <nav class="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav> -->
   <div class="page-nav">
     
+      <a href="/"
+         class="page-nav-pre">
+         <i class="fas fa-angle-left"></i><span class="ml-5">上一页</span>
+      </a>
+    
     <div class="page-info">
-        <div class="page-info-text">1 / 2</div>
+        <div class="page-info-text">2 / 2</div>
     </div>
     
-      <a href="/page/2/"
-         class="page-nav-next">
-          <span class="mr-5">下一页</span><i class="fas fa-angle-right"></i>
-      </a>
-      
   </div>
 
   </div>
