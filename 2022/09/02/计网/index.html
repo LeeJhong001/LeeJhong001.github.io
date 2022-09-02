@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>笔记 | 浅辄_Blog</title>
+
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
+  
+  
+    <script>
+        var themeModelId = '';
+        if (themeModelId) {
+            localStorage.setItem('modelId', themeModelId);
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
+  
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  
+    
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  
+
+  
+    
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+
+  
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">加载中...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+  function loadScript(src, cb) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+
+  //https://github.com/filamentgroup/loadCSS
+  var loadCSS = function (href, before, media, attributes) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  };
+
+</script> 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+<script type="text/javascript">
+  Vue.use(window.VueAwesomeSwiper)
+</script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://unpkg.com/typed.js@2.0.11"></script>
+
+
+    <div id="safearea">
+      <main class="main" id="pjax-container">
+        <!-- 头部导航 -->
+        
+<header class="header   " 
+  id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fas fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
+      <h3 class="drawer-box-head_title">浅辄_Blog</h3>
+      <h5 class="drawer-box-head_desc">程序小白的日记</h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/LeeJhong001">
+              <i class="fas fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">浅辄_Blog</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <span>
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
+          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+      window.addEventListener('pjax:complete', () => {
+        this.cancelDialogVisible();
+      })
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/LeeJhong001" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+</header>
+        <!-- 内容区域 -->
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/9.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        笔记
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2022-09-02 |
+        </span>
+      
+
+      
+
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="post-detail-content row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h2 id="Ch1-计网体系结构"><a href="#Ch1-计网体系结构" class="headerlink" title="Ch1.计网体系结构"></a>Ch1.计网体系结构</h2><p><img src="C:\Users\24946\Desktop\Ch1.计网体系结构.png" class="lazyload placeholder" data-srcset="C:\Users\24946\Desktop\Ch1.计网体系结构.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Ch1.计网体系结构"></p>
+<blockquote>
+<p>分成结构相当于类<br>ISO/OSI模型和TCP/IP模型相当于实例</p>
+</blockquote>
+<h3 id="一-概念和功能"><a href="#一-概念和功能" class="headerlink" title="一.概念和功能"></a>一.概念和功能</h3><h4 id="1-计算机网络的概念"><a href="#1-计算机网络的概念" class="headerlink" title="1.计算机网络的概念"></a>1.计算机网络的概念</h4><p>网络:网状的东西或网状系统</p>
+<hr>
+<blockquote>
+<p>计算机网络:是一个将分散的、具有独立功能的<strong>计算机系统</strong>,通过<strong>通信设备</strong>与<strong>线路</strong>连接起来,有功能完善的<strong>软件</strong>实现<em>资源共享</em>和<em>信息传递</em>的系统</p>
+</blockquote>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831220641102.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831220641102.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220831220641102"><br>计算机网络是<strong>互连</strong>的、自治的计算机集合</p>
+<p><strong>互连</strong>-通过通信链路互联互通</p>
+<p><strong>自治</strong>-无主从关系</p>
+<h4 id="2-计算机网络的功能"><a href="#2-计算机网络的功能" class="headerlink" title="2.计算机网络的功能"></a>2.计算机网络的功能</h4><table>
+<thead>
+<tr>
+<th>1.数据通信</th>
+<th><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831220908496.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831220908496.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220831220908496"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2.资源共享</td>
+<td>同一个计算机网络上的其他计算机可使用某台计算机资源的行为,可共享<strong>硬件</strong>、<strong>软件</strong>、<strong>数据</strong></td>
+</tr>
+<tr>
+<td>3.分布式处理</td>
+<td>多台计算机各自承担同一工作任务的不同部分Hadoop平台</td>
+</tr>
+<tr>
+<td>4.提高可靠性</td>
+<td>替代机</td>
+</tr>
+<tr>
+<td>5.负载均衡</td>
+<td>个计算机之间更亲密</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+</tr>
+</tbody></table>
+<h4 id="3-计算机网络的发展"><a href="#3-计算机网络的发展" class="headerlink" title="3.计算机网络的发展"></a>3.计算机网络的发展</h4><h5 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h5><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221339993.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221339993.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220831221339993"></p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221424256.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221424256.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220831221424256"></p>
+<h5 id="第二阶段–三级结构"><a href="#第二阶段–三级结构" class="headerlink" title="第二阶段–三级结构"></a>第二阶段–三级结构</h5><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221538302.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221538302.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220831221538302"></p>
+<h5 id="第三阶段–多层次ISP结构"><a href="#第三阶段–多层次ISP结构" class="headerlink" title="第三阶段–多层次ISP结构"></a>第三阶段–多层次ISP结构</h5><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221631727.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220831221631727.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220831221631727"></p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="C:\Users\24946\Desktop\概念&功能.png" class="lazyload placeholder" data-srcset="C:\Users\24946\Desktop\概念&功能.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="概念&amp;功能"></p>
+<h3 id="二-组成和分类"><a href="#二-组成和分类" class="headerlink" title="二.组成和分类"></a>二.组成和分类</h3><h4 id="1-计算机网络的组成"><a href="#1-计算机网络的组成" class="headerlink" title="1.计算机网络的组成"></a>1.计算机网络的组成</h4><p>1.1组成部分:硬件、软件、协议(一系列规则和约定的集合)</p>
+<p>协议穿梭在各个硬件之中</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901104728082.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901104728082.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901104728082"></p>
+<p>1.2工作方式:|</p>
+<p>(端系统之间的进程通信) |边缘部分:用户直接使用:C/S方式</p>
+<p>​                                                                                    P2P方式</p>
+<p>​                                          |核心部分:为边缘部分服务</p>
+<ol>
+<li>3功能组成:|</li>
+</ol>
+<p>​                          |通信子网  实现<strong>数据通信</strong></p>
+<p>​                          |资源子网  实现<strong>资源共享</strong> /数据处理</p>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>应用层</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>子</td>
+<td>表示层</td>
+<td></td>
+</tr>
+<tr>
+<td>网</td>
+<td>会话层</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>传输层</td>
+<td></td>
+</tr>
+<tr>
+<td>通信</td>
+<td>网络层</td>
+<td>路由器</td>
+</tr>
+<tr>
+<td>子</td>
+<td>数据链路层</td>
+<td>交换机，网桥</td>
+</tr>
+<tr>
+<td>网</td>
+<td>物理层</td>
+<td>集线器，中继器</td>
+</tr>
+</tbody></table>
+<p>资源子网:（实现资源共享功能的设备 和软件的集合）</p>
+<p>通信子网:（各种传输介质、通信设 备、相应的网络协议组成）</p>
+<h4 id="2-计算机网络的分类"><a href="#2-计算机网络的分类" class="headerlink" title="2.计算机网络的分类"></a>2.计算机网络的分类</h4><p>2.1按分布范围分:<img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110533906.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110533906.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901110533906"></p>
+<p>2.2按使用者分:<img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110602131.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110602131.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901110602131"></p>
+<p>2.3按交换技术分:电路交换  报文交换  分组交换</p>
+<p>2.4按拓扑结构分:<img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110706234.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110706234.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901110706234"><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110720461.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110720461.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901110720461"><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110735583.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901110735583.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901110735583"></p>
+<p>2.5按传输技术分:</p>
+<p>​                              <strong>广播式网络</strong>:共享公共通信信道</p>
+<p>​                              <strong>点对点网络</strong>:使用<strong>分组存储转发</strong>和<strong>路由选择</strong>机制</p>
+<h3 id="Summary-1"><a href="#Summary-1" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901154439055.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901154439055.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901154439055"></p>
+<h3 id="三-标准化工作及相关组织-了解即可"><a href="#三-标准化工作及相关组织-了解即可" class="headerlink" title="三.标准化工作及相关组织(了解即可)"></a>三.标准化工作及相关组织(了解即可)</h3><p>标准的分类:</p>
+<p>​                        法定标准:由权威机构制定的正式的、合法的标准</p>
+<p>​                        事实标准:某些公司的产品在竞争中占据了主流,时间长了,这些产品的协议的技术就成立标准</p>
+<h4 id="RFC–因特网标准的形式"><a href="#RFC–因特网标准的形式" class="headerlink" title="RFC–因特网标准的形式"></a>RFC–因特网标准的形式</h4><p>RFC上升为因特网正式标准的四个阶段:</p>
+<p>​        1)因特网草案:这个阶段还不是RFC文档</p>
+<p>​        2)建议标准:这个阶段开始成为RFC文档</p>
+<p>​        3)草案标准</p>
+<p>​        4)因特网标准</p>
+<h3 id="四-性能指标"><a href="#四-性能指标" class="headerlink" title="四.性能指标"></a>四.性能指标</h3><h4 id="4-1速率"><a href="#4-1速率" class="headerlink" title="4.1速率"></a>4.1速率</h4><p>1.速率:即<strong>数据率</strong>或称<strong>数据传输率</strong>或<strong>比特率</strong></p>
+<p>比特:1/0位</p>
+<p>连接在计算机网络的<strong>主机</strong>在数字信道上传送数据<strong>位数的速率</strong></p>
+<p>单位:b/s,kb/s,Mb/s,Gb/s,Tb/s</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901215215121.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901215215121.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901215215121"></p>
+<h4 id="4-2带宽"><a href="#4-2带宽" class="headerlink" title="4.2带宽"></a>4.2带宽</h4><p>(1)”带宽”原本指某个信号具有的频带宽度,</p>
+<p>即最高频率与最低频率之差,单位是赫兹(Hz)</p>
+<p>(2)计算机网络中，<strong>带宽</strong>用来表示网络的通信线路传送数据的能力，通常是指单位时间内从网络中的某一点到另一点所能通过的“<strong>最高数据率</strong>”。单位是“比特每秒”，b/s,kb/s,Mbs,Gbs</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901221552080.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901221552080.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901221552080"></p>
+<h4 id="4-3吞吐量"><a href="#4-3吞吐量" class="headerlink" title="4.3吞吐量"></a>4.3吞吐量</h4><p>吞吐量:表示在<strong>单位时间</strong>内通过<strong>某个网络（或信道、接口）</strong>的数据量。单位b/s,kb/s,Mb/s等。<br>吞吐量受网络的带宽或网络的额定速率的限制</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901222516073.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901222516073.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901222516073"></p>
+<h4 id="4-4时延"><a href="#4-4时延" class="headerlink" title="4.4时延"></a>4.4时延</h4><p>指数据（报文/分组/比特流）从网络（或链路）的一端传送到另一端所需的时间。也叫延迟或迟延.单位是s.</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901223029083.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901223029083.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901223029083"></p>
+<h4 id="4-5时延带宽积"><a href="#4-5时延带宽积" class="headerlink" title="4.5时延带宽积"></a>4.5时延带宽积</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901223104292.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901223104292.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901223104292"></p>
+<h4 id="4-6往返时间效率RTT"><a href="#4-6往返时间效率RTT" class="headerlink" title="4.6往返时间效率RTT"></a>4.6往返时间效率RTT</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901223127501.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901223127501.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901223127501"></p>
+<h4 id="4-7利用率"><a href="#4-7利用率" class="headerlink" title="4.7利用率"></a>4.7利用率</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901224644382.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220901224644382.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220901224644382"></p>
+<h3 id="Summary-2"><a href="#Summary-2" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="C:\Users\24946\Desktop\性能指标.png" class="lazyload placeholder" data-srcset="C:\Users\24946\Desktop\性能指标.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="性能指标"></p>
+<h3 id="习题"><a href="#习题" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>选择</p>
+<p>1.计算机网络可被理解为(B).<br>A.执行计算机数据处理的软件模块<br><strong>B.由自治的计算机互联起来的集合体</strong><br>C.多个处理器通过共享内存实现的紧耦合系统<br>D.用于共同完成一项任务的分布式系统</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;计算机网络是由自治计算机互联起来的集合体，其中包含着三个关键点：自治计算机、互联、集合体。自治计算机由软件和硬件两部分组成，能完整地实现计算机的各种功能：互联是指计算机之间能实现相互通信；集合体是指所有使用通信线路及互联设备连接起来的自治计算机的集合。选项C和D分别指多机系统和分布式系统。</span><br></pre></td></tr></table></figure>
+
+<p>2.计算机网络最基本的功能是（A)。<br><strong>A.数据通信</strong><br>B.资源共享<br>C.分布式处理<br>D.信息综合处理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;计算机网络的功能包括：数据通信、资源共享、分布式处理、信息综合处理、负载均衡、提高可靠性等，但其中最基本的功能是数据通信功能，数据通信功能也是实现其他功能的基础。</span><br></pre></td></tr></table></figure>
+
+<p>3.下列不属于计算机网络功能的是(D).<br>A,提高系统可靠性<br>B.提高工作效率<br>C.分散数据的综合处理<br><strong>D.使各计算机相对独立</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;计算机网络的三大主要功能是数据通信、资源共享及分布式处理。计算机网络使各计算机之间的联系更加紧密而非相对独立。</span><br></pre></td></tr></table></figure>
+
+<p>4.计算机网络系统的基本组成是（C)。<br>A,局域网和广域网<br>B.本地计算机网和通信网<br><strong>C.通信子网和资源子网</strong><br>D.服务器和工作站</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;计算机网络从逻辑功能上可分为资源子网和通信子网两部分。</span><br></pre></td></tr></table></figure>
+
+<p>5.在计算机网络中可以没有的是（D).<br>A.客户机<br>B.服务器<br>C.操作系统<br><strong>D.数据库管理系统</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;从物理组成上看，计算机网络由硬件、软件和协议组成，客户机是客户访问网络的出入口，服务器是提供服务、存储信息的设备，当然是必不可少的。只是，在P2P模式下，服务器不一定是固定的某台机器，但网络中一定存在充当服务器角色的计算机。操作系统是最基本的软件。数据库管理系统用于管理数据库，由于在一个网络上可以没有数据库系统，所以数据库管理系统可能没有。</span><br></pre></td></tr></table></figure>
+
+<p>6.计算机网络的资源主要是指(C)。<br>A.服务器、路由器、通信线路与用户计算机<br>B.计算机操作系统、数据库与应用软件<br><strong>C.计算机硬件、软件与数据</strong><br>D.Web服务器、数据库服务器与文件服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;选项A和D都属于硬件，选项B都属于软件，只有选项C最全面。网络资源包括硬件资源、软件资源和数据资源。</span><br></pre></td></tr></table></figure>
+
+<p>7.计算机网络可分为通信子网和资源子网。下列属于通信子网的是（A)。<br>I.网桥II.交换机III.计算机软件IV.路由器<br><strong>A.I、II、IV</strong><br>B.II、III、IV<br>C.I、III、IV<br>D.I、II、III</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;资源子网主要由计算机系统、终端、联网外部设备、各种软件资源和信息资源等组成。资源子网负责全网的数据处理业务，负责向网络用户提供各种网络资源与网络服务。通信子网由通信控制处理机、通信线路和其他通信设备组成，其任务是完成网络数据传输、转发等。</span><br><span class="line">&gt;由此可知，网桥、交换机和路由器都属于通信子网，只有计算机软件属于资源子网。</span><br></pre></td></tr></table></figure>
+
+<p>8.下列设备属于资源子网的是(A)。<br><strong>A.计算机软件</strong><br>B.网桥<br>C.交换机<br>D.路由器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;通信子网对应于OSI参考模型的下三层，包括物理层、数据链路层和网络层。通过通信子网互联在一起的计算机负贵运行对信息进行处理的应用程序，它们是网络中信息流动的源和宿，向网络用户提供可共享的硬件、软件和信息资源，构成资源子网。网桥、交换机、路由器都属于通信子网中的硬件设备。</span><br></pre></td></tr></table></figure>
+
+<p>9.计算机网络分为广域网、城域网和局域网，其划分的主要依据是（A)。<br><strong>A,网络的作用范围</strong><br>B.网络的拓扑结构<br>C.网络的通信方式<br>D.网络的传输介质</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;按分布范围分类：广域网、城域网、局域网、个人区域网。</span><br><span class="line">&gt;按拓扑结构分类：星形网络、总线形网络、环形网络、网状网络。</span><br><span class="line">&gt;按传输技术分类：广播式网络、点对点网络。</span><br><span class="line">&gt;按使用者分类：公用网、专用网。</span><br><span class="line">&gt;按数据交换技术分类：电路交换网、报文交换网、分组交换网。</span><br><span class="line">&gt;因此，根据网络的覆盖范围可将网络主要分为广域网、城域网和局域网。</span><br></pre></td></tr></table></figure>
+
+<p>10.局域网和广战网的差异不仅在于它们所覆盖的范围不同，还主要在于它们(B)。<br>A.所使用的介质不同<br><strong>B.所使用的协议不同</strong><br>C.所能支持的通信量不同<br>D.所提供的服务不同</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;广域网和局域网之间的差异不仅在于它们所覆盖范围的不同，还在于它们所采用的协议和网络技术的不同，广域网使用点对点等技术，局域网使用广播技术。</span><br></pre></td></tr></table></figure>
+
+<p>11.下列说法中正确的是（D)。<br>A.在较小范围内布置的一定是局域网，而在较大范围内布置的一定是广域网<br>B.城域网是连接广域网而覆盖园区的网络<br>C.城域网是为淘汰局域网和广域网而提出的一种新技术<br><strong>D.局域网是基于广播技术发展起来的网络，广域网是基于交换技术发展起来的网络</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;区别局域网与广域网的关键在于所采用的协议，而非覆盖范围，而且局域网技术的进步己使其覆盖的范围越来越大，达到几千米的范围。城域网可视为为了满足一定的区域需求，而将多个局域网互联的局域网，因此它仍属于以太网的范畴。最初的局域网采用广播技术，这种技术一直被沿用，而广域网最初使用的是交换技术，也一直被沿用。</span><br></pre></td></tr></table></figure>
+
+<p>12.现在大量的计算机是通过诸如以太网这样的局域网连入广域网的，而局域网与广城网的<br>互联是通过(A)实现的<br><strong>A.路由器</strong><br>B.资源子网<br>C.桥接器<br>D.中继器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;中继器和桥接器通常是指用于局域网的物理层和数据链路层的联网设备。目前局域网接入广</span><br><span class="line">&gt;域网主要是通过称为路由器的互联设备来实现的。</span><br></pre></td></tr></table></figure>
+
+<p>13.计算机网络拓扑结构主要取决于它的（C).<br>A.资源子网<br>B.路由器<br><strong>C.通信子网</strong><br>D.交换机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;拓扑结构主要是指通信子网的拓扑结构。通信子网包括物理层、数据链路层、网络层，而诸如集线器、交换机和路由器分别工作在物理层、数据链路层和网络层。</span><br></pre></td></tr></table></figure>
+
+<p>14.广域网的拓扑结构通常采用（C).<br>A.星形<br>B.总线形<br><strong>C.网状</strong><br>D.环形</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;广域网覆盖范围较广、结点较多，为了保证可靠性和可扩展性，通常需采用网状结构。</span><br></pre></td></tr></table></figure>
+
+<p>15.在n个结点的里形拓扑结构中，有(A)条物理链路。<br><strong>A.n-1</strong><br>B.n<br>C.n(n-1)<br>D.n(n+1)/2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;星形拓扑结构是用一个结点作为中心结点，其他-1个结点直接与中心结点相连构成的网络。中心结点既可以是文件服务器，也可以是连接设备。常见的中心结点为集线器。</span><br></pre></td></tr></table></figure>
+
+<p>16.下列关于广播式网络的说法中，错误的是（D)。<br>A.共享广播信道<br>B.不存在路由选择问题<br>C.可以不要网络层<br><strong>D.不需要服务访问点</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;广播式网络共享广播信道（如总线），通常是局域网的一种通信方式（局域网工作在数据链</span><br><span class="line">&gt;路层)，因此不需要网络层，因而也不存在路由选择问题。但数据链路层使用物理层的服务必须</span><br><span class="line">&gt;通过服务访问点实现。</span><br></pre></td></tr></table></figure>
+
+<p>17.下列（B)是分组交换网络的缺，点。<br>A.信道利用率低<br><strong>B.附加信息开销大</strong><br>C.传播时延大<br>D.不同规格的终端很难相互通信</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;分组交换要求把数据分成大小相当的小数据片，每片都要加上控制信息（如目的地址），因而传送数据的总开销较多。相比其他交换方式，分组交换信道利用率高。传播时延取决于传播介质及收发双方的距离。对各种交换方式，不同规格的终端都很难相互通信，因此它不是分组交换的缺点。</span><br></pre></td></tr></table></figure>
+
+<p>18.1968年6月，世界上出现的最早计算机网络是（B)。<br>A.Internet<br><strong>B.ARPAnet</strong><br>C.以太网<br>D.令牌环网</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;ARPAnet是最早的计算机网络，它是因特网(Internet)的前身。</span><br></pre></td></tr></table></figure>
+
+
+<p>简答</p>
+<p>1.假定有一个通信协议，每个分组都引入100字节的开销用于头和成顿。现在使用这个协议发送10字节的数据，然而在传送的过程中有一个字节被破坏，因而包含该字节的那个分组被丢弃。试对于1000字节和20000字节的分组的有效数据大小分别计算.“开销+丢失”字节<br>的总数目。分组数据大小的最佳值是多少？</p>
+<blockquote>
+<p><img src="C:\Users\24946\Downloads\uTools_1662127633007.png" class="lazyload placeholder" data-srcset="C:\Users\24946\Downloads\uTools_1662127633007.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="uTools_1662127633007"></p>
+</blockquote>
+<p>2.考虑一个最大距离为2km的局域网，当带宽等于多大时，传播延时（传播速率为2×10^8m/s)等于100B分组的发送延时？对于512B分组结果又当如何？</p>
+<blockquote>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902220823179.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902220823179.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902220823179"></p>
+</blockquote>
+<p>3.在两台计算机之间传输一个文件有两种可行的确认策略。第一种策略把文件截成分组，接收方逐个确认分组，但就整体而言，文件没有得到确认。第二种策略不确认单个分组，但当文件全部收到后，对整个文件予以确认。请讨论这两种方式的优缺点。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;如果网络容易丢失分组，那么对每个分组逐一进行确认较好，此时仅重传丢失的分组。另一方面，如果网络高度可靠，那么在不发生差错的情况下，仅在整个文件传送的结尾发送一次确认，从而减少了确认次数，节省了带宽。不过，即使只有单个分组丢失，也要重传整个文件。</span><br></pre></td></tr></table></figure>
+
+<p>4.试在下列条件下比较电路交换和分组交换。要传送的报文共x比特。从源点到终点共经过k段链路，每段链路的传播时延为d秒，数据传输速率为b比特/秒。在电路交换时电路的建立时间为。秒。在分组交换时分组长度为？比特，且各结点的排队等待时间可忽略不计。问在怎样的条件下，分组交换的时延比电路交换的时延要小？（提示：画草图观察k段链路共有几个结点。)</p>
+<blockquote>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902220924784.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902220924784.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902220924784"></p>
+</blockquote>
+<p>5.在上题的分组交换网中，设报文长度和分组长度分别为x和p+h比特，其中p为分组的数据部分的长度，而h为每个分组所带控制信息r固定长度，与p的大小无关。通信的两端共经过k段链路。链路的数据传输速率为b比特/秒，传播时延、结点的排队时延和处理时延均可忽略不计。若欲使总的时延为最小，问分组的数据部分长度p应取多大？</p>
+<blockquote>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902221031227.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902221031227.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902221031227"><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902221049842.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902221049842.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902221049842"></p>
+</blockquote>
+<p>6.在下列情况下，计算传送1000KB文件所需要的总时间，即从开始传送时起直到文件的最后一位到达目的地为止的时间。假定往返时间RTT为100ms,一个分组是1KB（即1024B)的数据，在开始传送整个文件数据之前进行的起始握手过程需要2RTT的时间。<br>1)带宽是1.5Mb/s,数据分组可连续发送。<br>2)带宽是1.5M6s,但在发送完每个数据分组后，必须等待一个RTT(等待来自接收方<br>的确认)才能发送下一个数据分组。<br>3)假设带宽是无限大的值，即我们取发送时间为0，并在等待每个RTT后可以发送多达20个分组。</p>
+<blockquote>
+<p>提示：前面提到过，如果题目没有说考虑排队时延，那么处理时延也无须考虑。</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902221136503.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902221136503.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902221136503"></p>
+</blockquote>
+<p>7.有两个网络，它们都提供可靠的面向连接的服务，一个提供可靠的字节流，另一个提供可靠的报文流。请问两者是否相同？为什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;不相同。在报文流中，网络保持对报文边界的跟踪：而在字节流中，网络不进行这样的跟踪。例如，一个进程向一条连接写了1024B,稍后又写了1024B,那么接收方共读了2048B。对于报文流，接收方将得到两个报文，每个报文1024B。而对于字节流，报文边界不被识别，接收方将全部2048B作为一个整体，在此已经体现不出原先有两个不同报文的事实。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="五-分层结构-协议、接口、服务"><a href="#五-分层结构-协议、接口、服务" class="headerlink" title="五.分层结构(协议、接口、服务)"></a>五.分层结构(协议、接口、服务)</h3><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902094801983.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902094801983.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902094801983"></p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902094905451.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902094905451.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902094905451"></p>
+<h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902095200273.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902095200273.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902095200273"></h4><h3 id="概念总结"><a href="#概念总结" class="headerlink" title="概念总结:"></a>概念总结:</h3><p>网络体系结构是从<strong>功能</strong>上描述计算机网络结构的</p>
+<p>计算机网络体系结构简称网络体系结构是<strong>分层结构</strong></p>
+<p>每层遵循某个/些<strong>网络协议</strong>以完成本层功能</p>
+<p><strong>计算机网络体系结构</strong>是计算机网络的<strong>各层及其协议</strong>的集合</p>
+<p>第n层在想第n-1层提供服务时,此服务不仅包含第n层本身的功能,还包含由下层服务提供的功能</p>
+<p>仅仅在<strong>相邻层有接口</strong>,且所提供的服务的具体实现细节对上一层完全屏蔽</p>
+<p>体系结构是<strong>抽象</strong>的,而实现是指能运行一些软件和硬件</p>
+<h3 id="六-OSI模型"><a href="#六-OSI模型" class="headerlink" title="六.OSI模型"></a>六.OSI模型</h3><blockquote>
+<p>​                |  <strong>7层</strong>OSI参考模型(法定标准)</p>
+<p>分层结构                                                       =&gt;5层体系结构</p>
+<p>​                |<strong>4层</strong>TCP/IP参考模型(事实标准)</p>
+</blockquote>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902135545966.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902135545966.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902135545966"></p>
+<p>目的：支持异构网络系统的互联互通。</p>
+<p>国际标准化组织（ISO）于1984年提出开放系统互连（OSI）参考模型。 </p>
+<p>但是！理论成功，市场失败。</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902140058703.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902140058703.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902140058703"></p>
+<h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141230636.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141230636.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902141230636"></p>
+<h4 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141305587.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141305587.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902141305587"></p>
+<h4 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141540993.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141540993.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902141540993"></p>
+<h4 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141600241.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141600241.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902141600241"></p>
+<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141614534.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902141614534.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902141614534"></p>
+<h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902143510915.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902143510915.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902143510915"></p>
+<h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902144220682.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902144220682.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902144220682"></p>
+<h3 id="七-TIC-IP参考模型"><a href="#七-TIC-IP参考模型" class="headerlink" title="七.TIC/IP参考模型"></a>七.TIC/IP参考模型</h3><blockquote>
+<p>与OSI的相同点:</p>
+<p>1.都分层</p>
+<p>2.基于独立的协议栈的概念 </p>
+<p>3.可以实现异构网络互联</p>
+<p>不同点:</p>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902150810771.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902150810771.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902150810771"></p>
+</blockquote>
+<h4 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h4><table>
+<thead>
+<tr>
+<th>应用层</th>
+<th>支持各种网络应用   FTP、SMTP、HTTP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>传输层</td>
+<td>进程-进程的数据传输  TCP、UDP</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>源主机到目的主机的数据分组路由与转发  IP、ICMP、OSFP等</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>把网络层传下来的数据报组装成帧  Erhernet、PPP</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td>比特传输</td>
+</tr>
+</tbody></table>
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902151847302.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902151847302.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902151847302"></p>
+<h3 id="习题-1"><a href="#习题-1" class="headerlink" title="习题:"></a>习题:</h3><h2 id="Ch1-疑难总结"><a href="#Ch1-疑难总结" class="headerlink" title="Ch1.疑难总结"></a>Ch1.疑难总结</h2><blockquote>
+<p>1.计算机网络与分布式计算机系统的主要区别是什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">分布式系统最主要的特点是，整个系统中的各个计算机对用户都是透明的。用户通过输入命令就可以运行程序，但用户并不知道哪台计算机在为它运行程序。操作系统为用户选择一台最合适的计算机来运行其程序，并将运行的结果传送到合适的地方。</span><br><span class="line">计算机网络则与之不同，用户必须先登录欲运行程序的计算机，然后按照计算机的地址，将程序通过计算机网络传送到该计算机中运行，最后根据用户的命令将结果传送到指定的计算机中。二者的区别主要是软件的不同。</span><br></pre></td></tr></table></figure>
+
+<p>2.为什么一个网络协议必须考虑到各种不利的情况？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">因为网络协议如果不全面考虑不利的情况，那么当情况发生变化时，协议就会保持理想状况，一直等下去！就如同两位朋友在电话中约好下午3点在公园见面，并且约定不见不散。这一协议很不科学，因为任何一方如果有耽搁而来不了，且无法通知对方，那么另一方就要一直等下去！所以判断一个计算机网络是否正确，不能只看在正常情况下是否正确，还必须非常仔细地检查协议能否应付各种异常情况。</span><br></pre></td></tr></table></figure>
+
+<p>3.因特网使用的P协议是无连接的，因此其传输是不可靠的。这样容易使人们感到因特网很不可靠。那么为什么当初不把因特网的传输设计为可靠的呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">传统电信网的主要用途是电话通信，并且普通电话机不是智能的，因此电信公司必须花费巨大的代价把电信网设计得非常好，以保证用户的通信质量。</span><br><span class="line">数据的传送显然必须非常可靠。当初在设计ARPAnet时，很重要的讨论内容之一是：“谁应当负责数据传输的可靠性？”一种意见是主张应当像电信网那样，由通信网络负贵数据传输的可靠性（因为电信网的发展历史及其技术水平己经证明，人们可以将网络设计得相当可靠)：另一种意见则坚决主张由用户的主机负贵数据传输的可靠性，理由是这样可使计算机网络便宜、灵活。</span><br><span class="line">计算机网络的先驱认为，计算机网络和电信网的一个重大区别是终端设备的性能差别很大。于是，他们采用了“端到端的可靠传输”策略，即在传输层使用面向连接的TCP协议，这样既能使网络部分价格便宜且灵活可靠，又能保证端到端的可靠传输。</span><br></pre></td></tr></table></figure>
+
+<p>4.有人说，宽带信道相当于高速公路车道数目增多了，可以同时并行地跑更多数量的汽车.虽然汽车的时速并没有提高（相当于比特在信道上的传播速率未提高)，但整个高速公路的运输能力却增多了，相当于能够传送更多数量的比特。这种比喻合适否？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以这样比喻。但一定不能误认为“提高信道的速率是设法使比特并行地传输”。</span><br><span class="line">如果一定要用汽车在高速公路上行驶和比特在通信线路上传输相比较，那么可以这样来想象：低速信道相当于汽车进入高速公路的时间间隔较长。例如，每隔1分钟有一辆汽车进入高速公路；“信道速率提高”相当于进入高速公路的汽车的时间间隔缩短了，例如，现在每隔6秒就有一辆汽车进入高速公路。虽然汽车在高速公路上行驶的速率无变化，但在同样的时间内，进入高速公路的汽车总数却增多了（每隔下分钟进入高速公路的汽车现在增加到10辆)，因而吞吐量也就增大了。</span><br><span class="line">也就是说，当带宽或发送速率提高后，比特在链路上向前传播的速率并未提高，只是每秒注入链路的比特数增加了。“速率提高”就体现在单位时间内发送到链路上的比特数增多了，而并不是比特在链路上跑得更快了。</span><br></pre></td></tr></table></figure>
+
+<p>5.端到端通信和，点到点通信有什么区别？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">从本质上说，由物理层、数据链路层和网络层组成的通信子网为网络环境中的主机提供点到点的服务，而传输层为网络中的主机提供端到端的通信。</span><br><span class="line">直接相连的结点之间的通信称为点到点通信，它只提供一台机器到另一台机器之间的通信，不涉及程序或进程的概念。同时，点到点通信并不能保证数据传输的可靠性，也不能说明源主机与目的主机之间是哪两个进程在通信，这些工作都是由传输层来完成的。</span><br><span class="line">端到端通信建立在点到点通信的基础上，它是由一段段的点到点通信信道构成的，是比点到点通信更高一级的通信方式，以完成应用程序（进程）之间的通信。“端”是指用户程序的端口，端口号标识了应用层中不同的进程。</span><br></pre></td></tr></table></figure>
+
+<p>6.如何理解传输速率、带宽和传播速率？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">传输速率指主机在数字信道上发送数据的速率，也称数据传输速率、数据率或比特率，单位是比特/秒(b/s)。更常用的速率单位是干比特/秒(kbs)、兆比特/秒(Mb/s)、吉比特/秒(Gb/s)、太比特/秒(Tbs)。</span><br><span class="line">注意：在计算机领域，表示存储容盘或文件大小时，K=20=1024,M=220,G=230,T=20。这与通信领域中的表示方式不同。</span><br><span class="line">带宽(Bandwidth)在计算机网络中指数字信道所能传送的“最高数据传输速率”，常用来表示网络的通信线路传送数据的能力，其单位与传输速率的单位相同。</span><br><span class="line">传播速率是指电磁波在信道中传播的速率，单位是米/秒(/s),,更常用的单位是千米/秒(am/s)。电磁波在光纤中的传播速率约为2×103m/s。</span><br><span class="line">举例如下。假定一条链路的传播速率为2×103/s,这相当于电磁波在该媒体上1μs可向前传播200m。若链路带宽为1Mb/s,则主机在1μs内可向链路发送1bit数据。</span><br><span class="line">在图1.15中，当t=0时，开始向链路发送数据：当t=1μs时，信号传播到200m处，注入链路1比特；当t=2μs时，信号传播到400m处，注入链路共2比特：当t=3μs时，信号传播到600m处，注入链路共3比特。</span><br><span class="line">从图1.15可以看出，在一段时间内，链路中有多少比特取决于带宽（或传输速率)，而1比特“跑”了多远取决于传播速率。</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902222428026.png" class="lazyload placeholder" data-srcset="C:\Users\24946\AppData\Roaming\Typora\typora-user-images\image-20220902222428026.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220902222428026"></p>
+<p>7.如何理解传输时延、发送时延和传播时延？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 传输时延又称发送时延，是主机或路由器发送数据帧所需的时间，即从数据帧的第1比特算起，到该数据帧的最后1比特发送完毕所需要的时间。计算公式是</span><br><span class="line">                             发送时延=数据帧长度/信道带宽</span><br><span class="line">&gt;传播时延是电磁波在信道中传播一定的距离所花费的时间。计算公式是</span><br><span class="line">						  传播时延=信道长度/电磁波在信道上的传播速率</span><br></pre></td></tr></table></figure>
+</blockquote>
+
+      </div>
+      <div class="post-tags-categories">
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>LeeZhi</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2022/09/02/计网/" target="_blank" title="笔记">https://leejhong001.github.io/2022/09/02/计网/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/Alipay.jpg" class="lazyload placeholder" data-srcset="/medias/Alipay.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/WeChatpay.jpg" class="lazyload placeholder" data-srcset="/medias/WeChatpay.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="gitment-container"></div>
+
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin-left': 'auto', 'margin-right': 'auto',});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
+
+      </main>
+    </div>
+
+    <!-- 页脚 -->
+    
+  
+  
+    <!-- 底部鱼儿跳动效果，依赖于jquery-->
+<div id="j-fish-skip" style=" position: relative;height: 153px;width: auto;"></div>
+<script>
+  var RENDERER = {
+    POINT_INTERVAL: 5,
+    FISH_COUNT: 3,
+    MAX_INTERVAL_COUNT: 50,
+    INIT_HEIGHT_RATE: .5,
+    THRESHOLD: 50,
+    FISH_COLOR: '',
+    init: function () {
+      this.setFishColor(); this.setParameters(), this.reconstructMethods(), this.setup(), this.bindEvent(), this.render()
+    },
+    setFishColor: function () {
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+      if (isDark) {
+        this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
+      } else {
+        this.FISH_COLOR = '' || '#42b983';
+      }
+    },
+    setParameters: function () {
+      this.$window = $(window), this.$container = $("#j-fish-skip"), this.$canvas = $("<canvas />"), this.context = this.$canvas.appendTo(this.$container).get(0).getContext("2d"), this.points = [], this.fishes = [], this.watchIds = []
+    },
+    createSurfacePoints: function () {
+      var t = Math.round(this.width / this.POINT_INTERVAL);
+      this.pointInterval = this.width / (t - 1), this.points.push(new SURFACE_POINT(this, 0));
+      for (var i = 1; i < t; i++) {
+        var e = new SURFACE_POINT(this, i * this.pointInterval),
+          h = this.points[i - 1];
+        e.setPreviousPoint(h), h.setNextPoint(e), this.points.push(e)
+      }
+    },
+    reconstructMethods: function () {
+      this.watchWindowSize = this.watchWindowSize.bind(this), this.jdugeToStopResize = this.jdugeToStopResize.bind(this), this.startEpicenter = this.startEpicenter.bind(this), this.moveEpicenter = this.moveEpicenter.bind(this), this.reverseVertical = this.reverseVertical.bind(this), this.render = this.render.bind(this)
+    },
+    setup: function () {
+      this.points.length = 0, this.fishes.length = 0, this.watchIds.length = 0, this.intervalCount = this.MAX_INTERVAL_COUNT, this.width = this.$container.width(), this.height = this.$container.height(), this.fishCount = this.FISH_COUNT * this.width / 500 * this.height / 500, this.$canvas.attr({
+        width: this.width,
+        height: this.height
+      }), this.reverse = !1, this.fishes.push(new FISH(this)), this.createSurfacePoints()
+    },
+    watchWindowSize: function () {
+      this.clearTimer(), this.tmpWidth = this.$window.width(), this.tmpHeight = this.$window.height(), this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL))
+    },
+    clearTimer: function () {
+      for (; this.watchIds.length > 0;) clearTimeout(this.watchIds.pop())
+    },
+    jdugeToStopResize: function () {
+      var t = this.$window.width(),
+        i = this.$window.height(),
+        e = t == this.tmpWidth && i == this.tmpHeight;
+      this.tmpWidth = t, this.tmpHeight = i, e && this.setup()
+    },
+    bindEvent: function () {
+      this.$window.on("resize", this.watchWindowSize), this.$container.on("mouseenter", this.startEpicenter), this.$container.on("mousemove", this.moveEpicenter)
+    },
+    getAxis: function (t) {
+      var i = this.$container.offset();
+      return {
+        x: t.clientX - i.left + this.$window.scrollLeft(),
+        y: t.clientY - i.top + this.$window.scrollTop()
+      }
+    },
+    startEpicenter: function (t) {
+      this.axis = this.getAxis(t)
+    },
+    moveEpicenter: function (t) {
+      var i = this.getAxis(t);
+      this.axis || (this.axis = i), this.generateEpicenter(i.x, i.y, i.y - this.axis.y), this.axis = i
+    },
+    generateEpicenter: function (t, i, e) {
+      if (!(i < this.height / 2 - this.THRESHOLD || i > this.height / 2 + this.THRESHOLD)) {
+        var h = Math.round(t / this.pointInterval);
+        h < 0 || h >= this.points.length || this.points[h].interfere(i, e)
+      }
+    },
+    reverseVertical: function () {
+      this.reverse = !this.reverse;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].reverseVertical()
+    },
+    controlStatus: function () {
+      for (var t = 0, i = this.points.length; t < i; t++) this.points[t].updateSelf();
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].updateNeighbors();
+      this.fishes.length < this.fishCount && 0 == --this.intervalCount && (this.intervalCount = this.MAX_INTERVAL_COUNT, this.fishes.push(new FISH(this)))
+    },
+    render: function () {
+      requestAnimationFrame(this.render), this.controlStatus(), this.context.clearRect(0, 0, this.width, this.height), this.context.fillStyle = this.FISH_COLOR;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].render(this.context);
+      this.context.save(), this.context.globalCompositeOperation = "xor", this.context.beginPath(), this.context.moveTo(0, this.reverse ? 0 : this.height);
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].render(this.context);
+      this.context.lineTo(this.width, this.reverse ? 0 : this.height), this.context.closePath(), this.context.fill(), this.context.restore()
+    }
+  },
+  SURFACE_POINT = function (t, i) {
+    this.renderer = t, this.x = i, this.init()
+  };
+  SURFACE_POINT.prototype = {
+    SPRING_CONSTANT: .03,
+    SPRING_FRICTION: .9,
+    WAVE_SPREAD: .3,
+    ACCELARATION_RATE: .01,
+    init: function () {
+      this.initHeight = this.renderer.height * this.renderer.INIT_HEIGHT_RATE, this.height = this.initHeight, this.fy = 0, this.force = {
+        previous: 0,
+        next: 0
+      }
+    },
+    setPreviousPoint: function (t) {
+      this.previous = t
+    },
+    setNextPoint: function (t) {
+      this.next = t
+    },
+    interfere: function (t, i) {
+      this.fy = this.renderer.height * this.ACCELARATION_RATE * (this.renderer.height - this.height - t >= 0 ? -1 : 1) * Math.abs(i)
+    },
+    updateSelf: function () {
+      this.fy += this.SPRING_CONSTANT * (this.initHeight - this.height), this.fy *= this.SPRING_FRICTION, this.height += this.fy
+    },
+    updateNeighbors: function () {
+      this.previous && (this.force.previous = this.WAVE_SPREAD * (this.height - this.previous.height)), this.next && (this.force.next = this.WAVE_SPREAD * (this.height - this.next.height))
+    },
+    render: function (t) {
+      this.previous && (this.previous.height += this.force.previous, this.previous.fy += this.force.previous), this.next && (this.next.height += this.force.next, this.next.fy += this.force.next), t.lineTo(this.x, this.renderer.height - this.height)
+    }
+  };
+  var FISH = function (t) {
+    this.renderer = t, this.init()
+  };
+  FISH.prototype = {
+    GRAVITY: .4,
+    init: function () {
+      this.direction = Math.random() < .5, this.x = this.direction ? this.renderer.width + this.renderer.THRESHOLD : -this.renderer.THRESHOLD, this.previousY = this.y, this.vx = this.getRandomValue(4, 10) * (this.direction ? -1 : 1), this.renderer.reverse ? (this.y = this.getRandomValue(1 * this.renderer.height / 10, 4 * this.renderer.height / 10), this.vy = this.getRandomValue(2, 5), this.ay = this.getRandomValue(.05, .2)) : (this.y = this.getRandomValue(6 * this.renderer.height / 10, 9 * this.renderer.height / 10), this.vy = this.getRandomValue(-5, -2), this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1, this.theta = 0, this.phi = 0
+    },
+    getRandomValue: function (t, i) {
+      return t + (i - t) * Math.random()
+    },
+    reverseVertical: function () {
+      this.isOut = !this.isOut, this.ay *= -1
+    },
+    controlStatus: function (t) {
+      this.previousY = this.y, this.x += this.vx, this.y += this.vy, this.vy += this.ay, this.renderer.reverse ? this.y > this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy -= this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(.05, .2)), this.isOut = !1) : this.y < this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy += this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1), this.isOut || (this.theta += Math.PI / 20, this.theta %= 2 * Math.PI, this.phi += Math.PI / 30, this.phi %= 2 * Math.PI), this.renderer.generateEpicenter(this.x + (this.direction ? -1 : 1) * this.renderer.THRESHOLD, this.y, this.y - this.previousY), (this.vx > 0 && this.x > this.renderer.width + this.renderer.THRESHOLD || this.vx < 0 && this.x < -this.renderer.THRESHOLD) && this.init()
+    },
+    render: function (t) {
+      t.save(), t.translate(this.x, this.y), t.rotate(Math.PI + Math.atan2(this.vy, this.vx)), t.scale(1, this.direction ? 1 : -1), t.beginPath(), t.moveTo(-30, 0), t.bezierCurveTo(-20, 15, 15, 10, 40, 0), t.bezierCurveTo(15, -10, -20, -15, -30, 0), t.fill(), t.save(), t.translate(40, 0), t.scale(.9 + .2 * Math.sin(this.theta), 1), t.beginPath(), t.moveTo(0, 0), t.quadraticCurveTo(5, 10, 20, 8), t.quadraticCurveTo(12, 5, 10, 0), t.quadraticCurveTo(12, -5, 20, -8), t.quadraticCurveTo(5, -10, 0, 0), t.fill(), t.restore(), t.save(), t.translate(-3, 0), t.rotate((Math.PI / 3 + Math.PI / 10 * Math.sin(this.phi)) * (this.renderer.reverse ? -1 : 1)), t.beginPath(), this.renderer.reverse ? (t.moveTo(5, 0), t.bezierCurveTo(10, 10, 10, 30, 0, 40), t.bezierCurveTo(-12, 25, -8, 10, 0, 0)) : (t.moveTo(-5, 0), t.bezierCurveTo(-10, -10, -10, -30, 0, -40), t.bezierCurveTo(12, -25, 8, -10, 0, 0)), t.closePath(), t.fill(), t.restore(), t.restore(), this.controlStatus(t)
+    }
+  }, $(function () {
+    RENDERER.init()
+    $('.dark').click(function () {
+      setTimeout(() => {
+        RENDERER.setFishColor();
+        RENDERER.context.fill();
+      });
+    })
+  });
+</script>
+  
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  font-size: 15px;
+  color: #42b983;
+}
+
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+
+
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="playlist"
+  id="8062553743"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='random'
+  preload='auto'
+  volume='0.7'
+  list-folded='true'
+>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+
+    <script src="/js/utils/index.js"></script>
+    <script src="/js/app.js"></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+    content = '.post-detail',//文章容器
+    idArr = {};  //标题数组以确定是否增加索引id
+  //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    activeLinkClass: 'is-active-link',
+    // onClick: function (e) {},
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      tocbot.init(option);
+      mobileTocClick();
+    });
+
+  }
+
+  window.tocScrollFn = function () {
+    return bamboo.throttle(function () {
+      findHeadPosition();
+    }, 100)()
+  }
+  window.addEventListener('scroll', tocScrollFn);
+
+  const findHeadPosition = function (top) {
+    if ($('.toc-list').length <= 0) {
+      return false;
+    }
+    setTimeout(() => {  // or DOMContentLoaded 
+      autoScrollToc();
+    }, 0);
+  }
+
+  const autoScrollToc = function () {
+    const $activeItem = document.querySelector('.is-active-link');
+    const $cardToc = document.querySelector('.toc-content');
+    const activePosition = $activeItem.getBoundingClientRect().top
+    const sidebarScrollTop = $cardToc.scrollTop
+    if (activePosition > (document.documentElement.clientHeight - 100)) {
+      $cardToc.scrollTop = sidebarScrollTop + 150
+    }
+    if (activePosition < 100) {
+      $cardToc.scrollTop = sidebarScrollTop - 150
+    }
+  }
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+      mobileTocClick();
+    }
+  });
+  
+  // 手机端toc按钮点击出现目录
+  const mobileTocClick = function () {
+    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
+    let right = '45px';
+    if (window.innerWidth >= 551 && window.innerWidth <= 992) {
+      right = '100px'
+    }
+    const mobileToc = {
+      open: () => {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+      },
+
+      close: () => {
+        $cardTocLayout.style.animation = 'toc-close .2s'
+        setTimeout(() => {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+        }, 100)
+      }
+    }
+    document.getElementById('toc-mobile-btn').addEventListener('click', () => {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open()
+      else mobileToc.close()
+    })
+
+    $cardToc.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) { // 小于992px的时候
+        mobileToc.close()
+      }
+    })
+  }
+</script>
+
+<style>
+  .is-position-fixed {
+    position: sticky !important;
+    top: 74px;
+  }
+
+  .toc-main ul {
+    counter-reset: show-list;
+  }
+
+  .toc-main ul li::before {
+    content: counter(item)".";
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
+</style> 
+
+<!-- 设置导航背景 -->
+<script>
+  let setHeaderClass = () => {
+    const headerMenuTransparent = true;
+    if (!headerMenuTransparent) { return; }
+    const nav = $('#navHeader');
+    const navTop = nav.outerHeight();
+    const winTop = $(window).scrollTop();
+    if(winTop > navTop) {
+      nav.addClass('header-bg-color');
+    }
+    else {
+      nav.removeClass('header-bg-color');
+    }
+  };
+
+  let scrollCollect = () => {
+    return bamboo.throttle(function (e) {
+      setHeaderClass();
+    }, 200)()
+  }
+
+  let initHeaderBg = () => {
+    setHeaderClass();
+  }
+
+  setHeaderClass();
+  window.addEventListener('scroll', scrollCollect);
+
+  document.addEventListener('pjax:send', function () {
+    window.removeEventListener('scroll', scrollCollect)
+  })
+  document.addEventListener('pjax:complete', function () {
+    window.addEventListener('scroll', scrollCollect);
+    setHeaderClass();
+  })
+</script> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://unpkg.com/v-plugs-ayu/lib/ayu.css">
+  <script src="https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+          }
+        })
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+  
+
+<!-- 图片懒加载 -->
+<script defer src="https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+<!-- 卡片滚动动画 -->
+   
+
+<!-- 评论所需js -->
+
+  
+    <script type="text/javascript">
+  var utteranceCommon = {};
+
+  function check_utterance() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      utteranceCommon.Theme = 'github-dark';
+    } else {
+      utteranceCommon.Theme = 'github-light';
+    }
+
+    return document.getElementById("gitment-container");
+  }
+  comment_el = '#gitment-container';
+  load_utterance = function () {
+    if ($(comment_el).length) {
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_utterance();
+
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', '')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      // content 是要插入评论的地方
+      document.getElementById('gitment-container').appendChild(utterances);
+
+    }
+  }
+
+  function dark_utterance() {
+    const HEAD = check_utterance();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: utteranceCommon.Theme
+    };
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+
+  $(document).ready(load_utterance);
+  document.addEventListener('pjax:complete', function () {
+    load_utterance();
+  });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_utterance();
+    });
+  })
+
+</script>
+
+<style>
+  .utterances {
+    max-width: inherit !important;
+  }
+</style>
+  
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+  
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+    <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src="/js/cursor/explosion.min.js"></script>
+  
+
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+</html>
