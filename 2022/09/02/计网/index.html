@@ -697,7 +697,7 @@
 <p>第n层在想第n-1层提供服务时,此服务不仅包含第n层本身的功能,还包含由下层服务提供的功能</p>
 <p>仅仅在<strong>相邻层有接口</strong>,且所提供的服务的具体实现细节对上一层完全屏蔽</p>
 <p>体系结构是<strong>抽象</strong>的,而实现是指能运行一些软件和硬件</p>
-<h3 id="六-OSI模型"><a href="#六-OSI模型" class="headerlink" title="六.OSI模型"></a>六.OSI模型</h3><blockquote>
+<h3 id="六-OSI模型-重点-每个层次的功能"><a href="#六-OSI模型-重点-每个层次的功能" class="headerlink" title="六.OSI模型(!重点:!每个层次的功能)"></a>六.OSI模型(!重点:!每个层次的功能)</h3><blockquote>
 <p>​                |  <strong>7层</strong>OSI参考模型(法定标准)</p>
 <p>分层结构                                                       =&gt;5层体系结构</p>
 <p>​                |<strong>4层</strong>TCP/IP参考模型(事实标准)</p>
@@ -747,7 +747,99 @@
 </tr>
 </tbody></table>
 <p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662103124379.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662103124379.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
-<h3 id="习题-1"><a href="#习题-1" class="headerlink" title="习题:"></a>习题:</h3><h2 id="Ch1-疑难总结"><a href="#Ch1-疑难总结" class="headerlink" title="Ch1.疑难总结"></a>Ch1.疑难总结</h2><blockquote>
+<h3 id="习题-1"><a href="#习题-1" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>选择</p>
+<p>1.(B)不是对网络模型进行分层的目标。<br>A.提供标准语言<br><strong>B.定义功能执行的方法</strong><br>C.定义标准界面<br>D.增加功能之间的独立性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;分层属于计算机网络的体系结构的范畴，选项A、C和D均是网络模型分层的目的，而分层</span><br><span class="line">&gt;的目的不包括定义功能执行的具体方法。</span><br></pre></td></tr></table></figure>
+
+<p>2.将用户数据分成一个个数据块传输的优，点不包括（D)。<br>A.减少延迟时间<br>B.提高错误控制效率<br>C.使多个应用更公平地使用共享通信介质<br><strong>D.有效数据在协议数据单元(PDU)中所占比例更大</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;将用户数据分成一个个数据块传输，由于每块均需加入控制信息，因此实际上会使有效数据在PDU中所占的比例更小。其他各项均为其优点。</span><br></pre></td></tr></table></figure>
+
+<p>3.协议是指在(D)之间进行通信的规则或约定。<br>A.同一结点的上下层<br>B.不同结点<br>C.相邻实体<br><strong>D.不同结点对等实体</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;协议是为对等层实体之间进行逻辑通信而定义的规则的集合。</span><br></pre></td></tr></table></figure>
+
+<p>4.【2010统考真题】下列选项中，不属于网络体系结构所描述的内容是(C).<br>A.网络的层次<br>B.每层使用的协议<br><strong>C.协议的内部实现细节</strong><br>D.每层必须完成的功能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;计算机网络的各层及其协议的集合称为体系结构，分层就涉及对各层功能的划分，因此A、B、D正确。体系结构是抽象的，它不包括各层协议的具体实现细节。计算机网络教材在讲解网络层次时，仅涉及各层的协议和功能，而内部的实现细节则完全未提及。内部的实现细节是由具体设备厂家来确定的。</span><br></pre></td></tr></table></figure>
+
+<p>5.在OSI参考模型中，第n层与它之上的第n+1层的关系是(A).<br><strong>A.第n层为第n+1层提供服务</strong><br>B.第n+1层为从第n层接收的报文添加一个报头<br>C.第n层使用第n+1层提供的服务<br>D.第n层和第n+1层相互没有影响</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;服务是指下层为紧邻的上层提供的功能调用，每层只能调用紧邻下层提供的服务（通过服务访问点)，而不能跨层调用。</span><br></pre></td></tr></table></figure>
+
+<p>6.关于计算机网络及其结构模型，下列几种说法中错误的是(C)<br>A.世界上第一个计算机网络是ARPAnet<br>B.Internet最早起源于ARPAnet<br><strong>C.国际标准化组织(ISO)设计出了OSI/RM参考模型，即实际执行的标准</strong><br>D.TCP/IP参考模型分为4个层次</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;国际标准化组织(ISO)设计了开放系统互连参考模型(OSRM),即7层网络参考模型，但实际执行的国际标准是TCPP标准。</span><br></pre></td></tr></table></figure>
+
+<p>7.（A)是计算机网络中OSI参考模型的3个主要概念.<br><strong>A.服务、接口、协议</strong><br>B.结构、模型、交换<br>C.子网、层次、端口<br>D.广域网、城域网、局域网</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;计算机网络要做到有条不紊地交换数据，就必须避守一些实现约定的原则，这些原则就是协议。在协议的控制下，两个对等实体之间的通信使得本层能够向上一层提供服务。要实现本层协议，还需要使用下一层提供的服务，而提供服务就是交换信息，要交换信息就需要通过接口去交换信息，所以说服务、接口、协议是OS1参考模型的3个主要概念。</span><br></pre></td></tr></table></figure>
+
+<p>8.OSI参考模型中的数据链路层不具有（D)功能.<br>A.物理寻址<br>B.流量控制<br>C.差错校验<br><strong>D.拥塞控制</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层在不可靠的物理介质上提供可靠的传输。其作用包括物理寻址、成帧、流量控制、差错校验、数据重发等。网络层和传输层才具有拥塞控制的功能。</span><br></pre></td></tr></table></figure>
+
+<p>9.下列能够最好地描述OSI参考模型的数据链路层功能的是(D)。<br>A.提供用户和网络的接口<br>B.处理信号通过介质的传输<br>C.控制报文通过网络的路由选择<br><strong>D.保证数据正确的顺序和完整性</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层的功能包括：链路连接的建立、拆除、分离：帧界定和帧同步：差错检测等。A是应用层的功能，B是物理层的功能，C是网络层的功能，D才是数据链路层的功能。</span><br></pre></td></tr></table></figure>
+
+<p>10.当数据由端系统A传送至端系统B时，不参与数据封装工作的是(A)。<br><strong>A.物理层</strong><br>B.数据链路层<br>C.网络层<br>D.表示层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;物理层以0、1比特流的形式透明地传输数据链路层递交的帧。网络层、表示层和应用层都为上层提交的数据加上首部，数据链路层为上层提交的数据加上首部和尾部，然后提交给下一层。物理层不存在下一层，自然也就不用封装。</span><br></pre></td></tr></table></figure>
+
+<p>11.在OSI参考模型中，实现端到端的应答、分组排序和流量控制功能的协议层是(C)。<br>A.会话层<br>B.网络层<br><strong>C.传输层</strong><br>D.数据链路层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;只有传输层及以上各层的通信才能称为端到端，选项B、D错。会话层管理不同主机间进程的对话，而传输层实现应答、分组排序和流量控制功能。</span><br></pre></td></tr></table></figure>
+
+<p>12.在ISO/OSI参考模型中，可同时提供无连接服务和面向连接服务的是（C)。<br>A.物理层<br>B.数据链路层<br><strong>C.网络层</strong><br>D.传输层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;本题容易误选D。ISO/OSI参考模型在网络层支持无连接和面向连接的通信，但在传输层仅支持面向连接的通信；T℃P⑧模型在网络层仅有无连接的通信，而在传输层支持无连接和面向连接的通信。两类协议栈的区别是统考的考点，而这个区别是常考点。</span><br></pre></td></tr></table></figure>
+
+<p>13.【2009统考真题】在OS1参考模型中，自下而上第一个提供端到端服务的层次是(B).<br>A.数据链路层<br><strong>B.传输层</strong><br>C.会话层<br>D.应用层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;传输层提供应用进程间的逻辑通信（通过端口号），即端到端的通信。数据链路层负贵相邻结点之间的通信，这个结点包括了交换机和路由器等数据通信设备，这些设备不能称为端系统。网络层负责主机到主机的逻辑通信。因此选B。</span><br></pre></td></tr></table></figure>
+
+<p>14.在OS参考模型中，.当两台计算机进行文件传输时，为防止中间出现网络故障而重传整个文件的情况，可通过在文件中插入同步点来解决，这个动作发生在(B).<br>A,表示层<br><strong>B.会话层</strong><br>C.网络层<br>D.应用层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在OSI参考模型中，会话层的两个主要服务是会话管理和同步。会话层使用校验点可使通信会话在通信失效时从校验点继续恢复通信，实现数据同步。</span><br></pre></td></tr></table></figure>
+
+<p>15.数据的格式转换及压缩属于OSI参考模型中(B)的功能.<br>A.应用层<br><strong>B.表示层</strong><br>C.会话层<br>D.传输层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;OSI参考模型表示层的功能有数据解密与加密、压缩、格式转换等。</span><br></pre></td></tr></table></figure>
+
+<p>16.【2013统考真题〗在OS1参考模型中，功能需由应用层的相邻层实现的是(B).<br>A.对话管理<br><strong>B.数据格式转换</strong><br>C.路由选择<br>D.可靠数据传输</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在OSI参考模型中，应用层的相邻层是表示层，它是OSI参考模型七层协议的第六层。表示层的功能是表示出用户看得懂的数据格式，实现与数据表示有关的功能。主要完成数据字符集的转换、数据格式化及文本压缩、数据加密和解密等工作。</span><br></pre></td></tr></table></figure>
+
+<p>17.下列说法中，正确描述了OSI参考模型中数据的封装过程的是（B)。<br>A,数据链路层在分组上仅增加了源物理地址和目的物理地址<br><strong>B.网络层将高层协议产生的数据封装成分组，并增加第三层的地址和控制信息</strong><br>C.传输层将数据流封装成数据帧，并增加可靠性和流控制信息<br>D.表示层将高层协议产生的数据分割成数据段，并增加相应的源和目的端口信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层在分组上除增加源和目的物理地址外，也增加控制信息；传输层的PDU不称为帧：表示层不负责把高层协议产生的数据分割成数据段，且负责增加相应源和目的端口信息的应是传输层。，选项B正确描述了OSI参考模型中数据的封装过程，数据经过应用层、表示层、会话层后，只是增加了第三层PCI。</span><br></pre></td></tr></table></figure>
+
+<p>18.在OSI参考模型中，提供流量控制功能的层是第（①）层；提供建立、维护和拆除端到<br>端的连接的层是（②方；为数据分组提供在网络中路由的功能的是（③：传输层提供（④）<br>的数据传送；为网络层实体提供数据发送和接收功能及过程的是（⑤)。<br>①A.1、2、3<br><strong>B.2、3、4</strong><br>C.3、4、5<br>D.4、5、6<br>②A.物理层<br>B.数据链路层<br>C.会话层<br><strong>D.传输层</strong><br>③A.物理层<br>B.数据链路层<br><strong>C.网络层</strong><br>D.传输层<br>④<strong>A.主机进程之间</strong><br>B.网络之间<br>C.数据链路之间<br>D.物理线路之间<br>⑤A.物理层<br><strong>B.数据链路层</strong><br>C.·会话层<br>D.传输层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在计算机网络中，流量控制指的是通过限制发送方发出的数据流量，从而使得其发送速率不超过接收方接收速率的一种技术。流量控制功能可以存在于数据链路层及其之上的各层中。目前提供流量控制功能的主要是数据链路层、网络层和传输层。不过，各层的流量控制对象不一样，各层的流量控制功能是在各层实体之间进行的。</span><br><span class="line">在OSI参考模型中，物理层实现比特流在传输介质上的透明传输：数据链路层将有差错的物理线路变成无差错的数据链路，实现相邻结点之间即点到点的数据传输。网络层的主要功能是路由选择、拥塞控制和网际互联等，实现主机到主机的通信：传输层实现主机的进程之间即端到端的数据传输。</span><br><span class="line">下一层为上一层提供服务，而网络层下一层是数据链路层，所以为网络层实体提供数据发送和接收功能及过程的是数据链路层。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>19.在OSI参考模型中，（①）利用通信子网提供的服务实现两个用户进程之间端到端的通信。在这个层次模型中，如果用户A需要通过网络向用户B传送数据，那么首先将数据送入应用层，在该层给它附加控制信息后送入表示层；在表示层对数据进行必要的变换并加上头部后送入会话层；在会话层加头部后送入传输层；在传输层将数据分割为(②)后送至网络层；在网络层将数据封装成（③)后送至数据链路层；在数据链路层将数据加上头部和尾部封装成（④）后发送到物理层；在物理层数据以（⑤）形式发送到物理线路。用户B所在的系统接收到数据后，层层剥去控制信息，最终将原数据传送给用户B.<br>①A.网络层<br><strong>B.传输层</strong><br>C.会话层<br>D.表示层<br>②A.数据报<br>B.数据流<br><strong>C.报文</strong><br>D.分组<br>③A.数据流<br>B.报文<br>C.路由信息<br><strong>D.分组</strong><br>④A.数据段<br>B.报文<br><strong>C.数据帧</strong><br>D.分组<br>⑤<strong>A.比特流</strong><br>B.数据帧<br>C.报文<br>D.分组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在OSI参考模型中，在对等层之间传送的数据的单位都称为协议数据单元(PDU):具体而言，在传输层称为报文段(TCP)或用户数据报(UDP),在网络层称为分组或数据报，在数据链路层称为帧，在物理层称为比特。</span><br></pre></td></tr></table></figure>
+
+<p>20.【2016统考真题】在OSI参考模型中，路由器、交换机（Switch)、集线器（Hub)实现的最高功能层分别是(C)。<strong>看本章(二  1)</strong><br>A.2、2、1<br>B.2、2、2<br><strong>C.3、2、1</strong><br>D.3、2、2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;集线器是一个多端口的中继器，它工作在物理层。以太网交换机是一个多端口的网桥，它工作在数据链路层。路由器是网络层设备，它实现了网络模型的下三层，即物理层、数据链路层和网络层。题中路由器、交换机和集线器实现的最高层功能分别是网络层（即3）、数据链路层（即2）和物理层（即1)。</span><br></pre></td></tr></table></figure>
+
+<p>21.因特网采用的核心技术是（A)。<br><strong>A.TCP/IP</strong><br>B.局域网技术<br>C.远程通信技术<br>D.光纤技术</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;协议是网络上计算机之间进行信息交换和资源共享时所共同遵守的约定，没有协议的存在，网络的作用也就无从谈起。在因特网中应用的网络协议是采用分组交换技术的TCP/IP协议，它是因特网的核心技术。</span><br></pre></td></tr></table></figure>
+
+<p>22.在TCPP模型中，（C)处理关于可靠性、流量控制和错误校正等问题。<br>A.网络接口层<br>B.网际层<br><strong>C.传输层</strong><br>D.应用层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;TCP/IP模型的传输层提供端到端的通信，并负贵差错控制和流量控制，可以提供可靠的面向连接的服务或不可靠的无连接服务。</span><br></pre></td></tr></table></figure>
+
+<p>23.【2011统考真题】TCP/IP参考模型的网络层提供的是（A)。<br><strong>A.无连接不可靠的数据报服务</strong><br>B.无连接可靠的数据报服务<br>C.有连接不可靠的虚电路服务<br>D.有连接可靠的虚电路服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;T℃PP的网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务。考察IP首部，如果是面向连接的，那么应有用于建立连接的字段，但是没有；如果提供可靠的服务，那么至少应有序号和校验和两个字段，但是IP分组头中也没有(IP首部中只有首部校验和)。通常有连接、可靠的应用是由传输层的TCP实现的。</span><br></pre></td></tr></table></figure>
+
+<p>24.上下邻层实体之间的接口称为服务访问点，应用层的服务访问点也称(A)。<br><strong>A.用户界面</strong><br>B.网卡接口<br>C.P地址<br>D.MAC地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;服务访问点(SAP)是在一个层次系统的上下层之间进行通信的接口，N层的SAP是N+1层可以访问N层服务的地方。一般而言，物理层的服务访问点是“网卡接口”，数据链路层的服务访问点是“MAC地址（网卡地址）”，网络层的服务访问点是“P地址（网络地址）”，传输层的服务访问点是“端口号”，应用层提供的服务访问点是“用户界面”。</span><br></pre></td></tr></table></figure>
+
+<p>25.【2014统考真题】在OSI参考模型中，直接为会话层提供服务的是(C).<br>A.应用层<br>B.表示层<br><strong>C.传输层</strong><br>D.网络层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;直接为会话层提供服务的是会话层的下一一层，即传输层，选C。</span><br></pre></td></tr></table></figure>
+
+<p>26.【2017统考真题】假设OSI参考模型的应用层欲发送400B的数据（无拆分)，除物理层和应用层外，其他各层在封装PDU时均引入20B的额外开销，则应用层的数据传输效率约为（A).<br><strong>A.80%</strong><br>B.83%<br>C.87%<br>D.91%</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;OSI参考模型共7层，除去物理层和应用层，剩5层。它们会向PDU引入20B×5=100B的额外开销。应用层是最顶层，因此其数据传输效率为400B/500B=80%,选A。</span><br></pre></td></tr></table></figure>
+
+<p>27.【2019统考真题】OSI参考模型的第5层（自下而上）完成的主要功能是（C).<br>A.差错控制<br>B.路由选择<br><strong>C.会话管理</strong><br>D.数据表示转换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;OSI参考模型自下而上分别为物理层、数据链路层、网络层、传输层、会话层、表示层和应用层。第5层为会话层，它的主要功能是管理和协调不同主机上各种进程之间的通信（对话），即负责建立、管理和终止应用程序之间的会话，这也是会话层得名的原因。</span><br></pre></td></tr></table></figure>
+
+<p>简答</p>
+<p>1.协议与服务有何区别？有何联系？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">协议是控制两个对等实体之间通信的规则的集合。在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务，而要实现本层协议，还需要使用下一层提供的服务。</span><br><span class="line">协议和服务概念的区分：</span><br><span class="line">1)协议的实现保证了能够向上一层提供服务。本层的服务用户只能看见服务而无法看见下面的协议，即下面的协议对上面的服务用户是透明的。</span><br><span class="line">2)协议是“水平的”，即协议是控制两个对等实体之间的通信的规则。但服务是“垂直的”，即服务是由下层通过层间接口向上层提供的。</span><br></pre></td></tr></table></figure>
+
+<p>2.在OSI参考模型中，各层都有差错控制过程。指出以下每种差错发生在OSI参考模型的哪些层中？<br>1)噪声使传输链路上的一个0变成1或一个1变成0。<br>2)一个分组被传送到错误的目的站。<br>3)收到一个序号错误的目的颅。<br>4)一台打印机正在打印，突然收到一个错误指令要打印头回到本行的开始位置。<br>5)一个半双工的会话中，正在发送数据的用户突然接收到对方用户发来的数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;1)物理层。物理层负贵正确、透明地传输比特流(0、1)。</span><br><span class="line">&gt;2)网络层。网络层的PDU称为分组，分组转发是网络层的功能。</span><br><span class="line">&gt;3)数据链路层。数据链路层的PDU称为帧，帧的差错检测是数据链路层的功能。</span><br><span class="line">&gt;4)应用层。打印机是向用户提供服务的，运行的是应用层的程序。</span><br><span class="line">&gt;5)会话层。会话层允许不同主机上的进程进行会话。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Ch1-疑难总结"><a href="#Ch1-疑难总结" class="headerlink" title="Ch1.疑难总结"></a>Ch1.疑难总结</h2><blockquote>
 <p>1.计算机网络与分布式计算机系统的主要区别是什么？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">分布式系统最主要的特点是，整个系统中的各个计算机对用户都是透明的。用户通过输入命令就可以运行程序，但用户并不知道哪台计算机在为它运行程序。操作系统为用户选择一台最合适的计算机来运行其程序，并将运行的结果传送到合适的地方。</span><br><span class="line">计算机网络则与之不同，用户必须先登录欲运行程序的计算机，然后按照计算机的地址，将程序通过计算机网络传送到该计算机中运行，最后根据用户的命令将结果传送到指定的计算机中。二者的区别主要是软件的不同。</span><br></pre></td></tr></table></figure>
 
