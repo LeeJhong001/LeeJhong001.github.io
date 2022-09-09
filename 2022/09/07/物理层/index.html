@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Ch1.物理层 | 浅辄_Blog</title>
+  <title>Ch2.物理层 | 浅辄_Blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -677,7 +677,7 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Ch1.物理层
+        Ch2.物理层
       </span>
     </div>
     
@@ -790,7 +790,85 @@
 </blockquote>
 </blockquote>
 <h3 id="三-奈氏准则-amp-香农定理"><a href="#三-奈氏准则-amp-香农定理" class="headerlink" title="三.奈氏准则&amp;香农定理"></a>三.奈氏准则&amp;香农定理</h3><h4 id="1-失真"><a href="#1-失真" class="headerlink" title="1.失真"></a>1.失真</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662635756796.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662635756796.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
-<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4>
+<blockquote>
+<p>失真的一种现象—码间串扰</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662636472141.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662636472141.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+</blockquote>
+<h4 id="2-奈氏准则"><a href="#2-奈氏准则" class="headerlink" title="2.奈氏准则"></a>2.奈氏准则</h4><blockquote>
+<p>在理想低通(无噪声,带宽受限)条件下,为了避免码间串扰,极限码元传输速率为 2W Baud,W是信道带宽,单位是Hz.</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662644355125.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662644355125.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<blockquote>
+<p>只有在这两个公式<br>这带宽才用Hz!I</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662645691920.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662645691920.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="3-香农定理"><a href="#3-香农定理" class="headerlink" title="3.香农定理"></a>3.香农定理</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662645882479.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662645882479.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<blockquote>
+<p>1.信道的带宽或信道中的信噪比越大，则信息的极限传输速率就越高。<br>2对一定的传输带宽和一定的信噪比，信息传输速率的上限就确定了。<br>3.只要信息的传输速率低于信道的极限传输速率，就一定能找到某种方法来实现无差错的传输。<br>4香农定理得出的为极限信息传输速率，实际信道能达到的传输速率要比它低不少。<br>5.<strong>从香农定理可以看出，若信道带宽W或信噪比SN没有上限（不可能），那么信道的极限信息传输速率也就没有上</strong><br><strong>限。</strong></p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662646180849.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662646180849.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<blockquote>
+<p>奈氏和香农侧重点</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662646257169.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662646257169.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="四-编码-amp-调制"><a href="#四-编码-amp-调制" class="headerlink" title="四.编码&amp;调制"></a>四.编码&amp;调制</h3><h4 id="1-基带信号与宽带信号"><a href="#1-基带信号与宽带信号" class="headerlink" title="1.基带信号与宽带信号"></a>1.基带信号与宽带信号</h4><p><strong>信道</strong>:信号的传输媒介。一般用来表示向某一个方向传送信息的介质，因此一条通信线路往往包含一条发送信道和一条接收信道</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>传输信号</th>
+<th>模拟信道（传送模拟信号）数字信道（传送数字信号）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>信道</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>传输介质</td>
+<td><strong>无线信道 有线信道</strong></td>
+</tr>
+</tbody></table>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662690877141.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662690877141.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="2-编码与与调制"><a href="#2-编码与与调制" class="headerlink" title="2.编码与与调制"></a>2.编码与与调制</h4><p>数据====&gt;<strong>数字信号  编码</strong></p>
+<p>数据====&gt;<strong>模拟信号  调制</strong></p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662691632496.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662691632496.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="3-数字数据编码为数字信号"><a href="#3-数字数据编码为数字信号" class="headerlink" title="3.数字数据编码为数字信号"></a>3.数字数据编码为数字信号</h4><h5 id="3-1非归零编码"><a href="#3-1非归零编码" class="headerlink" title="3.1非归零编码"></a>3.1非归零编码</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662692173270.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662692173270.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="3-2归零编码"><a href="#3-2归零编码" class="headerlink" title="3.2归零编码"></a>3.2归零编码</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694361441.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694361441.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="3-3反向不归零编码"><a href="#3-3反向不归零编码" class="headerlink" title="3.3反向不归零编码"></a>3.3反向不归零编码</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662713920448.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662713920448.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="3-4曼彻斯特编码"><a href="#3-4曼彻斯特编码" class="headerlink" title="3.4曼彻斯特编码"></a>3.4曼彻斯特编码</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694384397.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694384397.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="3-5差分曼彻斯特编码"><a href="#3-5差分曼彻斯特编码" class="headerlink" title="3.5差分曼彻斯特编码"></a>3.5差分曼彻斯特编码</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694445630.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694445630.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="3-6-4B-5B编码"><a href="#3-6-4B-5B编码" class="headerlink" title="3.6 4B/5B编码"></a>3.6 4B/5B编码</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694501436.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662694501436.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="4-数字数据调制为模拟信号"><a href="#4-数字数据调制为模拟信号" class="headerlink" title="4.数字数据调制为模拟信号"></a>4.数字数据调制为模拟信号</h4><blockquote>
+<p>数字数据调制技术在发送端将数字信号转换为模拟信号，而在接收端将模拟信号还原为数字信号，分别对应于调制 解调器的调制和解调过程。</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662716939556.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662716939556.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4x4 = 16种波形==&gt;16种码元</span><br><span class="line">log2 16 = 4 bit</span><br><span class="line">1200x4 = 4800 b/s</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-模拟数据编码为数字信号"><a href="#5-模拟数据编码为数字信号" class="headerlink" title="5.模拟数据编码为数字信号"></a>5.模拟数据编码为数字信号</h4><blockquote>
+<p>计算机内部处理的是二进制数据，处理的都是数字音频，所以需要将模拟音频通过采样、量化转换成有限个数字表示的离散序列（即实现<strong>音频数字化</strong>）。</p>
+<p>最典型的例子就是对音频信号进行编码的脉码调制(<strong>PCM</strong>)，在计算机应用中，能够达到<strong>最高保真水平</strong>的就是PCM编码，被广泛用于素材保存及音乐欣赏，CD、DVD以及我们常见的WAV文件中均有应用。它主要包括三步<br>抽样、量化、编码。</p>
+</blockquote>
+<p><strong>1.抽样:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对模拟信号周期性扫描，把时间上连续的信号变成时间上离散的信号。 为了使所得的离散信号能无失真地代表被抽样的模拟数据，要使用采样</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662717605253.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662717605253.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><strong>2.量化：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">把抽样取得的电平幅值按照一定的分级标度转化为对应的数字值，并取 整数，这就把连续的电平幅值转换为离散的数字量。</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.编码：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">把量化的结果转换为与之对应的二进制编码。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662717756817.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662717756817.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662717774934.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662717774934.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<blockquote>
+<p>为了实现传输的有效性，可能需要较高的频率。这种调制方式还可以使用频分复用技术，充分利用带宽 资源。在电话机和本地交换机所传输的信号是采用模拟信号传输模拟数据的方式；模拟的声音数据是加 载到模拟的载波信号中传输的。</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662718290151.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662718290151.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="Summary-1"><a href="#Summary-1" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662719051521.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662719051521.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+
       </div>
       <div class="post-tags-categories">
         
@@ -798,10 +876,6 @@
           
             <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="">
               计算机网络
-            </a>
-          
-            <a href="/tags/%E7%89%A9%E7%90%86%E5%B1%82/" class="">
-              物理层
             </a>
           
         </div>
@@ -815,7 +889,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/09/07/物理层/" target="_blank" title="Ch1.物理层">https://leejhong001.github.io/2022/09/07/物理层/</a>
+    <a href="/2022/09/07/物理层/" target="_blank" title="Ch2.物理层">https://leejhong001.github.io/2022/09/07/物理层/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
