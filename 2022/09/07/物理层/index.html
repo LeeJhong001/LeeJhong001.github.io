@@ -765,7 +765,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1s传输多少个码元</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>数字信号有多进制和二进制之分，但码元速率与进制数无关，只与<strong>码元长度T</strong>有关。</p>
+<p>数字信号有多进制和二进制之分，但<strong>码元速率与进制数无关</strong>，只与<strong>码元长度T</strong>有关。</p>
 </blockquote>
 <p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662623404432.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662623404432.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 <p>2）信息传输速率：别名信息速率、比特率等，表示单位时间内数字通信系统传输的二进制码元个数（即比特数）， 单位是比特/秒（b/s）</p>
@@ -868,6 +868,424 @@
 </blockquote>
 <p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662718290151.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662718290151.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 <h3 id="Summary-1"><a href="#Summary-1" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662719051521.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662719051521.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="五-数据交换"><a href="#五-数据交换" class="headerlink" title="五.数据交换"></a>五.数据交换</h3><h4 id="1-为什么要数据交换"><a href="#1-为什么要数据交换" class="headerlink" title="1.为什么要数据交换"></a>1.为什么要数据交换</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662811657033.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662811657033.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="2-数据交换方式-电路交换-报文交换-分组交换"><a href="#2-数据交换方式-电路交换-报文交换-分组交换" class="headerlink" title="2.数据交换方式(电路交换,报文交换,分组交换)"></a>2.数据交换方式(电路交换,报文交换,分组交换)</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662875318695.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662875318695.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="2-1电路交换"><a href="#2-1电路交换" class="headerlink" title="2.1电路交换"></a>2.1电路交换</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662875764147.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662875764147.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="2-2电路交换的优缺点"><a href="#2-2电路交换的优缺点" class="headerlink" title="2.2电路交换的优缺点"></a>2.2电路交换的优缺点</h5><table>
+<thead>
+<tr>
+<th>电路交换优点</th>
+<th>电路交换缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>传输时延小</td>
+<td>建立连接时间长</td>
+</tr>
+<tr>
+<td>数据顺序传送,无失序问题</td>
+<td>线路独占,即使通信线路空闲,也不能提供其他用户使用,信道使用率低</td>
+</tr>
+<tr>
+<td>实用性强,双方一旦建立物理通路,便可以实时通信,适用于交互式会话类通信</td>
+<td>灵活性差,双方连接通路中的任何一点出来故障,必须重新拨号建立连接,不适应突发性通信</td>
+</tr>
+<tr>
+<td>全双工通信,没有冲突,通信双方有不同的信道,不会争用物理信道</td>
+<td>无数据存储能力，难以平滑通信量</td>
+</tr>
+<tr>
+<td>适用于模拟信号和数字信号</td>
+<td>电路交换时，数据直达，不同类型、不同规格、不同 速率的终端很难相互进行通信</td>
+</tr>
+<tr>
+<td>控制简单,电路的交换设备及控制较简单</td>
+<td>无法发现与纠正传输差错，难以在通信过程中进行差 错控制</td>
+</tr>
+</tbody></table>
+<h5 id="2-3报文交换-Message-Exchanging"><a href="#2-3报文交换-Message-Exchanging" class="headerlink" title="2.3报文交换(Message Exchanging)"></a>2.3报文交换(Message Exchanging)</h5><blockquote>
+<p>报文:报文(message)是网络中交换与传输的数据单元，即站点一次性要发送的数据块。报文包含了将要发送的 完整的数据信息，其长短很不一致，长度不限且可变。</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662877539401.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662877539401.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><strong>报文交换的原理：</strong> </p>
+<p>无需在两个站点之间建立一条专用通路，其数据传输的单 位是报文，传送过程采用<strong>存储转发</strong>方式</p>
+<h5 id="2-4报文交换的优缺点"><a href="#2-4报文交换的优缺点" class="headerlink" title="2.4报文交换的优缺点"></a>2.4报文交换的优缺点</h5><table>
+<thead>
+<tr>
+<th>报文交换的优点</th>
+<th>报文交换的缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无需建立连接，无建立连接时延，用户可随时发送报文。</td>
+<td>实时性差，不适合传送实时或交互式业务的数据。数据进入交换结点后要经历存储转发过程，从而引起转发时延</td>
+</tr>
+<tr>
+<td>动态分配线路，动态选择报文通过的最佳路径，可以平滑通信量。</td>
+<td>只适用于数字信号</td>
+</tr>
+<tr>
+<td>提高线路可靠性，某条传输路径发生故障，可重新选 择另一条路径传输</td>
+<td>由于报文长度没有限制，而每个中间结点都要完整地接收传来的整个报文，</td>
+</tr>
+<tr>
+<td>提高线路利用率，通信双方在不同的时间一段一段地 部分占有这条物理通道，多个报文可共享信道。</td>
+<td>当输出线路不空闲时，还可能要存储几个完整报文等待转发，要求网络中每个结点有较大的缓冲区。</td>
+</tr>
+<tr>
+<td>提供多目标服务：一个报文可同时发往多个目的地址</td>
+<td>为了降低成本，减少结点的缓冲存 储器的容量，</td>
+</tr>
+<tr>
+<td>在存储转发中容易实现代码转换和速率匹配，甚至收 发双方可以不同时处于可用状态。这样就便于类型、 规格和速度不同的计算机之间进行通信</td>
+<td>有时要把等待转发的报文存在磁盘上， 进一步增加了传送时延。</td>
+</tr>
+</tbody></table>
+<h5 id="2-5分组交换"><a href="#2-5分组交换" class="headerlink" title="2.5分组交换"></a>2.5分组交换</h5><blockquote>
+<p>分组：大多数计算机网络都不能连续地传送任意长的数据，所以实际上网络系统把数据分割成小块，然后逐块地发送，这种小块就称作分组（packet）</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662880499780.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662880499780.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><strong>分组交换的原理：</strong></p>
+<p> 分组交换与报文交换的工作方式基本相同，都采用存储转发方式，形式上的主要差别在于，分组交换网 中要限制所传输的数据单位的长度，一般选128B。 发送节点首先对从终端设备送来的数据报文进行接收、 存储，而后将报文划分成一定长度的分组，并以分组为单位进行传输和交换。接收结点将收到的分组组装成信息或报文。</p>
+<h5 id="2-6分组交换优缺点"><a href="#2-6分组交换优缺点" class="headerlink" title="2.6分组交换优缺点"></a>2.6分组交换优缺点</h5><table>
+<thead>
+<tr>
+<th>分组交换优点</th>
+<th>分组交换缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无建立时延，无需为通信双方预先建立一条专用通信 线路，用户可随时发送分组。</td>
+<td>尽管分组交换比报文交换的传输时延少，但仍存在存 储转发时延，而且其结点交换机必须具有更强的处理 能力。</td>
+</tr>
+<tr>
+<td>线路利用率高，通信双方在不同的时间一段一段地部分占有这条物理通道，多个分组可共享信道。</td>
+<td>每个分组都要加控制信息，一定程度上降低了通信效 率，增加了处理的时间</td>
+</tr>
+<tr>
+<td>简化了存储管理。因为分组的长度固定，相应的缓冲 区的大小也固定，在交换结点中存储器的管理通常被 简化为对缓冲区的管理，相对比较容易。</td>
+<td>当分组交换采用数据报服务时，可能出现失序、丢失 或重复分组，分组到达目的结点时，</td>
+</tr>
+<tr>
+<td>加速传输，后一个分组的存储可以和前一个分组的转 发并行操作；传输一个分组比一份报文所需缓冲区小， 减少等待发送时间。</td>
+<td>要对分组按编号 进行排序等工作，增加了麻烦。若</td>
+</tr>
+<tr>
+<td>减少出错几率和重发数据量，提高可靠性，减少传输 时延。</td>
+<td>采用虚电路服务， 虽无失序问题，</td>
+</tr>
+<tr>
+<td>分组短小，适用于计算机之间突发式数据通信</td>
+<td>但有呼叫建立、数据传输和虚电路释 放三个过程。</td>
+</tr>
+</tbody></table>
+<h4 id="3-数据交换的选择"><a href="#3-数据交换的选择" class="headerlink" title="3.数据交换的选择"></a>3.数据交换的选择</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662880845661.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662880845661.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p>1.传送数据量大，且传送时间远大于呼叫时，选择电路交换。电路交换传输时延最小。 </p>
+<p>2.当端到端的通路有很多段的链路组成时， 采用分组交换传送数据较为合适。</p>
+<p> 3.从信道利用率上看，报文交换和分组交 换优于电路交换，其中分组交换比报文交换的时延小，尤其适合于计算机之间的突发式的数据通信。</p>
+<h4 id="4-分组交换之数据报方式"><a href="#4-分组交换之数据报方式" class="headerlink" title="4.分组交换之数据报方式"></a>4.分组交换之数据报方式</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662881375698.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662881375698.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<blockquote>
+<p>1.源主机(A)将<strong>报文分成多个分组</strong>，依次发送到直接相连的结点(A)。<br>2结点A收到分组后，对每个分组<strong>差错检测</strong>和<strong>路由选择</strong>，不同分组的下一跳结点可能不同。<br>3.结点C收到分组P1后，对分组P1进行<strong>差错检测</strong>，若正确则向A发送<strong>确认信息</strong>，A收到C确认后则丢弃分组P1副本。<br>4.所有分组到家辽（主机B)!</p>
+</blockquote>
+<h5 id="4-1数据报方式的特点"><a href="#4-1数据报方式的特点" class="headerlink" title="4.1数据报方式的特点"></a>4.1数据报方式的特点</h5><blockquote>
+<p>1.<strong>数据报方式</strong>为网络层提供无连接服务。发送方可随时发送分组，网络中的结点可随时接收分组。</p>
+<p>2.同一报文的不同分组达到目的结点时可能发生乱序、重复与丢失。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;无连接服务：不事先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组传输路径可能不同。</span><br></pre></td></tr></table></figure>
+
+<p>3.每个分组在传输过程中都必须携带源地址和目的地址，以及分组号。</p>
+<p>4.分组在交换结点存储转发时，需要排队等候处理，这会带来一定的时延。当通过交换结点的通信量较大或网 络发生拥塞时，这种时延会大大增加，交换结点还可根据情况丢弃部分分组。</p>
+<p>5.网络具有冗余路径，当某一交换结点或一段链路出现故障时，可相应地更新转发表，寻找另一条路径转发分 组，对故障的适应能力强，适用于突发性通信，不适于长报文、会话式通信。</p>
+</blockquote>
+<h4 id="5-分组交换之虚电路方式"><a href="#5-分组交换之虚电路方式" class="headerlink" title="5.分组交换之虚电路方式"></a>5.分组交换之虚电路方式</h4><p>虚电路将数据报方式和电路交换方式结合，以发挥两者优点。</p>
+<p>虚电路：一条源主机到目的主机类似于电路的路径（逻辑连接），路径上所有结点都要维持这条虚电路的建立， 都维持一张虚电路表，每一项记录了一个打开的虚电路的信息。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662881889346.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662881889346.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="5-1虚电路方式的特点"><a href="#5-1虚电路方式的特点" class="headerlink" title="5.1虚电路方式的特点"></a>5.1虚电路方式的特点</h5><p>1.<strong>虚电路方式</strong>为网络层提供连接服务。源节点与目的结点之间建立一条逻辑连接，而非实际物理连接。</p>
+<p>2.一次通信的所有分组都通过虚电路顺序传送，分组不需携带源地址、目的 地址等信息，包含虚电路号，相对数据报方式开销小，同一报文的不同分 组到达目的结点时不会乱序、重复或丢失。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">连接服务：首先为分组的传输确定传输路径（建立连接），然后沿该路径（连接）传输系列分组，系列分组传输路径相同，传输结束后拆除连接</span><br></pre></td></tr></table></figure>
+
+<p>3.分组通过虚电路上的每个节点时，节点只进行差错检测，不需进行路由选择。</p>
+<p>4每个节点可能与多个节点之间建立多条虚电路，每条虚电路支持特定的两个端系统之间的数据传输，可以对两个数据端点的流量进行控制，两个端系统之间也可以有多条虚电路为不同的进程服务。</p>
+<p>5致命弱点：当网络中的某个结点或某条链路出故障而彻底失效时，则所有经过该结点或该链路的虚电路将遭到破坏</p>
+<h4 id="6-数据报和虚电路方式的比较"><a href="#6-数据报和虚电路方式的比较" class="headerlink" title="6.数据报和虚电路方式的比较"></a>6.数据报和虚电路方式的比较</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662882255489.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662882255489.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="习题"><a href="#习题" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>选择</p>
+<p>1.下列说法正确的是（D)。<br>A.信道与通信电路类似，一条可通信的电路往往包含一个信道<br>B.调制是指把模拟数据转换为数字信号的过程<br>C.信息传输速率是指通信信道上每秒传输的码元数<br><strong>D.在数值上，波特率等于比特率与每符号所含的比特数的比值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;信道不等于通信电路，一条可双向通信的电路往往包含两个信道：一条是发送信道，一条是接收信道。另外，多个通信用户共用通信电路时，每个用户在该通信电路都会有一个信道，因此A错误。调制是把数据变换为模拟信号的过程，B错误。“比特率”在数值上和“波特率”的关系如下：波特率=比特率/每符号含的比特数，C错误。</span><br></pre></td></tr></table></figure>
+
+<p>2.影响信道最大传输速率的因素主要有(A)。<br><strong>A.信道带宽和信噪比</strong><br>B.码元传输速率和噪声功率<br>C.频率特性和带宽<br>D.发送功率和噪声功率</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;依香农定理，信道的极限数据传输速率=W10g2(1+S),影响信道最大传输速率的因素主要有信道带宽和信噪比，而信噪比与信道内所传信号的平均功率和信道内部的高斯噪声功率有关，在数值上等于两者之比。</span><br></pre></td></tr></table></figure>
+
+<p>3.（B)被用于计算机内部的数据传输.<br>A.串行传输<br><strong>B.并行传输</strong><br>C.同步传输<br>D.异步传输</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;并行传输的特点：距离短、速度快。串行传输的特点：距离长、速度慢。所以在计算机内部(距离短)传输应选择并行传输。同步、异步传输是通信方式，不是传输方式。</span><br></pre></td></tr></table></figure>
+
+<p>4.下列有关曼彻斯特编码的叙述，正确的是()。<br>A.每个信号起始边界作为时钟信号有利于同步<br>B.将时钟与数据取值都包含在信号中<br>C.这种模拟信号的编码机制特别适合于传输声音<br>D.每位的中间不跳变表示信号的取值为0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;曼彻斯特编码将每个码元分成两个相等的间隔。前面一个间隔为高电平而后一个间隔为低电平表示码元1，码元0正好相反：也可以采用相反的规定，因此选项D错。位中间的跳变作为时钟信号，每个码元的电平作为数据信号，因此选项B正确。曼彻斯特编码将时钟和数据包含在数据流中，在传输代码信息的同时，也将时钟同步信号一起传输到对方，·因此选项A错。声音是模拟数据，而曼彻斯特编码最适合传输二进制数字信号，因此选项C错。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662960683250.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662960683250.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;A</span><br><span class="line">&gt;10 BaseT即10Mb/s的以太网，采用曼彻斯特编码，将一个码元分成两个相等的间隔，前一个间隔为低电平而后一个间隔为高电平表示码元1：码元0正好相反。也可以采用相反的规定。因此，对应比特串可以是00110110或11001001。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.不含同步信息的编码是(A)。<br><strong>I.非归零编码II.曼彻斯特编码</strong><br>III.差分受彻斯特编码<br>A.仅I<br>B.仅II<br>C.仅II、III<br>D.I、II、III</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">非归零编码是最简单的一种编码方式，它用低电平表示0，用高电平表示1：或者相反。由于每个码元之间并没有间隔标志，所以它不包含同步信息。</span><br><span class="line">曼彻斯特编码和差分曼彻斯特编码都将每个码元分成两个相等的时间间隔。将每个码元的中间跳变作为收发双方的同步信息，所以无须额外的同步信息，实际应用较多。但它们所占的频带宽度是原始基带宽度的2倍。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>7、在网络中，要同时传输语音与计算机产生的数字、文字、图形与图像，必须先把语音信号数字化。下列可以把语音信号数字化的技术是(D)。<br>A.要彻斯特编码<br>B.QAM<br>C.差分曼彻斯特编码<br><strong>D.脉冲编码调制</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;QAM是一种用模拟信号传输数字数据的编码方式。曼彻斯特编码和差分曼彻斯特编码都是用数字信号传输数字数据的编码方式。使用数字信号编码模拟数据最常见的例子是用于音频信号的脉冲编码调制(PCM)。</span><br></pre></td></tr></table></figure>
+
+<p>8.利用模拟通信信道传输数字信号的方法称为(D)。<br>A.同步传输<br>B.异步传输<br>C.基带传输<br><strong>D.频带传输</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;将基带信号直接传送到通信线路（数字信道）上的传输方式称为基带传榆，把基带信号经过调制后送到通信线路（模拟信道）上的方式称为频带传输。</span><br></pre></td></tr></table></figure>
+
+<p>9.波特率等于（A).<br><strong>A.每秒可能发生的信号变化次数</strong><br>B.每秒传输的比特数<br>C.每秒传输的周期数<br>D.每秒传输的字节数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;波特率表示信号每秒变化的次数（注意和比特率的区别）。</span><br></pre></td></tr></table></figure>
+
+<p>10.测得一个以太网的数据波特率是40 MIBaud,那么其数据率是（B)。<br>A.10Mb/s<br><strong>B.20Mb/s</strong><br>C.40Mb/s<br>D.80Mb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   因为以太网采用曼彻斯特编码，每位数据（一个比特，对应信息传输速率）都需要两个电平（两个脉冲信号，对应码元传输速率)来表示，因此波特率是数据率的两倍，得数据率为(40Mb/s)2=20Mb/s.</span><br><span class="line">   注意：对于曼彻斯特编码，每个比特需要两个信号周期，20MBud的信号率可得10Mb/s的数据率，编码效率是50%；对于4B/5B编码，每4比特组被编码成5比特，12.5 MBaud的信号率</span><br><span class="line">&gt;可得10Mb/s,编码效率是80%。</span><br></pre></td></tr></table></figure>
+
+<p>11.某信道的波特率为1000Baud,若令其数据传输速率达到4kb/s,则一个信号码元所取的有效离散值个数为(D)。<br>A.2<br>B.4<br>C.8<br><strong>D.16</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;比特率=波特率×l0g2,若一个码元含有n比特的信息量，则表示该码元所需要的不同离散值为2”个。数值上，波特率=比特率/每码元所含比特数，因此每码元所含比特数=4000/1000=4比特，有效离散值的个数为2^4=16。</span><br></pre></td></tr></table></figure>
+
+<p>12.已知某信道的信号传输速率为64b/9,一个载波信号码元有4个有效离散值，则该信道的波特率为（B)。<br>A.16kBaud<br><strong>B.32kBaud</strong><br>C.64kBaud<br>D.128kBaud</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;一个码元若取2”个不同的离散值，则含有比特的信息量。本题中，一个码元含有的信息量为2比特，由于数值上波特率=比特率/每符号所含比特数，因此波特率为(64/2)k=32 kBaud。</span><br></pre></td></tr></table></figure>
+
+<p>13.有一条无噪声的8kHz信道，每个信号包含8级，每秒采样24k次，那么可以获得的最大传输速率是（C)。<br>A.24kb/s<br>B.32kb/s<br><strong>C.48kb/s</strong><br>D.72kb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;无噪声的信号应该满足奈奎斯特定理，即最大数据传输速率2W10g2V比特/秒。将题目中的数据代入，得到答案是48kHz。注意题目中给出的每秒采样24kHz是无意义的，因为超过了波特率的上限2W=16 kBaud,所以D是错误答案。</span><br></pre></td></tr></table></figure>
+
+<p>14.对于某带宽为4000Hz的低通信道，采用16种不同的物理状态来袁示数据。按照奈奎斯特定理，信道的最大传输速率是（D)。<br>A.4kb/s<br>B.8kb/s<br>C.16kb/s<br><strong>D.32kb/s</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;根据奈奎斯特定理，本题中W=4000Hz,最大码元传输速率=2W=8000Baud,16种不同的物理状态可表示1og216=4比特数据，所以信道的最大传输速率=8000×4=32kb/s。</span><br></pre></td></tr></table></figure>
+
+<p>15.二进制信号在信噪比为127：1的4kHz信道上传输，最大数据传输速率可以达到(B).<br>A.28000b/s<br><strong>B.8000b/s</strong><br>C.4000b/s<br>D.无限大</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   依香农定理，最大数据率=W1og2(1+SW)=4000×log2(1+127)=28000b/s,本题容易误选A。但注意题中“二进制信号”的限制，依奈奎斯特定理，最大数据传输速率=2H10g2V=2×4000×1og22=8000b/s,两个上限中取最小的，因此选B。</span><br><span class="line">   注意：若给出了码元与比特数之间的关系，则需受两个公式的共同限制，关于香农定理和奈</span><br><span class="line">&gt;奎斯特定理的比较，请参考本章疑难，点4。</span><br></pre></td></tr></table></figure>
+
+<p>16.电话系统的典型参数是信道带宽为3000Hz,信噪比为30B,则该系统的最大数据传输速率为(C)。<br>A.3kb/s<br>B.6kb/s<br><strong>C.30kb/s</strong><br>D.64kb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;信噪比SN常用分贝(dB)表示，数值上等于101og1o(SW)dB。依题意有30=10log1o(SW),可解出S/W=1000。根据香农定理，最大数据传输速率=30001og2(1+S)≈30kb/s。</span><br></pre></td></tr></table></figure>
+
+<p>17.采用8种相位，每种相位各有两种幅度的QAM调制方法，在1200Baud的信号传输速率下能达到的数据传输速率为(D)。<br>A.2400b/s<br>B.3600b/s<br>C.9600b/s<br><strong>D.4800b/s</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;每个信号有8×2=16种变化，每个码元携带10g216=4比特的信息，则信息传输速率为1200×4=4800b/s。</span><br></pre></td></tr></table></figure>
+
+<p>18.【2011统考真题】若某通信链路的数据传输速率为2400/s,采用4相位调制，则该链路的波特率是(B)。<br>A.600Baud<br><strong>B.1200Baud</strong><br>C.4800Baud<br>D.9600Baud</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;波特率B与数据传输速率C的关系为C=B10g2W,N为一个码元所取的离散值个数。采用4种相位，也即可以表示4种变化，因此一个码元可携带10g24=2比特信息，则该链路的波特率=比特率/每码元所含比特数=2400/2=1200波特。</span><br></pre></td></tr></table></figure>
+
+<p>19.【2009统考真题】在无噪声的情况下，若某通信链路的带宽为3kH2,采用4个相位，每个相位具有4种振幅的QAM调制技术，则该通信链路的最大数据传输速率是(B).<br>A.12kb/s<br><strong>B.24kb/s</strong><br>C.48kb/s<br>D.96kb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">采用4个相位，每个相位有4种幅度的QAM调制方法，每个信号可以有16种变化，传输4比特的数据。根据奈奎斯特定理，信息的最大传输速率为2W1og2V=2×3k×4=24kb/s。</span><br><span class="line">注意本题与第17题的区别：第17题已知波特率，而本题仅给出了带宽，因此需要先用奈奎斯特定理计算出最大的波特率。</span><br></pre></td></tr></table></figure>
+
+<p>20.一个信道每1/8s采样一次，传输信号共有16种变化状态，最大数据传输速率是（B)。<br>A.16b/s<br><strong>B.32b/s</strong><br>C.48b/s<br>D.64b/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;由题意知，采样频率为8Hz。有16种变化状态的信号可携带4比特数据，因此由最大数据传输速率为8×4=32b/s。</span><br></pre></td></tr></table></figure>
+
+<p>21.【2017统考真题】若信道在无噪声情况下的极限数据传输速率不小于信噪比为30dB条件下的极限数据传输速率，则信号状态数至少是(D)。<br>A.4<br>B.8<br>C.16<br><strong>D.32</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;可用奈奎斯特采样定理计算无噪声情况下的极限数据传输速率，用香农第二定理计算有噪信道极限数据传输速率。2W1og2N≥Mog2(1+SW,W是信道带宽，N是信号状态数，SN是信噪</span><br><span class="line">&gt;比。将数据代入公式，可得N≥32，选D。分贝数=10og1o(SW)。</span><br></pre></td></tr></table></figure>
+
+<p>22.将1路模拟信号分别编码为数字信号后，与另外7路数字信号采用同步TDM方式复到一条通信线路上。1路模拟信号的频率变化范围为0~1kHz,每个采样,每个采样点采用PCM方式编码为4位的二进制数，另外7路数字信号的数据率均为7.2kb/s。复用线路需要的最小通信能力是（C)<br>A.7.2kb/s<br>B.8kb/s<br><strong>C.64kb/s</strong><br>D.512kb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;1路模拟信号的最大频率为1kHz,根据采样定理可知采样频率至少为2kHz,每个样值编码为4位二进制数，所以数据传输速率为8kb/s。复用的每条支路速率要相等，而另外7路数字信号的速率均低于8kb/s,所以它们均要采用脉冲填充方式，将数据率提高到8kb/s,然后将这8路信号复用，需要的通信能力为8kb/s×8=64kb/s。</span><br></pre></td></tr></table></figure>
+
+<p>23.用PCM对语音进行数字量化，如果将声音分为128个量化级，采样频率为8000次/秒，那么一路话音需要的数据传输速率为（)。<br><strong>A.56kb/s</strong><br>B.64kb/s<br>C.128kb/s<br>D.1024kb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;声音信号需要128个量化级，那么每采样一次需要log2128=7bit来表示，每秒采样8000次，那么一路话音需要的数据传输速率为8000×7=56kb/s。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662964204898.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662964204898.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;C</span><br><span class="line">&gt;香农定理给出了带宽受限且有高斯白噪声干扰的信道的极限数据传输速率，香农定理定义为：信道的极限数据传输速率=W1og2z(1+SW),单位b/s。其中，SN为信噪比，即信号的平均功率和噪声的平均功率之比，信噪比=10logo(SW),单位dB,当SW=1000时，信噪比为30dB。则该链路的实际数据传输速率约为50%×W1og2(1+SW)=50%×8k×ogz(1+1000)=40kb/s。</span><br></pre></td></tr></table></figure>
+
+<p>25.在下列数据交换方式中，数据经过网络的传输延迟长而且是不固定的，不能用于语音数据传输的是（B)。<br>A.电路交换<br><strong>B.报文交换</strong><br>C.数据报交换<br>D.虚电路交换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在报文交换中，交换的数据单元是报文。由于报文大小不固定，在交换结点中需要较大的存储空间，另外报文经过中间结点的接收、存储和转发时间较长而且也不固定，因此不能用于实时通信应用环境（如语音、视频等）。</span><br></pre></td></tr></table></figure>
+
+<p>26.就交换技术而言，以太网采用的是(A)<br><strong>A.分组交换技术</strong><br>B.电路交换技术<br>C.报文交换技术<br>D.混合交换技术</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在以太网中，数据以帧的形式传输。源端用户的较长报文要被分为若干数据块，这些数据块在各层还要加上相应的控制信息，在网络层是分组，在数据链路层是以太网的帧。以太网的用户在会话期间只是断续地使用以太网链路。</span><br></pre></td></tr></table></figure>
+
+<p>27.为了使数据在网络中传输时延最小，首选的交换方式是（A)。<br><strong>A.电路交换</strong><br>B.报文交换<br>C.分组交换<br>D.信元交换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;电路交换虽然建立连接的时延较大，但在数据传输时是一直占据链路的，实时性更好，传输时延小。</span><br></pre></td></tr></table></figure>
+
+<p>28.分组交换对报文交换的主要改进是(C)。<br>A,差错控制更加完善<br>B.路由算法更加简单<br><strong>C.传输单位更小且有固定的最大长度</strong><br>D.传输单位更大且有固定的最大长度</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;相对于报文交换而言，分组交换中将报文划分为一个个具有固定最大长度的分组，以分组为单位进行传输。</span><br></pre></td></tr></table></figure>
+
+<p>29.下列关于三种数据交换方式的叙述，错误的是(D)。<br>A.电路交换不提供差错控制功能<br>B.分组交换的分组有最大长度的限制<br>C.虚电路是面向连接的，它提供的是一种可靠的服务<br><strong>D.在出错率很高的传输系统中，选择虚电路方式更合适</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;电路交换不具备差错控制能力，A正确。分组交换对每个分组的最大长度有规定，超过此长度的分组都会被分割成几个长度较小的分组后再发送，B正确。由第27题的解析可知C正确、D错误。</span><br></pre></td></tr></table></figure>
+
+<p>30.不同的数据交换方式有不同的性能。为了使数据在网络中的传输时延最小，首选的交换方式是（①A)方为保证数据无差错地传送，不应选用的交换方式是（②A)方分组交换对报文交换的主要改进是（③A)，这种改进产生的直接结果是（④C）；在出错率很高的传输系统中，选用（⑤B)更合适。<br>①<strong>A.电路交换</strong><br>B.报文交换<br>C.分组交换<br>D.信元交换<br>②<strong>A.电路交换</strong><br>B.报文交换<br>C.分组交换<br>D.信元交换<br>③<strong>A.传输单位更小且有固定的最大长度</strong><br>B.传输单位更大且有固定的最大长度<br>C.差错控制更完善<br>D.路由算法更简单<br>④A.降低了误码率<br>B.捉高了数据传输速率<br><strong>C.减少传输时延</strong><br>D.增加传输时延<br>⑤A.虚电路方式<br><strong>B.数据报方式</strong><br>C.报文交换<br>D.电路交换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">本题综合考查几种数据交换方式及数据报和虚电路的特点。</span><br><span class="line">电路交换方式的优点是传输时延小、通信实时性强，适用于交互式会话类通信：但其缺点是对突发性通信不适应，系统效率低，不具备存储数据的能力，不能平滑网络通信量，不具备差错控制的能力，无法纠正传输过程中发生的数据差错。</span><br><span class="line">报文交换和分组交换都采用存储转发，传送的数据都要经过中间结点的若干存储、转发才能到达目的地，因此传输时延较大。报文交换传送数据长度不固定且较长，分组交换中，要将传送的长报文分割为多个固定有限长度的分组，因此传输时延较报文交换要小。</span><br><span class="line">分组交换在实际应用中又可分为数据报和虚电路两种方式。数据报是面向无连接的，它提供的是一种不可靠的服务，它不保证分组不被丢失，也不保证分组的顺序不变及在多长的时限到达目的主机。但由于每个分组能独立地选择传送路径，当某个结点发生故障时，后续的分组就可另选路径：另外通过高层协议如T℃P的差错控制和流量控制技术可以保证其传输的可靠性、有序性。虚电路是面向连接的，它提供的是一种可靠的服务，能保证数据的可靠性和有序性。但是由于所有分组都按同一路由进行转发，一旦虚电路中的某个结点出现故障，它就必须重新建立一条虚电路。因此，对于出错率高的传输系统，易出现结点故障，这项任务就显得相当艰巨。所以，采用数据报方式更合适。</span><br><span class="line">注意：此题中的“出错率很高”意思是指出错率要比在早期的广战网中采用的电话网的出错率高很多。电话网的出错率虽然和数字光纤网的出错率相比很高，但实际上还是算较低的，所以早期的广域网大多采用虚电路交换的方案。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>31.有关虚电路服务和数据报服务的特性，正确的是(C)。<br>A.虚电路服务和数据报服务都是无连接的服务<br>B.数据报服务中，分组在网络中沿同一条路径传输，并且按发出顺序到达<br><strong>C.虚电路在建立连接后，分组中需携带虚电路标识</strong><br>D.虚电路中的分组到达顺序可能与发出颅序不同</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;虚电路服务是有连接的，属于同一条虚电路的分组，根据该分组的相同虚电路标识，按照同一路由转发，保证分组的有序到达。数据报服务中，网络为每个分组独立地选择路由，传输不保证可靠性，也不保证分组的按序到达。</span><br></pre></td></tr></table></figure>
+
+<p>32.同一报文中的分组可以由不同的传输路径通过通信子网的方法是（D).<br>A,分组交换<br>B.电路交换<br>C.虚电路<br><strong>D.数据报</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;分组交换有两种方式：虚电路和数据报。在虚电路服务中，属于同一条虚电路的分组按照同一路由转发：在数据报服务中，网络为每个分组独立地选择路由，传输不保证可靠性，也不保证分组的按序到达。</span><br></pre></td></tr></table></figure>
+
+<p>33.下列有关数据报和虚电路的叙述中，错误的是（D).<br>A.数据报方式中，某个结点若因故障而丢失分组，其他分组仍可正常传输<br>B.数据报方式中，每个分组独立地进行路由选择和转发，不同分组之间没有必然联系<br>C.虚电路方式中，属于同一条虚电路的分组按照同一路由转发<br><strong>D.尽管虚电路方式是面向连接的，但它并不保证分组的有序到达</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;解析看五.6</span><br></pre></td></tr></table></figure>
+
+<p>34.下列叙述正确的是（D).<br>A,电路交换是真正的物理线路交换，而虚电路交换是逻辑上的连接，且一条物理线路只可以进行一条逻辑连接<br>B.虚电路的连接是临时性连接，当会话结束时就释放这种连接<br>C.数据报服务不提供可靠传输，但可以保证分组的有序到达<br><strong>D.数据报服务中，每个分组在传输过程中都必须携带源地址和目的地址</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;电路交换是真正的物理线路交换，例如电话线路；虚电路交换是多路复用技术，每条物理线路可以进行多条逻辑上的连接，A错误。虚电路不只是临时性的，它提供的服务包括永久性虚电路(PVC)和交换型虚电路(SVC),其中前者是一种提前定义好的、基本上不需要任何建立时间的端点之间的连接，而后者是端点之间的一种临时性连接，这些连接只持续所需的时间，并且在会话结束时就取消这种连接，B错误。数据报服务是无连接的，不提供可靠性保障，也不保证分组的有序到达，C错误。数据报服务中，每个分组在传输过程中都必须携带源地址和目的地址：而虚电路服务中，在建立连接后，分组只需携带虚电路标识，而不必带有源地址和目的地址，D正确。</span><br></pre></td></tr></table></figure>
+
+<p>35.下列关于虚电路的说法中，（C)是正确的.<br>A.虚电路与电路交换没有实质性的不同<br>B.在通信的两个站，点之间只可以建立一条虚电路<br><strong>C.虚电路有连接建立、数据传输和连接拆除3个阶段</strong><br>D.在虚电路上传送的同一个会话的数据分组可以走不同的路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;虚电路属于分组交换的一种，它和电路交换有着本质的差别，A错误。虚电路之所以是“虚”的，是因为这条电路不是专用的，每个结点到其他结点之间可能同时有若干虚电路通过，它也可能同时与多个结点之间建立虚电路，B错误。一个特定会话的虚电路是事先建立好的，因此它的数据分组所走的路径也是固定的，D错误。</span><br></pre></td></tr></table></figure>
+
+<p>36.下列4种传输方式中，由网络负贵差错控制和流量控制，分组按顺序被递交的是（C)。<br>A.电路交换<br>B.报文交换<br><strong>C.虚电路分组交换</strong><br>D.数据报分组交换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;电路交换和报文交换不采用分组交换技术。数据报传输方式没有差错控制和流量控制机制，也不保证分组按序交付。虚电路方式提供面向连接的、可靠的、保证分组按序到达的网络服务。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662964773989.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662964773989.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;C</span><br><span class="line">   分组大小为1000B,分组头大小为20B,则分组携带的数据大小为980B,文件长度为980000B,需拆分为1000个分组，加上头部后，每个分组大小为1000B,共需要传送的数据量大小为1MB。由于所有链路的数据传输速率相同，因此文件传输经过最短路径时所需的时间最少，最短路径经过2个分组交换机。</span><br><span class="line">   当t=1M×8/(100Mb/s)=80ms时，H1发送完最后一个比特。</span><br><span class="line">&gt;当H1发送完最后一个分组时，该分组需要经过2个分组交换机的转发，在2次转发完成后，所有分组均到达H2。每次转发的时间为t0=1K×8/(100Mb/s)=0.08ms。</span><br><span class="line">   所以，在不考虑分组拆装时间和传播延迟的情况下，当t=80ms+2to=80.16ms时，H2接收完文件，即所需的时间至少为80.16ms。</span><br></pre></td></tr></table></figure>
+
+<p>38.【2013统考真题】主机甲通过1个路由器（存储转发方式)与主机乙互联，两段链路的数据传输速率均为10Mbs,主机甲分别采用报文交换和分组大小为10kb的分组交换向主机乙发送一个大小为8M心（1M=10)的报文，若忽略链路传播延迟、分组头开销和分组拆装时间，则两种交换方式完成该报文传输所需的总时间分别为(D)。<br>A.800ms、1600ms<br>B.801m3、1600ms<br>C.1600ms、800ms<br><strong>D.1600ms、801ms</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   传输图为：甲—路由器一乙。</span><br><span class="line">   在题目没有明确说明的情况下，不考虑排队时延和处理时延，只考虑发送时延和传播时延，本题中忽略传播时延，因此只针对报文交换和分组交换计算发送时延即可。</span><br><span class="line">   计算报文交换的发送时延。报文交换将信息直接传输，其发送时延是每个结点转发报文的时间。而对于每个结点，均有发送时延T=8Mb/10Mb/s=0.8s,由于数据从甲发出，又被路由器转发1次，因此一共有2个发送时延，所以总发送时延为1.6s,即报文交换的总时延为1.6s,排除A、B选项。</span><br><span class="line">   计算分组交换的发送时延。简单画出前3个分组的发</span><br><span class="line">&gt;送时间示意图如下。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662969475951.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662969475951.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图中t为第2个分组等待第1个分组从第1个结点发送完毕的时间。观察发现，在所有分组长度相同的情况下，总的发送时延应为第1个分组到达接收端的时间，加上其余所有分组等待第1个分组在第1个结点的时间t,即总的发送时延T=t1+(n-1)t,其中，为第1个分组到达接收端的时间，n为分组数量，t为第2个分组等待第1个分组从第1个结点发送完毕的时间。首先计算t1，同样，分组1从甲发送，被路由器转发，一共有2个发送时延，即t1=(10kb/10Mb/s)×2=2s。其次计算分组数量n,由于忽略分组头开销，因此n=8Mb/10kb=800。将结果代入T的公式，求得发送时延T=801ms。</span><br></pre></td></tr></table></figure>
+
+<p>39.【2014统考真题】下列因素中，不会影响信道数据传输速率的是（D)。<br>A.信噪比<br>B.频率宽带<br>C.调制速率<br><strong>D.信号传播速度</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;由香农定理可知，信噪比和频率带宽都可限制信道的极限传输速率，所以信噪比和频率带宽对信道的数据传输速率是有影响的，选项A、B错误；信道传输速率实际上就是信号的发送速率，而调制速率也会直接限制数据传输速率，选项C错误；信号的传播速率是信号在信道上传播的速率，与信道的发送速率无关，选D选项。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662964854595.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662964854595.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;A</span><br><span class="line">&gt;NRZ是最简单的串行编码技术，它用两个电压来代表两个二进制数，如高电平表示1，低电平表示0，题中编码1符合。NRZI是用电平的一次翻转来表示0，与前一个RZI电平相同的电平表示1。曼彻斯特编码将一个码元分成两个相等的间隔，前一个间隔为低电平而后一个间隔为高电平表示1：0的表示方式正好相反，题中编码2符合。</span><br></pre></td></tr></table></figure>
+
+<p>41.【2020统考真题】下列关于虚电路网络的叙述中，错误的是（B)。<br>A.可以确保数据分组传输顺序<br><strong>B.需要为每条虚电路预分配带宽</strong><br>C.建立虚电路时需要进行路由选择<br>D.依据虚电路号(VCD)进行数据分组转发</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;虚电路服务需要有建立连接的过程，每个分组使用短的虚电路号，属于同一条虚电路的分组按照同一路由进行转发，分组到达终点的顺序与发送顺序相同，可以保证有序传输，不需要为每条虚电路预分配带宽。</span><br></pre></td></tr></table></figure>
+
+<p>简答</p>
+<p>1.试比较分组交换与报文交换，并说明分组交换优越的原因。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">报文交换与分组交换的原理如下：用户数据加上源地址、目的地址、长度、校验码等辅助信息后，封装成PDU,发给下一个结点。下一个结点收到后先暂存报文，待输出线路空闲时再转发给下一个结点，重复该过程直到到达目的结点。每个PDU可单独选择到达目的结点的路径。</span><br><span class="line">不同之处在于：分组交换生成的PDU的长度较短且是固定的，而报文交换生成的PDU的长度不是固定的。正是这一差别使得分组交换具有独特的优点：①缓冲区易于管理：②分组的平均延迟更小，网络中占用的平均缓冲区更少：③更易标准化：④更适合应用。因此，现在的主流网络基本上都可视为分组交换网络。</span><br></pre></td></tr></table></figure>
+
+<p>2.假定在地球和月球之间建立一条100Mb/s的链路。月球到地球的距离约为385000km,数据在链路上以光速3×108m/s传输。<br>1)计算该链路的最小RTT.<br>2)使用RTT作为延迟，计算该链路的.“延迟×带宽”值。<br>3)在2)中计算的“延迟×带宽”值的含义是什么？<br>4)在月球上用照相机拍取地球的相片，并把它们以数字形式保存到磁盘上。假定要在地球上下载25MB的最新图像，那么从发出数据请求到传送结束最少要花多少时间？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;RTT表示往返传输时间（等于单向传输时间的2倍）。</span><br><span class="line">&gt;1)最小RTT等于2×385000000m/3×108m/s)=2.57s。</span><br><span class="line">&gt;2)“延迟×带宽”值等于2.57s×100Mb/s=257Mb≈32MB。</span><br><span class="line">&gt;3)它表示发送方在收到一个响应之前能够发送的数据量。</span><br><span class="line">&gt;4)在图像可以开始到达地面之前，至少需要一个RTT。假定仅有带宽延迟，那么发送需要的时间等于25MB/(100M6/s)=(25×1024×1024×8)bit/(100M6/s)≈2.1s。因此，直到最后一</span><br><span class="line">&gt;个图像位到达地球，总共花的时间等于2.1+2.57=4.67s。</span><br></pre></td></tr></table></figure>
+
+<p>3.如下图所示，主机A和B都通过10Mb/s链路连接到交换机S.<br>在每条链路上的传播延迟都是20μ5。S是一个存储转发设备，在它接收完一个分组35μs后开始转发收到的分组。试计算把10000bt从A发送到B所需要的总时间.<br>1)作为单个分组。<br>2)作为两个5000bit的分组一个紧接着另一个发送。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;1)每条链路的发送延迟是10000/(10Mb/s)=1000μs。</span><br><span class="line">&gt;总传送时间等于2×1000+2×20+35=2075μs。</span><br><span class="line">&gt;2)作为两个分组发送时，下面列出的是各种事件发生的时间表：</span><br><span class="line">&gt;T=0         开始</span><br><span class="line">&gt;T=500     A完成分组1的发送，开始发送分组2</span><br><span class="line">&gt;T=520     分组1完全到达S</span><br><span class="line">&gt;T=555     分组1从S起程前往B</span><br><span class="line">&gt;T=1000    A结束了分组2的发送</span><br><span class="line">&gt;T=1055    分组2从S起程前往B</span><br><span class="line">&gt;T=1075    分组2的第1位开始到达B</span><br><span class="line">&gt;T=1575    分组2的最后1位到达B</span><br><span class="line">   事实上，从开始发送到A把第2个分组的最后1位发送完，经过的时间为2×500μs,第1个链路延迟20μs,交换机延迟35μs(然后才能开始转发第2个分组)，发送延尺为500μs,第2个链路延迟20μs。所以，总时间等于2×500μs+20μs+35μs+500μs+20μs=1575s。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4.一个简单的电话系统由两个端局和一个长途局连接而成，端局和长途局之间由1MHz的全双工主干连接。在8小时的工作日中，一部电话平均使用4次，每次的平均使用时间为6分钟.在所有通话中，10%的通话是长途（即通过端局）。假定每条通话线路的带宽是4kHz,请分析一个端局能支持的最大电话数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;每部电话平均每小时通话次数=4/8=0.5次，每次通话6分钟，因此一部电话每小时占用一条电路3分钟，即20部电话可共享一条线路。由于只有10%的呼叫是长途，因此200部电话占用一条完全时间的长途线路。局间干线复用了10(4×10)=250条线路，每条线路支持200部电话，因此一个端局能支持的最大电话数是200×250=50000部”。</span><br></pre></td></tr></table></figure>
+
+<p>5.T1系统共有24个话路进行时分复用，每个话路采用7比特编码，然后加上1比特信令码元，24个话路的一次采样编码构成一帧。另外，每桢数据有1比特帧同步码，每秒采样8000次。请问T1的数据率是多少？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">由于每个话路采用7bit编码，然后再加上1bit信令码元，因此一个话路占用8bit。帧同步码是在24路的编码之后加上1bit,因此每帧有8bit×24+1bit=193bit。</span><br><span class="line">因为每秒采样8000次，因此采样频率为8000Hz,即采样周期为1/8000s=125μs。所以T1的数据率为193bit/(125×10^-6s)=1.544Mb/s。</span><br></pre></td></tr></table></figure>
+
+<p>6.一个分组交换网采用虚电路方式转发分组，分组的首部和数据部分分别为h位和p位。现有L(L为p)位的报文要通过该网络传送，源点和终点之间的线路数为k,每条线路上的传播时延为d秒，数据传输速率为b位/秒，虚电路建立连接的时间为5秒，每个中间结，点有m秒的平均处理时延。求源，点开始发送数据直至终点收到全部数据所需要的时间。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">整个传输过程的总时延=连接建立时延+源点发送时延+中间结点的发送时延+中间结点的处理时延+传播时延。</span><br><span class="line">虚电路的建立时延已给出，为s秒。</span><br><span class="line">源点要将L位的报文分割成分组，分组数=L/p,每个分组的长度为(h+p),源点要发送的数据量=(h+p)L/p,所以源点的发送时延=(h+p)L/(pb)秒。</span><br><span class="line">每个中间结点的发送时延=(h+p)/b秒，源点和终点之间的线路数为k,所以有k-1个中间结点，因此中间结点的发送时延=(h+P)(k-1)/b秒。</span><br><span class="line">中间结点的处理时延=m(k-1)秒，传播时延=kd秒。所以源结点开始发送数据直至终点收到全部数据所需要的时间=s+(h+p)L/(pb)+(h+p)(k-1)/b+m(k-1)+kd秒。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="六-传输介质"><a href="#六-传输介质" class="headerlink" title="六.传输介质"></a>六.传输介质</h3><h4 id="1-传输介质及分类"><a href="#1-传输介质及分类" class="headerlink" title="1.传输介质及分类"></a>1.传输介质及分类</h4><blockquote>
+<p>传输介质也称传输媒体/传输媒介，它就是数据传输系统中在发送设备和接收设备之间的物理通路。</p>
+</blockquote>
+<p><strong>传输媒体并不是物理层。</strong></p>
+<blockquote>
+<p>传输媒体在物理层的下面，因为物理层是体系结构的第一层，因此有时称传输媒体为0层。在传输媒体中传输的是信号，但传输媒体并不知道所传输的信号代表什么意思。 但物理层规定了<strong>电气特性</strong>，因此能够识别所传送的比特流。</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894452510.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894452510.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h5 id="1-1导向性传输介质"><a href="#1-1导向性传输介质" class="headerlink" title="1.1导向性传输介质"></a>1.1导向性传输介质</h5><h6 id="1-1-1双绞线"><a href="#1-1-1双绞线" class="headerlink" title="1.1.1双绞线"></a>1.1.1双绞线<img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894539970.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894539970.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></h6><p>为了进一步提高抗电磁干扰能力，可在双绞线的外面再加上一个由<strong>金属丝</strong>编织成的屏蔽层，这就是屏蔽双绞线 （STP），无屏蔽层的双绞线就称为非屏蔽双绞线（UTP）</p>
+<blockquote>
+<p>双绞线价格<strong>便宜</strong>，是最常用的传输介质之一，在 局域网和传统电话网中普遍使用。模拟传输和数字传输都可以使用双绞线，其通信距离一般为几公里到数十公里。距离太远时，对于模拟传输， 要用<strong>放大器</strong>放大衰减的信号；对于<strong>数字传输</strong>，要用<strong>中继器</strong>将失真的信号整形</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894626752.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894626752.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h6 id="1-1-2同轴电缆"><a href="#1-1-2同轴电缆" class="headerlink" title="1.1.2同轴电缆"></a>1.1.2同轴电缆</h6><blockquote>
+<p>同轴电缆由导体铜质芯线、绝缘层、网状编织屏蔽层和塑料外层构成。按特性阻抗数值的不同，通常将同轴电缆分为两类：50Ω同轴电缆和75Ω同轴电缆。其中，50Ω同轴电缆主要用于传送基带数字信号，又称为基带同轴电缆，它在局域网中得到广泛应用；75Ω同轴电缆主要用于传送宽带信号，又称为宽带同轴电缆，它主要用于有线电视系统。</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894834836.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894834836.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<hr>
+<p>同轴电缆vs双绞线</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">由于外导体屏蔽层的作用， 同轴电缆抗干扰特性比双绞线好，被广泛用于传输较高速率的数据，其传输距离更远，但价格较双绞线贵。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894885271.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662894885271.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h6 id="1-1-3光纤"><a href="#1-1-3光纤" class="headerlink" title="1.1.3光纤"></a>1.1.3光纤</h6><p>光纤通信就是利用光导纤维（简称光纤）传递光脉冲来进行通信。有光脉冲表示1，无光脉冲表示0。而可见光的频 率大约是108MHz，因此光纤通信系统的带宽远远大于目前其他各种传输媒体的带宽。</p>
+<blockquote>
+<p>光纤在发送端有光源，可以采用发光二极管或半导体激光器，它们在电脉冲作用下能产生出光脉冲；在接收端用光电二极管做成光检测器，在检测到光脉冲时可还原出电脉冲。</p>
+</blockquote>
+<p>光纤主要由<strong>纤芯(实心的！)<strong>和</strong>包层</strong>构成，光波通过纤芯进行传导，包层较纤芯有较低的折射率。当光线从高折射率的 介质射向低折射率的介质时，其折射角将大于入射角。因此，如果入射角足够大，就会出现<strong>全反射</strong>，即光线碰到包 层时候就会折射回纤芯、这个过程不断重复，光也就沿着光纤传输下去。 光纤在发送端有光源，可以采用发光二极管或半导体激光器，它们在电脉冲作用下能产生出光脉冲；在接收端用光电 二极管做成光检测器，在检测到光脉冲时可还原出电脉冲。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895110589.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895110589.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895142666.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895142666.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895223698.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895223698.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p>光纤的特点:</p>
+<p>1.传输<strong>损耗小</strong>，中继距离长，对远距离传输特别经济。</p>
+<p> 2.<strong>抗雷电和电磁干扰性能好</strong>。 </p>
+<p>3.无串音干扰，保密性好，也<strong>不易被窃听或截取数据</strong>。 </p>
+<p>4.<strong>体积小，重量轻</strong></p>
+<h5 id="1-2非导向传输介质"><a href="#1-2非导向传输介质" class="headerlink" title="1.2非导向传输介质"></a>1.2非导向传输介质</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895681692.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895681692.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="Summary-2"><a href="#Summary-2" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895891104.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662895891104.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="七-物理层设备"><a href="#七-物理层设备" class="headerlink" title="七.物理层设备"></a>七.物理层设备</h3><h4 id="1-中继器"><a href="#1-中继器" class="headerlink" title="1.中继器"></a>1.中继器</h4><p><strong>诞生原因:</strong></p>
+<blockquote>
+<p>由于存在损耗，在线路上传输的信号功率会逐渐衰减，衰减到一定程度时将造成信号失真，因此会导致接收错误</p>
+</blockquote>
+<p><strong>中继器的功能:</strong></p>
+<blockquote>
+<p>对信号进行<strong>再生和还原</strong>，对衰减的信号进行放大，保持与原数据相同，以增加信号传输的距离，延长网络的长度</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662896253163.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662896253163.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><strong>中继器的两端:</strong></p>
+<blockquote>
+<p>两端的网络部分是网段，而不是子网，适用于完全相同的<strong>两类</strong>网络的互连，且两个网段速率要相同。 </p>
+<p>两端可连相同媒体，也可连不同媒体。</p>
+<p>中继器只将任何电缆段上的数据发送到另一段电缆上，它仅作用于信号的电气部分，并不管数据中是 否有错误数据或不适于网段的数据。</p>
+<p>中继器两端的网段一定要是同一个协议。（中继器不会存储转发，傻）</p>
+</blockquote>
+<p><strong>5-4-3规则:</strong></p>
+<blockquote>
+<p>网络标准中都对信号的延迟范围作了具体的规定，因而中继器只能在规定的范围内进行，否则会网络故障</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662896367619.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662896367619.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="2-集线器-多口中继器"><a href="#2-集线器-多口中继器" class="headerlink" title="2.集线器(多口中继器)"></a>2.集线器(多口中继器)</h4><p>再生,放大信号</p>
+<p><strong>集线器的功能：</strong> </p>
+<blockquote>
+<p>对信号进行再生放大转发，对衰减的信号进行放大，接着转发到其他所有（除输入端口外）处于工作 状态的端口上，以增加信号传输的距离，延长网络的长度。不具备信号的定向传送能力，是一个共享式设备</p>
+</blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662896829045.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662896829045.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h3 id="习题-1"><a href="#习题-1" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>1.双绞线是用两根绝缘导线绞合而成的，绞合的目的是(A)。<br><strong>A.减少干扰</strong><br>B.提高传输速度<br>C.增大传捻距离<br>D.增大抗拉强度</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;绞合可以减少两根导线相互的电磁干扰。</span><br></pre></td></tr></table></figure>
+
+<p>2.在电缆中采用屏蔽技术带来的好处主要是(B).<br>A.减少信号衰减<br><strong>B.减少电磁千扰辐射</strong><br>C.减少物理损坏<br>D.减少电缆的阻抗</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;屏蔽层的主要作用是提高电缆的抗干扰能力。</span><br></pre></td></tr></table></figure>
+
+<p>3.利用一根同轴电缆互连主机构成以太网，则主机间的通信方式为(B)。<br>A.全双工<br><strong>B.半双工</strong><br>C.单工<br>D.不确定</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;传统以太网采用广播的方式发送信息，同一时间只允许一台主机发送信息，否则各主机之间就会形成冲突，因此主机间的通信方式是半双工。全双工是指通信双方可以同时发送和接收信息。单工是指只有一个方向的通信而没有反方向的交互。</span><br></pre></td></tr></table></figure>
+
+<p>4.同轴电缆比双绞线的传输速率更快，得益于（C)。<br>A,同轴电缆的铜心比双绞线粗，能通过更大的电流<br>B.同轴电缆的阻抗比较标准，减少了信号的丧减<br><strong>C.同轴电缆具有更高的屏蔽性，同时有更好的抗噪声性</strong><br>D.以上都正确</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;同轴电缆以硬铜线为心，外面包一层绝缘材料，绝缘材料的外面再包围一层密织的网状导体，导体的外面又覆盖一层保护性的塑料外壳。这种结构使得它具有更高的屏蔽性，从而既有很高的带宽，又有很好的抗噪性。因此同轴电缆的带宽更高得益于它的高屏蔽性。</span><br></pre></td></tr></table></figure>
+
+<p>5.不受电磁千扰和噪声影响的传输介质是（C).<br>A.屏蔽双絞线<br>B.非屏蔽双绞线<br><strong>C.光纤</strong><br>D.同轴电缆</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;光纤抗雷电和电磁干扰性能好，无串音干扰，保密性好。</span><br></pre></td></tr></table></figure>
+
+<p>6.多模光纤传输光信号的原理是（C)。<br>A,光的折射特性<br>B.光的发射特性<br><strong>C.光的全反射特性</strong><br>D.光的绕射特性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;多模光纤传输光信号的原理是光的全反射特性。</span><br></pre></td></tr></table></figure>
+
+<p>7.以下关于单模光纤的说法中，正确的是(B)。<br>A.光纤越粗，数据传输速率越高<br><strong>B.如果光纤的直径减小到只有光的一个波长大小，那么光沿直线传播</strong><br>C.光源是发光二极管或激光<br>D.光纤是中空的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;光纤的直径减小到与光线的一个波长相同时，光纤就如同一个波导，光在其中没有反射，而沿直线传播，这就是单模光纤。</span><br></pre></td></tr></table></figure>
+
+<p>8。下面关于卫里通信的说法，错误的是(C)。<br>A.卫星通信的距离长，覆盖的范围广<br>B.使用卫星通信易于实现广播通信和多址通信<br><strong>C.卫星通信的好处在于不受气候的影响，误码率很低</strong><br>D.通信费用高、延时较大是卫星通信的不足之处</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;卫星通信有成本高、传播时延长、受气候影响大、保密性差、误码率较高的特点。</span><br></pre></td></tr></table></figure>
+
+<p>9.某网络在物理层规定，信号的电平用+10V<del>+15V表示二进制0，用-10V</del>-15V表示二进制1，电线长度限于15m以内，这体现了物理层接口的（C)。<br>A.机械特性<br>B.功能特性<br><strong>C.电气特性</strong><br>D.规程特性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;物理层的电气特性规定了信号的电压高低、传输距离等。</span><br></pre></td></tr></table></figure>
+
+<p>10.当描述一个物理层接口引脚处于高电平时的含义时，该描述属于（C)。<br>A,机械特性<br>B.电气特性<br><strong>C.功能特性</strong><br>D.规程特性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;物理层的功能特性指明某条线上出现的某一电平的电压表示何种意义。</span><br></pre></td></tr></table></figure>
+
+<p>11.【2012统考真题】在物理层接口特性中，用于描述完成每种功能的事件发生顺序的是（C)。<br>A.机械特性<br>B.功能特性<br><strong>C.过程特性</strong><br>D.电气特性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;概念题，过程特性定义各条物理线路的工作过程和时序关系。</span><br></pre></td></tr></table></figure>
+
+<p>12.【2018统考真题】下列选项中，不属于物理层接口规范定义范畴的是（C)。<br>A.接口形状<br>B.引脚功能<br><strong>C.物理地址</strong><br>D.信号电平</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;物理层的接口规范主要分为4种：机械特性、电气特性、功能特性、规程特性。机械特性规定连接所用设备的规格，即A所说的接口形状。电气特性规定信号的电压高低、阻抗匹配等，如</span><br><span class="line">&gt;D所说的信号电平。功能特性规定线路上出现的电平代表什么意义、接口部件的信号线（数据线、控制线、定时线等)的用途，如B所说的引脚功能。选项C中的物理地址是MAC地址，它属于数据链路层的范畴。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Ch2-疑难总结"><a href="#Ch2-疑难总结" class="headerlink" title="Ch2.疑难总结"></a>Ch2.疑难总结</h2><blockquote>
+<p>1.传输媒体是物理层吗？传输媒体和物理层的主要区别是什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">传输媒体并不是物理层。由于传输媒体在物理层的下面，而物理层是体系结构的第一层，因此有时称传输媒体为0层。在传输媒体中传输的是信号，但传输媒体并不知道所传输的信号代表什么。也就是说，传输媒体不知道所传输的信号什么时候是1什么时候是0。但物理层由于规定了电气特性，因此能够识别所传送的比特流。图2.12描述了上述概念。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662970725093.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662970725093.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p>2.什么是基带传输、频带传输和宽带传输？三者的区别是什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在计算机内部或在相邻设备之间近距离传输时，可以不经过调制就在信道上直接进行的传输方式称为基带传输。它通常用于局域网。数字基带传输就是在信道中直接传输数字信号，且传输媒体的整个带宽都被基带信号占用，双向地传输信息。最简单的方法是用两个高低电平来表示二进制数字，常用的编码方法有不归零编码和曼彻斯特编码。例如，要传输1010，低电平代表0，高电平代表1，那么在基带传输下，1010需要向通信线路传输（高、低、高、低电平)。</span><br><span class="line">用数字信号对特定频率的载波进行调制（数字调制），.将其变成适合于传送的信号后再进行传输，这种传输方式就是频带传输。远距离传输或无线传输时，数字信号必须用频带传输技术进行传输。利用频带传输，不仅解决了电话系统传输数字信号的问题，而且可以实现多路复用，进而提高传输信道的利用率。同样传输1010，经过调制，一个码元对应4个二进制位，假设码元A代表1010，那么在模拟信道上传输码元A就相当于传输了1010，这就是频带传输。</span><br><span class="line">借助频带传输，可将链路容量分解成两个或多个信道，每个信道可以携带不同的信号，这就是宽带传输。宽带传输中所有的信道能同时互不干扰地发送信号，链路容量大大增加。比如把信道进行频分复用，划分为2条互不相关的子信道，分别在两条子信道上同时进行频带传输，链路容量就大大增加了，这就是宽带传输。</span><br></pre></td></tr></table></figure>
+
+<p>3.如何理解同步和异步？什么是同步通信和异步通信？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在计算机网络中，同步(Synchronous)的意思很广泛，没有统一的定义。例如，协议的三个要素之一就是“同步”。在网络编程中常提到的“同步”则主要指某函数的执行方式，即函数调用者需等待函数执行完后才能进入下一步。异步(Asynchronous).可简单地理解为“非同步”。</span><br><span class="line">同步通信的通信双方必须先建立同步，即双方的时钟要调整到同一个频率。收发双方不停地发送和接收连续的同步比特流。主要有两种同步方式：一种是全网同步，即用一个非常精确的主时钟对全网所有结点上的时钟进行同步：另一种是准同步，即各结点的时钟之间允许有微小的误差，然后采用其他措施实现同步传输。同步通信数据率较高，但实现的代价也较高。</span><br><span class="line">异步通信在发送字符时，所发送的字符之间的时间间隔可以是任意的，但接收端必须时刻做好接收的准备。发送端可以在任意时刻开始发送字符，因此必须在每个字符开始和结束的地方加上标志，即开始位和停止位，以便使接收端能够正确地将每个字符接收下来。异步通信也可以帧作为发送的单位。这时，帧的首部和尾部必须设有一些特殊的比特组合，使得接收端能够找出一帧的开始（即帧定界）。异步通信的通信设备简单、便宜，但传输效率较低（因为标志的开销所占比例较大)。图213给出了以字符、帧为单位的异步通信示意图。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662973566381.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/uTools_1662973566381.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+</blockquote>
+<p>4.奈氏准则和香农定理的主要区别是什么？这两个定理对数据通信的意义是什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">奈氏准则指出，码元传输的速率是受限的，不能任意提高，否则接收端就不能正确判定码元所携带的比特是1还是0（因为存在码元之间的相互干扰)。</span><br><span class="line">奈氏准则是在理想条件下推导出来的。在实际条件下，最高码元传输速率要比理想条件下得出的数值小很多。电信技术人员的任务就是要在实际条件下，寻找出较好的传输码元波形，将比特转换为较为合适的传输信号。</span><br><span class="line"> 需要注意的是，奈氏准则并未限制信息传输速率(s)。要提高信息传输速率，就必须使每个传输的码元能够代表许多比特的信息，这就需要有很好的编码技术。但码元所载的比特数确定后，信道的极限数据率也就确定了。</span><br><span class="line"> 香农定理给出了信息传输速率的极限，即对于一定的传输带宽（单位为Hz)和一定的信噪比，信息传输速率的上限就确定了，这个极限是不能突破的。要想提高信息传输速率，要么设法提高传输线路的带宽，要么设法提高所传信道的信噪比，此外没有其他任何办法。</span><br><span class="line"> 香农定理告诉我们，若要得到无限大的信息传输速率，只有两个办法：要么使用无限大的传输带宽（这显然不可能），要么使信号的信噪比无限大，即采用没有噪声的传输信道或使用无限大的发送功率（显然这也不可能）。注意，奈氏准则和香农定理中“带宽”的单位都是Hz。</span><br></pre></td></tr></table></figure>
+
+<p>5.信噪比为SW,为什么还要取对数10log10(S/N)?</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1)数字形式表示，即一般数值。如噪声功率为1，信号功率为100，信噪比为100/1=100。</span><br><span class="line">2)以分贝形式表示，同样还是上面这些数字，以分贝形式表示的信噪比为101og10(S/N)=10log10 100=20dB</span><br><span class="line">两者的区别在于，前者（数值）是没有单位的，后者必须加B,代表分贝。两者数值上等价。</span><br><span class="line">采用分贝表示的原因是：很多时候，信号要比噪声强得多，比如信号比噪声强10亿倍，如果用数值表示的话，那么1后面有9个0，很容易丢失一个0。如果用分贝表示，那么仅为90B,因此要简单得多，而且不容易出错。分贝对于表示特别大或特别小的数值极为有利，这种表示方式在电子通信领域用途很广。</span><br></pre></td></tr></table></figure>
+
+</blockquote>
 
       </div>
       <div class="post-tags-categories">
