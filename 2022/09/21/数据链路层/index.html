@@ -738,6 +738,33 @@
 <h5 id="3-3功能三"><a href="#3-3功能三" class="headerlink" title="3.3功能三:"></a>3.3功能三:</h5><p>组帧</p>
 <h5 id="3-4功能四"><a href="#3-4功能四" class="headerlink" title="3.4功能四:"></a>3.4功能四:</h5><p>流量控制。  限制发送方</p>
 <h5 id="3-5功能五"><a href="#3-5功能五" class="headerlink" title="3.5功能五:"></a>3.5功能五:</h5><p>差错控制（帧错/位错）。</p>
+<h3 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h3><p>习题</p>
+<blockquote>
+<p>选择</p>
+<p>1.下列不属于数据链路层功能的是(B)。<br>A.帧定界功能<br><strong>B.电路管理功能</strong><br>C.差错控制功能<br>D.流量控制功能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层的主要功能有：如何将二进制比特流组织成数据链路层的帧：如何控制帧在物理信道上的传输，包括如何处理传输差错；在两个网络实体之间提供数据链路的建立、维护和释放；控制链路上帧的传输速率，以使接收方有足够的缓存来接收每个帧。这些功能对应为帧定界、差错检测、链路管理和流量控制。电路管理功能由物理层提供，关于“电路”和“链路”的区别请参见本章疑难点1。</span><br></pre></td></tr></table></figure>
+
+<p>2.数据链路层协议的功能不包括（D)。<br>A.定义数据格式<br>B.提供结点之间的可靠传输<br>C.控制对物理传输介质的访问<br><strong>D.为终端结点隐蔽物理传输的细节</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层的主要功能包括组，组帧即定义数据格式，A正确。数据链路层在物理层提供的不可靠的物理连接上实现结点到结点的可靠性传输，B正确。控制对物理传输介质的访问由数据链路层的介质访问控制(MAC)子层完成，C正确。数据链路层不必考虑物理层如何实现比特传输的细节，因此D错误。</span><br></pre></td></tr></table></figure>
+
+<p>3.为了避免传输过程中桢的丢失，数据链路层采用的方法是（D)。<br>A.帧编号机制<br>B.循环冗余校验码<br>C.汉明码<br><strong>D.计时器超时重发</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;为防止在传输过程中帧丢失，在可靠的数据链路层协议中，发送方对发送的每个数据帧设计一个定时器，当计时器到期而该帧的确认帧仍未到达时，发送方将重发该帧。为保证接收方不会接收到重复帧，需要对每个发送的帧进行编号：汉明码和循环冗余校验码都用于差错控制。</span><br></pre></td></tr></table></figure>
+
+<p>4.数据链路层为网络层提供的服务不包括(C)。<br>A.无确认的无连接服务<br>B.有确认的无连接服务<br><strong>C.无确认的面向连接服务</strong><br>D.有确认的面向连接服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;连接是建立在确认机制的基础上的，因此数据链路层没有无确认的面向连接服务。一般情况下，数据链路层会为网络层提供三种可能的服务：无确认的无连接服务、有确认的无连接服务、有确认的面向连接服务。</span><br></pre></td></tr></table></figure>
+
+<p>5.对于信道比较可靠且对实时性要求高的网络，数据链路层采用(A)比较合适。<br><strong>A.无确认的无连接服务</strong><br>B.有确认的无连接服务<br>C.无确认的面向连接服务<br>D.有确认的面向连接服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;无确认的无连接服务是指源机器向目标机器发送独立的帧，目标机器并不对这些帧进行确认。事先并不建立逻辑连接，事后也不用释放逻辑连接。若由于线路上有噪声而造成某一帧丢失，则数据链路层并不会检测这样的丢帧现象，也不会回复。当错误率很低时，这一类服务非常合适，这时恢复任务可以留给上面的各层来完成。这类服务对于实时通信也是非常合适的，因为实时通信中数据的迟到比数据损坏更不好。</span><br></pre></td></tr></table></figure>
+
+<p>6.流量控制实际上是对（A)的控制。<br><strong>A.发送方的数据流量</strong><br>B.接收方的数据流量<br>C.发送、接收方的数据流量<br>D.链路上任意两结点间的数据流量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;流量控制是通过限制发送方的数据流量而使发送方的发送速率不超过接收方接收速率的一种技术。流量控制功能并不是数据链路层独有的，其他层上也有相应的控制策略，只是各层的流</span><br><span class="line">&gt;墅控制对象是在相应层的实体之间进行的。</span><br></pre></td></tr></table></figure>
+
+<p>7.下述协议中，（A)不是数据链路层的标准。<br><strong>A.ICMP</strong><br>B.HDLC<br>C.PPP<br>D.SLIP</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;网际控制报文协议(ICMP)是网络层协议，PPP是在SLP基础上发展而来的，都是数据链路层协议。</span><br></pre></td></tr></table></figure>
+
+<p>8.假设物理信道的传输成功率是95%，而平均一个网络层分组需要10个数据链路层桢来发送。若数据链路层采用无确认的无连接服务，则发送网络层分组的成功率是()。<br>A.40%<br>B.60%<br>C.80%<br>D.95%</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;要成功发送一个网络层分组，需要成功发送10个数据链路层帧。成功发送10个数据链路层帧的概率是(0.95)^10≈0.598，即大约只有60%的成功率。这个结论说明了在不可靠的信道上无确认的服务效率很低。为了提高可靠性，应该引入有确认的服务。</span><br></pre></td></tr></table></figure>
+</blockquote>
 <h3 id="二-封装成帧和透明传输"><a href="#二-封装成帧和透明传输" class="headerlink" title="二.封装成帧和透明传输"></a>二.封装成帧和透明传输</h3><h4 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1.封装成帧"></a>1.封装成帧</h4><p><strong>封装成帧:</strong></p>
 <p>封装成帧就是在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流 后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。 首部和尾部包含许多的控制信息，他们的一个重要作用：<strong>帧定界</strong>（确定帧的界限）。</p>
 <p><strong>帧同步:</strong></p>
@@ -767,6 +794,10 @@
 <p><strong>保证了透明传输：在传送的比特流中可以传送任意比特组合，而不会引起对帧边界的判断错误。</strong></p>
 </blockquote>
 <h5 id="3-4违规编码法"><a href="#3-4违规编码法" class="headerlink" title="3.4违规编码法"></a>3.4违规编码法</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220923104941483.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220923104941483.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220923104941483"></p>
+<h3 id="习题-1"><a href="#习题-1" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>1.在一个数据链路协议中使用下列字符编码：<br>A01000111;      B11100011;      ESC11100000;      FLAG01111110<br>在使用下列成帧方法的情况下，说明为传送4个字符A、B、ESC、FLAG所组织的帧而实际发送的二进制位序列（使用FLAG作为首尾标志，ESC作为转义字符)。<br>1)字符计数法。<br>2)使用字符填充的首尾定界法。<br>3)使用比特填充的首尾标志法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;1.解答：</span><br><span class="line">&gt;1)第一字节为所传输的字符计数5，转换为二进制为00000101，后面依次为A、B、ESC、FLAG的二进制编码：</span><br><span class="line">&gt;00000101    01000111    11100011    11100000    01111110</span><br><span class="line">&gt;2)首尾标志位FLAG(01111110),在所传输的数据中，若出现控制字符，则在该字符前插入转义字符ESC(11100000):</span><br><span class="line">&gt;01111110 01000111 11100011 11100000 11100000 11100000 01111110 01111110</span><br><span class="line">&gt;3)首尾标志位FLAG(01111110),在所传输的数据中，若连续出现5个“1”，则在其后插入“0”：</span><br><span class="line">&gt;01111110 01000111 110100011 111000000 011111010 01111110</span><br></pre></td></tr></table></figure>
+</blockquote>
 <h3 id="三-差错控制-检错编码"><a href="#三-差错控制-检错编码" class="headerlink" title="三.差错控制(检错编码)"></a>三.差错控制(检错编码)</h3><h4 id="1-差错从何而来"><a href="#1-差错从何而来" class="headerlink" title="1.差错从何而来?"></a>1.差错从何而来?</h4><p>概括来说,传输中的差错都是由于噪声引起的.</p>
 <blockquote>
 <p>全局性  1.由于线路本身电气特性所产生的<strong>随机噪声</strong>(热噪声),是信道                 固有的,随机存在的.<br>                解决办法:提高信噪比来减少或避免干扰</p>
@@ -785,10 +816,6 @@
 <blockquote>
 <p>在数据链路层仅仅使用循环冗余检验CC差错检测技术，只能做到对帧的无差错接收，即“凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概率认为这些帧在传输过程中没有产生差错”。接收端丢弃的帧虽然曾收到了，但是最终还是因为有差错被丢弃。“凡是接收端数据链路层接收的帧均无差错”。</p>
 </blockquote>
-<h3 id="习题"><a href="#习题" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
-<p>1.在一个数据链路协议中使用下列字符编码：<br>A01000111;      B11100011;      ESC11100000;      FLAG01111110<br>在使用下列成帧方法的情况下，说明为传送4个字符A、B、ESC、FLAG所组织的帧而实际发送的二进制位序列（使用FLAG作为首尾标志，ESC作为转义字符)。<br>1)字符计数法。<br>2)使用字符填充的首尾定界法。<br>3)使用比特填充的首尾标志法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;1.解答：</span><br><span class="line">   1)第一字节为所传输的字符计数5，转换为二进制为00000101，后面依次为A、B、ESC、FLAG的二进制编码：</span><br><span class="line">&gt;00000101    01000111    11100011    11100000    01111110</span><br><span class="line">   2)首尾标志位FLAG(01111110),在所传输的数据中，若出现控制字符，则在该字符前插入转义字符ESC(11100000):</span><br><span class="line">&gt;01111110 01000111 11100011 11100000 11100000 11100000 01111110 01111110</span><br><span class="line">&gt;3)首尾标志位FLAG(01111110),在所传输的数据中，若连续出现5个“1”，则在其后插入“0”：</span><br><span class="line">&gt;01111110 01000111 110100011 111000000 011111010 01111110</span><br></pre></td></tr></table></figure>
-</blockquote>
 <h3 id="四-差错控制-纠错编码"><a href="#四-差错控制-纠错编码" class="headerlink" title="四.差错控制(纠错编码)"></a>四.差错控制(纠错编码)</h3><h4 id="1-海明码"><a href="#1-海明码" class="headerlink" title="1.海明码"></a>1.海明码</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220924201503929.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220924201503929.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220924201503929"></p>
 <h5 id="1-1海明距离"><a href="#1-1海明距离" class="headerlink" title="1.1海明距离"></a>1.1海明距离</h5><blockquote>
 <p>两个合法编码(码字)的对应比特取值不同的比特数称为这两个码字的**海明距离(码距)<strong>，一个有效编码集中,任 意两个合法编码(码字)的海明距离的最小值称为该编码集的</strong>海明距离(码距)**。</p>
@@ -800,31 +827,40 @@
 <h5 id="2-4-检错并纠错"><a href="#2-4-检错并纠错" class="headerlink" title="2.4.检错并纠错"></a>2.4.检错并纠错</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220924204230004.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220924204230004.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220924204230004"></p>
 <p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220924204210810.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220924204210810.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220924204210810"></p>
 <h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h3><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/%E5%B7%AE%E9%94%99%E6%8E%A7%E5%88%B6.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/%E5%B7%AE%E9%94%99%E6%8E%A7%E5%88%B6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="差错控制"></p>
-<h3 id="习题-1"><a href="#习题-1" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<h3 id="习题-2"><a href="#习题-2" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
 <p>选择</p>
-<p>1.下列不属于数据链路层功能的是(B)。<br>A.帧定界功能<br><strong>B.电路管理功能</strong><br>C.差错控制功能<br>D.流量控制功能</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层的主要功能有：如何将二进制比特流组织成数据链路层的帧：如何控制帧在物理信道上的传输，包括如何处理传输差错；在两个网络实体之间提供数据链路的建立、维护和释放；控制链路上帧的传输速率，以使接收方有足够的缓存来接收每个帧。这些功能对应为帧定界、差错检测、链路管理和流量控制。电路管理功能由物理层提供，关于“电路”和“链路”的区别请参见本章疑难点1。</span><br></pre></td></tr></table></figure>
+<p>1.通过提高信噪比可以减弱其影响的差错是（A)。<br><strong>A.随机差错</strong><br>B.突发差错<br>C.数据丢失差错<br>D.千扰差错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;一般来说，数据的传输差错是由噪声引起的。通信信道的噪声可以分为两类：热噪声和冲击噪声。热噪声一般是信道固有的，引起的差错是随机差错，可以通过提高信噪比来降低它对数据传输的影响。冲击噪声一般是由外界电磁干扰引起的，引起的差错是突发差错，它是引起传输差错的主要原因，无法通过提高信噪比来避免。</span><br></pre></td></tr></table></figure>
 
-<p>2.数据链路层协议的功能不包括（D)。<br>A.定义数据格式<br>B.提供结点之间的可靠传输<br>C.控制对物理传输介质的访问<br><strong>D.为终端结点隐蔽物理传输的细节</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;数据链路层的主要功能包括组，组帧即定义数据格式，A正确。数据链路层在物理层提供的不可靠的物理连接上实现结点到结点的可靠性传输，B正确。控制对物理传输介质的访问由数据链路层的介质访问控制(MAC)子层完成，C正确。数据链路层不必考虑物理层如何实现比特传输的细节，因此D错误。</span><br></pre></td></tr></table></figure>
+<p>2.下列有关数据链路层差错控制的叙述中，错误的是（A)<br><strong>A.数据链路层只能提供差错检测，而不提供对差错的纠正</strong><br>B.奇偶校验码只能检测出错误而无法对其进行修正，也无法检测出双位错误<br>C.CRC校验码可以检测出所有的单比特错误<br>D.海明码可以纠正一位差错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;链路层的差错控制有两种基本策略：检错编码和纠错编码。常见的纠错码有海明码，它可以纠正一位差错。</span><br></pre></td></tr></table></figure>
 
-<p>3.为了避免传输过程中桢的丢失，数据链路层采用的方法是（D)。<br>A.帧编号机制<br>B.循环冗余校验码<br>C.汉明码<br><strong>D.计时器超时重发</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;为防止在传输过程中帧丢失，在可靠的数据链路层协议中，发送方对发送的每个数据帧设计一个定时器，当计时器到期而该帧的确认帧仍未到达时，发送方将重发该帧。为保证接收方不会接收到重复帧，需要对每个发送的帧进行编号：汉明码和循环冗余校验码都用于差错控制。</span><br></pre></td></tr></table></figure>
+<p>3.下列属于奇偶校验码特征的是（A)。<br><strong>A.只能检查出奇数个比特错误</strong><br>B.能查出长度任意一个比特的错误<br>C.比CRC检验可靠<br>D.可以检查偶数个比特的错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;奇偶校验的原理是通过增加冗余位来使得码字中“1”的个数保持为奇数或偶数的编码方法，它只能发现奇数个比特的错误。</span><br></pre></td></tr></table></figure>
 
-<p>4.数据链路层为网络层提供的服务不包括(C)。<br>A.无确认的无连接服务<br>B.有确认的无连接服务<br><strong>C.无确认的面向连接服务</strong><br>D.有确认的面向连接服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;连接是建立在确认机制的基础上的，因此数据链路层没有无确认的面向连接服务。一般情况下，数据链路层会为网络层提供三种可能的服务：无确认的无连接服务、有确认的无连接服务、有确认的面向连接服务。</span><br></pre></td></tr></table></figure>
+<p>4.字符S的ASCII编码从低到高依次为1100101，采用奇校验，在下述收到的传输后字符<br>中，错误（D)不能检测。<br>A.11000011<br>B.11001010<br>C.11001100<br><strong>D.11010011</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;既然采用奇校验，那么传输的数据中1的个数若是偶数个则可检测出错误，若1的个数是奇数个，则检测不出错误，因此选D。</span><br></pre></td></tr></table></figure>
 
-<p>5.对于信道比较可靠且对实时性要求高的网络，数据链路层采用(A)比较合适。<br><strong>A.无确认的无连接服务</strong><br>B.有确认的无连接服务<br>C.无确认的面向连接服务<br>D.有确认的面向连接服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;无确认的无连接服务是指源机器向目标机器发送独立的帧，目标机器并不对这些帧进行确认。事先并不建立逻辑连接，事后也不用释放逻辑连接。若由于线路上有噪声而造成某一帧丢失，则数据链路层并不会检测这样的丢帧现象，也不会回复。当错误率很低时，这一类服务非常合适，这时恢复任务可以留给上面的各层来完成。这类服务对于实时通信也是非常合适的，因为实时通信中数据的迟到比数据损坏更不好。</span><br></pre></td></tr></table></figure>
+<p>5.为了纠正2比特的错误，编码的海明距应该为（D)。<br>A.2<br>B.·3<br>C.4<br><strong>D.5</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;海明码“纠错”d位，需要码距为2d+1的编码方案；“检错”d位，则只需码距为d+1。</span><br></pre></td></tr></table></figure>
 
-<p>6.流量控制实际上是对（A)的控制。<br><strong>A.发送方的数据流量</strong><br>B.接收方的数据流量<br>C.发送、接收方的数据流量<br>D.链路上任意两结点间的数据流量</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;流量控制是通过限制发送方的数据流量而使发送方的发送速率不超过接收方接收速率的一种技术。流量控制功能并不是数据链路层独有的，其他层上也有相应的控制策略，只是各层的流</span><br><span class="line">&gt;墅控制对象是在相应层的实体之间进行的。</span><br></pre></td></tr></table></figure>
+<p>6.对于10位要传输的数据，如果采用汉明校验码，那么露要增加的冗余信息位数是(B)。<br>A.3<br><strong>B.4</strong><br>C.5<br>D.6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在k比特信息位上附加r比特冗余信息，构成k+r比特的码字，必须满足2^r≥k+r+1。如果k的取值小于等于11且大于4，那么r=4。</span><br></pre></td></tr></table></figure>
 
-<p>7.下述协议中，（A)不是数据链路层的标准。<br><strong>A.ICMP</strong><br>B.HDLC<br>C.PPP<br>D.SLIP</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;网际控制报文协议(ICMP)是网络层协议，PPP是在SLP基础上发展而来的，都是数据链路层协议。</span><br></pre></td></tr></table></figure>
+<p>7.下列关于循环冗余校验的说法中，(B)是错误的.<br>A.带个校验位的多项式编码可以检测到所有长度小于等于r的突发性错误<br>B.<strong>通信双方可以无须商定就直接使用多项式编码</strong><br>C.CRC校验可以使用硬件来完成<br>D.有一些特殊的多项式，因为其有很好的特性，而成了国际标准</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在使用多项式编码时，发送端和接收端必须预先商定一个生成多项式。发送端按照模2除法，得到校验码，在发送数据时把该校验码加在数据后面。接收端收到数据后，也需要根据该生成多项式来验证数据的正确性。</span><br></pre></td></tr></table></figure>
 
-<p>8.假设物理信道的传输成功率是95%，而平均一个网络层分组需要10个数据链路层桢来发送。若数据链路层采用无确认的无连接服务，则发送网络层分组的成功率是()。<br>A.40%<br>B.60%<br>C.80%<br>D.95%</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;要成功发送一个网络层分组，需要成功发送10个数据链路层帧。成功发送10个数据链路层帧的概率是(0.95)^10≈0.598，即大约只有60%的成功率。这个结论说明了在不可靠的信道上无确认的服务效率很低。为了提高可靠性，应该引入有确认的服务。</span><br></pre></td></tr></table></figure>
+<p>8.要发送的数据是1101011011，采用CRC校验，生成多项式是10011，那么最终发送的<br>数据应是（)。<br>A.11010110111010<br>B.11010110110110<br>C.11010110111110<br>D.11110011011100</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;假设一个帧有m位，其对应的多项式为Gx),则计算冗余码的步骤如下：</span><br><span class="line">①加0。假设G(x)的阶为r,在帧的低位端加上r个0。</span><br><span class="line">②模2除。利用模2除法，用G(x)对应的数据串去除①中计算出的数据串，得到的余数即为冗余码（共”位，前面	 的0不可省略）。</span><br><span class="line">&gt;多项式以2为模运算。按照模2运算规则，加法不进位，减法不借位，它刚好是异或操作。乘除法类似于二进制运算，只是在做加减法时按模2规则进行。根据以上算法计算可得答案选C。</span><br></pre></td></tr></table></figure>
+
+
+<p>简答</p>
+<p>1.在数据传输过程中，若接收方收到的二进制比特序列为10110011010，接收双方采用的生成多项式为G(x)=x+x+1,则该二进制比特序列在传输中是否出错？如果未出现差错，那么发<br>送数据的比特序列和CRC检验码的比特序列分别是什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;根据题意，生成多项式Gx)对应的二进制比特序列为11001。进行如下的二进制模2除法,被除数为10110011010，除数为11001：</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/IMG_20221009_142547.jpg" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/IMG_20221009_142547.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="IMG_20221009_142547"></p>
+<p>所得余数为0，因此该二进制比特序列在传输过程中未出现差错。发送数据的比特序列是1011001，CRC检验码的比特序列是1010。</p>
+<p>注意：<br>CRC检验码的位数等于生成多项式G(x)的最高次数，</p>
 </blockquote>
 <h3 id="五-流量控制与可靠传输机制"><a href="#五-流量控制与可靠传输机制" class="headerlink" title="五.流量控制与可靠传输机制"></a>五.流量控制与可靠传输机制</h3><blockquote>
 <p><strong>较高的发送速度</strong>和<strong>较低的接收能力</strong>的不匹配，会造成传输出错，因此流量控制也是数据链路层的一项重要工作。</p>
@@ -879,6 +915,14 @@
 <h4 id="4-运行中的SR"><a href="#4-运行中的SR" class="headerlink" title="4.运行中的SR"></a>4.运行中的SR</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220927212345127.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220927212345127.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220927212345127"></p>
 <h4 id="5-滑动窗口长度"><a href="#5-滑动窗口长度" class="headerlink" title="5.滑动窗口长度"></a>5.滑动窗口长度</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220927212938672.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220927212938672.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220927212938672"></p>
 <h4 id="6-SR协议重点总结"><a href="#6-SR协议重点总结" class="headerlink" title="6.SR协议重点总结"></a>6.SR协议重点总结</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220927214203517.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20220927214203517.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20220927214203517"></p>
+<h3 id="习题-3"><a href="#习题-3" class="headerlink" title="习题"></a>习题</h3><blockquote>
+<p>1.从滑动窗口的观，点看，当发送窗口为1、接收窗口也为1时，相当于ARQ的()方式.<br>A.回退N帧ARQ<br>B.选择重传ARQ<br>C.停止-等待<br>D.连续ARQ<br>2.在简单的停止等待协议中，当顿出现丢失时，发送端会永远等待下去，解决这种死锁现象的办法是()<br>A.差错校验<br>B.帧序号<br>C.NAK机制<br>D.超时机制<br>3.一个信道的数据传输速率为4kb/s,单向传播时延为30s,如果使停止等待协议的信道最大利用率达到80%，那么要求的数据帧长度至少为()。<br>A.160bit<br>B.320bit<br>C.560bit<br>D.960bit<br>4.数据链路层采用后退N帧协议方式，进行流量控制和差错控制，发送方已经发送了编号<br>0<del>6的帧。计时器超时时，只收到了对1、3和5号顿的确认，发送方需要重传的帧的数<br>目是().<br>A.1<br>B.2<br>C.5<br>D.6<br>5.【2009統考真题】数据链路层采用了后退N顿（GBN)协议，发送方已经发送了编号<br>为0</del>7的帧。计时器超时时，若发送方只收到0、2、3号顿的确认，则发送方需要<br>重发的桢数是()。<br>A.2<br>B.3<br>C.4<br>D.5<br>6.数据链路层采用了后退N帧的（GBN)协议，如果发送宙口的大小是32，那么至少需要()位的序列号才能保证协议不出错。<br>A.4<br>B.5<br>C.6<br>D.7<br>7.【2012统考真题】两台主机之间的数据链路层采用后退N帧协议(GBN)传输数据，数据传输速率为16kb/s,单向传播时延为270ms,数据顿长度范围是128<del>512字节，接收方总是以与数据顿等长的帧进行确认。为使信道利用率达到最高，桢序列的比特数至少为().<br>A.5<br>B.4<br>C.3<br>D.2<br>8.若采用后退N帧的ARQ协议进行流量控制，帧编号字段为7位，则发送窗口的最大长度为()。<br>A.7<br>B.8<br>C.127<br>D.128<br>9.【2011统考真题】数据链路层采用选择重传协议（SR)传输数据，发送方已发送0</del>3号数据顿，现已收到1号帧的确认，而0、2号顿依次超时，则此时需要重传的顿数是()。<br>A.1<br>B.2<br>C.3<br>D.4<br>10.一个使用选择重传协议的数据链路层协议，如果采用了5位的颅序列号，那么可以选用的最大接收宙口是()。<br>A.15<br>B.16<br>C.31<br>D.32<br>11.对于窗口大小为的滑动窗口，最多可以有（)帧已发送但没有确认.<br>A.0<br>B.n-1<br>C.n<br>D.n/2<br>12.对无序接收的滑动窗口协议，若序号位数为，则发送窗口最大尺寸为（)。<br>A.2”-1<br>B.2n<br>C.2n-1<br>D.2”</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/IMG_20221009_145450.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/IMG_20221009_145450.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="IMG_20221009_145450"></p>
+<p>14.【2014统考真题】主机甲与主机乙之间使用后退N帧协议（GBN)传输数据，甲的发送窗口尺寸为1000，数据帧长为1000字节，信道带宽为100Mb/s,乙每收到一个数据帧立即利用一个短帧（忽略其传输延迟）进行确认，若甲、乙之间的单向传播时延是50ms,则甲可以达到的最大平均数据传输速率约为（)。<br>A.10Mb/s<br>B.20Mb/s<br>C.80Mb/s<br>D.100Mb/s<br>15.【2015统考真题】主机甲通过128kb/s卫星链路，采用滑动窗口协议向主机乙发送数据，链路单向传播时延为250ms,顿长为1000字节。不考虑确认帧的开销，为使链路利用率<br>不小于80%，帧序号的比特数至少是（)。<br>A.3<br>B.4<br>C.7<br>D.8<br>16.【2018统考真题】主机甲采用停止-等待协议向主机乙发送数据，数据传输速率是3kb/s,单向传播时延是200ms,忽略确认顿的传输时延。当信道利用率等于40%时，数据帧的长度为()。<br>A.240比特<br>B.400比特<br>C:480比特<br>D.800比特<br>17.【2019统考真题】对于滑动窗口协议，若分组序号采用3比特编号，发送窗口大小为5，则接收窗口最大是()。<br>A.2<br>B.3<br>C.4<br>D.5</p>
+<p>18.【2020统考真题】假设主机甲采用停等协议向主机乙发送数据帧，数据帧长与确认帧长均为1000B,数据传输速率是10kb/s,单项传播延时是200s。则甲的最大信道利用率为()。<br>A.80%<br>B.66.7%<br>C.44.4%<br>D.40%</p>
+<p>简答</p>
+<p>1.在选择ARQ协议中，设编号用3bit,发送窗口W=6,接收窗口WR=3。试找出一种情况，使得在此情况下协议不能正确工作。<br>2.假设一个信道的数据传输速率为5kb/s,单向传输时延为30ms,那么颅长在什么范围内，才能使用于差错控制的停止等待协议的效率至少为50%？<br>3.假定卫星信道的数据率为100kb/s,卫里信道的单程传播时延为250s,每个数据帧的长度均为2000位，并且不考虑误码、确认帧长、头部和处理时间等开销，为达到传输的最大效率，试问帧的顺序号应为多少位？此时信道利用率是多少？<br>4.在数据传输速率为50kb/s的卫星信道上传送长度为1kbt的帧，假设确认帧总由数据帧捎带，帧头的序号长度为3bit,卫星信道端到端的单向传播延迟为270ms。对于下面三种协<br>议，信道的最大利用率是多少？<br>1)停止等待协议.<br>2)后退N帧协议。<br>3)选择重传协议（假设发送窗口和接收窗口相等）。<br>5.对于下列给定的值，不考虑差错重传，非受限协议（无须等待应答)和停止-等待协议的有效数据率是多少？（即每秒传输了多少真正的数据，单位为b/s.)<br>R=传输速率（16Mb/s)<br>S=信号传播速率（200m/μs)<br>D=接收主机和发送主机之间传播距离（200m)<br>T=创建颅的时间（2μs)<br>F=每帧的长度（500bit)<br>N=每桢中的数据长度（450bit)<br>A=确认帧ACK的帧长（80bit)<br>6.在某个卫星信道上，发送端从一个方向发送长度为512B的颅，且发送端的数据发送速率为64kbS,接收端在另一端返回一个很短的确认顿。设卫星信道端到端的单向传播延时为270ms,对于发送窗口尺寸分别为1、7、17和117的情况，信道的吞吐率分别为多少？</p>
+</blockquote>
 <h3 id="八-介质访问控制"><a href="#八-介质访问控制" class="headerlink" title="八.介质访问控制"></a>八.介质访问控制</h3><h4 id="1-传输数据使用的两种链路"><a href="#1-传输数据使用的两种链路" class="headerlink" title="1.传输数据使用的两种链路"></a>1.传输数据使用的两种链路</h4><blockquote>
 <p>点对点链路</p>
 </blockquote>
@@ -966,6 +1010,483 @@
 <p>1.<strong>传输介质不同</strong>：CSMA/CD用于总线式以太网【有线】，而CSMA/CA用于无线局域网【无线】<br>2.<strong>载波检测方式不同</strong>：因<strong>传输介质不同</strong>，CSMA/CD与CSMA/CA的<strong>检测方式也不同</strong>。CSMA/CD通过电缆中电压的变化来检测，当数据发生碰撞时，电缆中的电压就会随着发生变化；而CSMA/CA采用能量检测(ED)、载波检测(CS)和能量载波混合检测三种检测信道空闲的方式。<br>3.<strong>CSMA/CD检测冲突，CSMA/CA避免冲突</strong>，二者出现冲突后都会进行<strong>有上限的重传</strong>。</p>
 </blockquote>
 <h4 id="Summary-3"><a href="#Summary-3" class="headerlink" title="Summary:"></a>Summary:</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221001200612477.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221001200612477.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221001200612477"></p>
+<h4 id="2-轮询访问介质访问控制"><a href="#2-轮询访问介质访问控制" class="headerlink" title="2.轮询访问介质访问控制"></a>2.轮询访问介质访问控制</h4><h5 id="2-1介质访问控制"><a href="#2-1介质访问控制" class="headerlink" title="2.1介质访问控制"></a>2.1介质访问控制</h5><p>信道划分介质访问控制（MAC Multiple Access Control ）协议：</p>
+<p>​                基于<strong>多路复用</strong>技术划分资源。 </p>
+<p>​                <strong>网络负载重</strong>：共享信道效率高，且公平 </p>
+<p>​                <strong>网络负载轻</strong>：共享信道效率低</p>
+<p>随机访问MAC协议： <strong>冲突</strong></p>
+<p>​                用户根据意愿随机发送信息，发送信息时可独占信道带宽。</p>
+<p>​                <strong>网络负载轻</strong>：共享信道效率高,单个节点可利用全部带宽</p>
+<p>​                <strong>网络负载重</strong>：产生冲突开销  </p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221003222752786.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221003222752786.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221003222752786"></p>
+<h5 id="2-2轮询协议"><a href="#2-2轮询协议" class="headerlink" title="2.2轮询协议"></a>2.2轮询协议</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221003222903089.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221003222903089.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221003222903089"></p>
+<p>问题： 1.轮询开销 2.等待延迟 3.单点故障</p>
+<h5 id="2-3令牌传递协议"><a href="#2-3令牌传递协议" class="headerlink" title="2.3令牌传递协议"></a>2.3令牌传递协议</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221003223440675.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221003223440675.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221003223440675"></p>
+<blockquote>
+<p>令牌：一个特殊格式的MAC控制帧，不含任何信息。<br>           控制信道的使用，确保同一时刻只有一个结点独占信道。</p>
+</blockquote>
+<p><strong>令牌环网无碰撞</strong></p>
+<blockquote>
+<p>每个结点都可以在一定的时间内（令牌持有时间）获得发送数据的权利，并不是无限制地持有令牌。</p>
+</blockquote>
+<p>问题：<br>        1.令牌开销        2.等待延迟        3.单点故障<br>        应用于令牌环网（物理星型拓扑，逻辑环形拓扑）。<br>        采用令牌传送方式的网络常用于<strong>负载较重、通信量较大</strong>的网络中。</p>
+<h3 id="习题-4"><a href="#习题-4" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>选择</p>
+<p>1.将物理信道的总频带宽分割成若干子信道，每个子信道传输一路信号，这种信道复用技术是（B)。<br>A.码分复用<br><strong>B.频分复用</strong><br>C.时分复用<br>D.空分复用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在物理信道的可用带宽超过单个原始信号所需带宽的情况下，可将该物理信道的总带宽分割成若干与传输单个信号带宽相同（或略宽）的子信道，每个子信道传输一种信号，这就是频分多路复用。</span><br></pre></td></tr></table></figure>
+
+<p>2.TDM所用传输介质的性质是(D)。<br>A.介质的带宽大于结合信号的位速率<br>B.介质的带宽小于单个信号的带宽<br>C.介质的位速率小于最小信号的带宽<br><strong>D.介质的位速率大于单个信号的位速率</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">时分复用TDM共享带宽，但分时利用信道。将时间划分成一段段等长的时分复用帧(TDM帧)，参与带宽共享的每个时分复用的用户在每个TDM帧中占用固定序号的时隙。显然，在这种情况下，介质的位速率大于单个信号的位速率。</span><br></pre></td></tr></table></figure>
+
+<p>3.从表面上看，FDM比TDM能更好地利用信道的传输能力，但现在计算机网络更多地使用TDM而非FDM,其原因是().<br>A.FDM实际能力更差<br><strong>B.TDM可用于数字传输而FDM不行</strong><br>C.FDM技术不成热<br>D.TDM能更充分地利用带宽</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TDM与FDM相比，抗干扰能力强，可以逐级再生整形，避免干扰的积累，而且数字信号比较容易实现自动转换，所以根据FDM和TDM的工作原理，FDM适合于传输模拟信号，TDM适合于传输数字信号。</span><br></pre></td></tr></table></figure>
+
+<p>4.在下列多路复用技术中，（B)具有动态分配时隙的功能。<br>A.同步时分多路复用<br><strong>B.统计时分多路复用</strong><br>C.频分多路复用<br>D.码分多路复用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">时分多路复用(TDM)可分为同步时分多路复用和异步时分多路复用（又称统计时分复用）。同步时分多路复用是一种静态时分复用技术，它预先分配时间片（即时隙)，而异步时分多路复用则是一种动态时分复用技术，它动态地分配时间片（时隙）。</span><br></pre></td></tr></table></figure>
+
+<p>5.在下列协议中，不会发生碰撞的是（A)。<br><strong>A.TDM</strong><br>B.ALOHA<br>C.CSMA<br>D.CSMA/CD</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TDM属于静态划分信道的方式，各结点分时使用信道，不会发生碰撞，而ALOHA、CSMA和CSMA/CD都属于动态的随机访问协议，都采用检测碰撞的策略来应对碰撞，因此都可能会发生碰撞。</span><br></pre></td></tr></table></figure>
+
+<p>6.【2013统考真题】下列介质访问控制方法中，可能发生冲突的是(B)。<br>A.CDMA<br><strong>B.CSMA</strong><br>C.TDMA<br>D.FDMA</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">选项A、C·和D都是信道划分协议，信道划分协议是静态划分信道的方法，肯定不会发生冲突。CSMA的全称是载波侦听多路访问协议，其原理是站点在发送数据前先侦听信道，发现信道空闲后再发送，但在发送过程中有可能会发生冲突。</span><br></pre></td></tr></table></figure>
+
+<p>7.以下几种CSMA协议中，(C)协议在监听到介质空闲时仍可能不发送。<br>A.1-坚持CSMA B.非坚持CSMA <strong>C.p-坚持CSMA</strong> D.以上都不是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p-坚持CSMA协议是1-坚持CSMA协议和非坚持CSMA协议的折中。p-坚持CSMA在检测到信道空闲后，以概率p发送数据，以概率1-p推迟到下一个时隙，目的是降低1-坚持CSMA中多个结点检测到信道空闲后同时发送数据的冲突概率；采用坚持“侦听”的目的，是试图克服非坚持CSMA中由于随机等待造成延迟时间较长的缺点。</span><br></pre></td></tr></table></figure>
+
+<p>8.在CSMA的非坚持协议中，当媒体忙时，则(C)直到媒体空闲。<br>A.延迟一个固定的时间单位再侦听<br>B.继续侦听<br><strong>C.延迟一个随机的时间单位再侦听</strong><br>D.放弃侦听</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">非坚持CSMA:站点在发送数据前先监听信道，若信道忙则放弃监听，则等待一个随机时间后再监听，若信道空闲则发送数据。</span><br></pre></td></tr></table></figure>
+
+<p>9.在CSMA的非坚持协议中，当站点侦听到总线媒体空闲时，它(B).<br>A.以概率p传送<br><strong>B.马上传送</strong><br>C.以概率1-p传送<br>D.以概率p延迟一个时间单位后传送</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">非坚持CSMA:站点在发送数据前先监听信道，若信道忙则放弃监听，等待一个随机时间后再监听，若信道空闲则发送数据。</span><br></pre></td></tr></table></figure>
+
+<p>10.在CSMA/CD协议的定义中，“争议期”指的是（A)。<br><strong>A,信号在最远两个端，点之间往返传输的时间</strong><br>B.信号从线路一端传输到另一端的时间<br>C.从发送开始到收到应答的时间<br>D.从发送完毕到收到应答的时间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSMA/CD协议中定义的冲突检测时间（即争议期）是指，信号在最远两个端点之间往返传输的时间。</span><br></pre></td></tr></table></figure>
+
+<p>11.以太网中，当数据传输速率提高时，帧的发送时间会相应地缩短，这样可能会影响到冲突的检测。为了能有效地检测冲突，可以使用的解决方策有（B)。<br>A.减少电缆介质的长度或减少最短帧长<br><strong>B.减少电筑介质的长度或增加最短帧长</strong><br>C.增加电缆介质的长度或减少最短帧长<br>D.增加电缆介质的长度或增加最短帧长</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最短帧长等于争用期时间内发出的比特数。因此当传输速率提高时，可减少电缆介质的长度(使争用期时间减少，即以太网端到端的时延减小)，或增加最短帧长。</span><br></pre></td></tr></table></figure>
+
+<p>12.【2009统考真题】在一个采用CSMA/CD协议的网络中，传输介质是一根完整的电缆，传输速率为1Gb/s,电缆中的信号传播速率是200000k/s.若最小数据帧长度减少800比特，则最远的两个站点之间的距离至少需要（D)<br>A.增加160m<br>B.增加80m<br>C.减少160m<br><strong>D.减少80m</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">若最短帧长减少，而数据传输速率不变，则需要使冲突域的最大距离变短来实现碰撞窗口的减少。碰撞窗口是指网络中收发结点间的往返时延，因此假设需要减少的最小距离为S,则可得到如下公式（注意单位的转换)：减少的往返时延=减少的发送时延，即2×(s/(2×10^8))=800/(1×10^9)。即由于帧长减少而缩短的发送时延，应等于由于距离减少而缩短的传播时延的2倍。</span><br><span class="line">可得s=80,即最远的两个站点之间的距离最少需要减少80m。</span><br><span class="line">注意：CSMA/CD的碰撞窗口=2倍传播时延，报文发送时间&gt;&gt;碰撞窗口，</span><br></pre></td></tr></table></figure>
+
+<p>13.长度为10km、数据传输速率为10Mb/s的CSMA/CD以太网，信号传播速率为200m/μs。那么该网络的最小帧长为(D)。<br>A.20bit<br>B.200bit<br>C.100bit<br><strong>D.1000bit</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">来回路程=10000×2m,往返时间RTT=10000×2/(200×10^6)=10^-4,最小帧长度=WRTT=1000bit。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010104017060.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010104017060.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221010104017060"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">		B</span><br><span class="line">因为要解决“理论上可以相距的最远距离”，那么最远肯定要保证能检测到碰撞，而以太网规定最短帧长为64B,其中Hub.为100Base-T集线器，可知线路的传输速率为100Mb/s,则单程传输时延为64B/(100Mb/s)/2=2.56μs,又Hub在产生比特流的过程中会导致时延1.535s,则单程的传播时延为2.56-1.535=1.025μs,从而H3与H4之间理论上可以相距的最远距离为200m/s×1.025μs=205m。</span><br></pre></td></tr></table></figure>
+
+<p>15.以太网中若发生介质访问冲突，则按照二进制指数回退算法决定下一次重发的时间。使用二进制回退算法的理由是(C)。<br>A.这种算法简单<br>B.这种算法执行速度快<br><strong>C.这种算法考虑了网络负载对冲突的影响</strong><br>D.这种算法与网络的规模大小无关</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">以太网采用CSMA/CD技术，网络上的流量越多、负载越大时，发生冲突的概率也会越大。当工作站发送的数据帧因冲突而传输失败时，会采用二进制回退算法后退一段时间再重新发送数</span><br><span class="line">据帧。二进制回退算法可以动态地适应发送站点的数量，后退延时的取值范围与重发次数形成二进制指数关系。网络负载小时，后退延时的取值范围也小：负载大时，后退延时的取值范围也随着增大。二进制回退算法的优点是，把后退延时的平均取值与负载的大小联系了起来。所以二进制回退算法考虑了负载对冲突的影响。</span><br></pre></td></tr></table></figure>
+
+<p>16.以太网中采用二进制指数回退算法处理冲突问题。下列数据帧重传时再次发生冲突的概率最低的是（D).<br>A.首次重传的帧<br>B.发生两次冲突的帧<br>C.发生三次重传的帧<br><strong>D.发生四次重传的帧</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	根据IEEE8023标准的规定，以太网采用二进制指数后退算法处理冲突问题。在由于检测到冲突而停止发送后，一个站必须等待一个随机时间段，才能重新尝试发送。这一随机等待时间的</span><br><span class="line">目的是为了减少再次发生冲突的可能性。等待的时间长度按下列步骤计算：</span><br><span class="line">	1)取均匀分布在0至2^min(k,10) -1之间的一个随机整数r,k是冲突发生的次数。</span><br><span class="line">	2)发送站等待r×2t长度的时间后才能尝试重新发送，其中1为以太网的端到端延迟。</span><br><span class="line">	从这个计算步骤可以看出，k值越大，帧重传时再次发生冲突的概率越低。</span><br></pre></td></tr></table></figure>
+
+<p>17.在以太网的二进制回退算法中，在11次碰撞之后，站点会在0~(C)之间选择一个随机数。<br>A.255<br>B.511<br><strong>C.1023</strong><br>D.2047</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一般来说，在第i(i&lt;10)次碰撞后，站点会在0到2^i -1中之间随机选择一个数M,然后等待M倍的争用期再发送数据。在达到10次冲突后，随机数的区间固定在最大值1023上，以后不再增加。如果连续超过16次冲突，那么丢弃。</span><br></pre></td></tr></table></figure>
+
+<p>18.【2011统考真题】下列选项中，对正确接收到的数据帧进行确认的MAC协议是(D).<br>A.CSMA<br>B.CDMA<br>C.CSMA/CD<br><strong>D.CSMA/CA</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSMA/CA是无线局域网标准802.11中的协议，它在CSMA的基础上增加了冲突避免的功能。ACK帧是CSMA/CA避免冲突的机制之一，也就是说，只有当发送方收到接收方发回的ACK帧后，才确认发出的数据顿已正确到达目的地。</span><br></pre></td></tr></table></figure>
+
+<p>19.与CSMA/CD网络相比，令牌环网更适合的环境是（B).<br>A.负载轻<br><strong>B.负载重</strong><br>C.距离远<br>D.距离近</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSMA/CD网络各站随机发送数据，有冲突产生。负载很重时，冲突会加剧。而令牌环网各站轮流使用令牌发送数据，无论网络负载如何，都无冲突产生，这是它的突出优点。</span><br></pre></td></tr></table></figure>
+
+<p>20.根据CSMA/CD协议的工作原理，需要提高最短帧长度的是(B).<br>A.网络传输速率不变，冲突域的最大距离变短<br><strong>B.冲突域的最大距离不变，网络传输速率提高</strong><br>C.上层协议使用TCP的概率增加<br>D.在冲突域不变的情况下减少线路中的中继器数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于选项A,网络传输速率不变，冲突域的最大距离变短，冲突信号可以更快地到达发送站点，此时可以减小最小帧的长度。对于选项B,冲突域的最大距离不变，网络传输速率提高，如果帧长度不增加，那么在帧发送完之前冲突信号可能回不到发送站点，因此必须提高最短帧长度。对于选项C,上层协议使用T℃P的概率增加与是否提高最短帧长度无关。对于选项D,在冲突域不变的情况下减少线路中的中继器数量，此时冲突信号可以更快地到达发送站点，因此可以减少最短帧长度。</span><br></pre></td></tr></table></figure>
+
+<p>21.多路复用器的主要功能是(D).<br>A.执行模/数转换<br>B.执行串行/并行转换<br>C.减少主机的通信处理负荷<br><strong>D.结合来自两条或更多条线路的传输</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">多路复用器的主要功能是结合来自两条或多条线路的传输，以充分利用信道。</span><br></pre></td></tr></table></figure>
+
+<p>22.下列关于令牌环网络的描述中，错误的是（A)。<br><strong>A.令牌环网络存在冲突</strong><br>B.同一时刻，环上只有一个数据在传输<br>C.网上所有结点共车网络带宽<br>D.数据从一个结点到另一结点的时间可以计算</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">令牌环网络的拓扑结构为环状，有一个令牌不停地在环中流动。只有获得了令牌的主机才能发送数据，因此不存在冲突，选项A错误。其他选项都是令牌环网络的特点。</span><br></pre></td></tr></table></figure>
+
+<p>23.一条广播信道上接有3个站点A、B、C,介质访问控制采用信道划分方法，信道的划分采用码分复用技术，A、B要向C发送数据，设A的码序列为+1，-1，-1，+1，+1，+1，+1，-1.站B可以选用的码片序列为（D).<br>A.-1,-1,-1,+1,-1,.+1,+1,+1<br>B.-1,+1,-1,-1-1,+1,+1,+1<br>C.-1+1,-1,+1,-1,+1,-1,+1<br><strong>D.-1,+1,-1,+1,-1,+1,+1+1</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B站点选用的码片序列一定要与A站点的码片序列正交，且规格化内积为0。分别计算A,B,C,D,可知只有D选项符合要求。</span><br></pre></td></tr></table></figure>
+
+<p>24.【2014统考真题】站点A、B、C通过CDMA共享链路，A、B、C的码片序列分别是(1,1,1,1)、(1,-1,1,-1)和(1,1，-1，-1).若C从链路上收到的序列是(2,0,2,0,0，-2,0，-2,0，2,0,2),则C收到A发送的数据是（B).<br>A.000<br><strong>B.101</strong><br>C.110<br>D.111</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">把收到的序列分成每4个数字一组，即(2,0,2,0)，(0，-2,0，-2)，(0,2,0,2)，因为题目求的是A发送的数据，因此把这三组数据与A站的码片序列(1,1,1,1)做内积运算，结果分别是(2,0,2,0)·(1,1,1,1)/4=-1,(0,-2,0,-2)·(1,1,1,1)/4=1,(0,2,0,2)·(1,1,1,1)4=1,所以C接收到的A发送的数据是101，选B。</span><br></pre></td></tr></table></figure>
+
+<p>25.【2015统考真题】下列关于CSMA/CD协议的叙述中，错误的是（B).<br>A,边发送数据顿，边检测是否发生冲突<br><strong>B.适用于无线网络，以实现无线链路共享</strong><br>C.需要根据网络跨距和数据传输速率限定最小帧长<br>D.当信号传播延迟趋近0时，信道利用率趋近100%</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSMA/CD适用于有线网络，CSMA/CA则广泛应用于无线周域网。其他选项关于CSMA/CD的描述都是正确的。</span><br></pre></td></tr></table></figure>
+
+<p>26.【2018统考真题】IEEE802.11无线局域网的MAC协议CSMA/CA进行信道预约的方法是（D)。<br>A,发送确认帧<br>B.采用二进制指数退避<br>C.使用多个MAC地址<br><strong>D.交换RTS与CTS帧</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSMA/CA协议进行信道预约时，主要使用的是销求发送顾(Request to Send,RIS)和清除发送帧(Clear to Send,CTS)。一台主机想要发送信息时，先向无线站点发送一个RTS帧，说明要传输的数据及相应的时间。无线站点收到RTS帧后，会广播一个CTS帧作为对此的响应，既给发送端发送许可，又指示其他主机不要在这个时间内发送数据，从而预约信道，避免碰撞。发送确认帧的目的主要是保证信息的可靠传输：二进制指数退避法是CSMA/CD中的一种冲突处理方法；C选项则和预约信道无关。</span><br></pre></td></tr></table></figure>
+
+<p>27.【2019统考真题】假设一个采用CSMA/CD协议的100Mb/s局域网，最小帧长是128B,则在一个冲突域内两个站点之间的单向传播延时最多是(B)。<br>A.2.56μs<br><strong>B.5.12μs</strong><br>C.10.24μs<br>D.20.48μs</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">为了确保发送站在发送数据的同时能检测到可能存在的冲突，需要在发送完顺之前就能收到自己发送出去的数据，帧的传输时延至少要两倍于信号在总线中的传播时延，所以CSMA/CD总线网中的所有数据帧都必须大于一个最小帧长，这个最小帧长=总线传播时延×数据传输速率×2。已知最小帧长为128B,数据传输速率为100Mb/s=12.5MB/s,计算得单向传播延时为128B/(12.5MB/s×2)=5.12×10^-6s,即5.12μs</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010104424867.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010104424867.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221010104424867"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">	A</span><br><span class="line">为了尽量避免碰撞，IEEE802.11规定，所有的站在完成发送后，必须再等待一段很短的时间（继续监听）才能发送下一帧。这段时间称为帧间间隔(InterFrame Space,IFS)。帧间间隔的长短取决于该站要发送的帧的类型。IEE80211使用3种FS:</span><br><span class="line">DIFS（分布式协调IFS):最长的IFS,优先级最低，用于异步帧竞争访问的时延。</span><br><span class="line">PIFS(点协调IFS):中等长度的FS,优先级居中，在PCF操作中使用。</span><br><span class="line">SIFS(短IFS):最短的IFS,优先级最高，用于靥要立即响应的操作。</span><br><span class="line">网络中的控制帧以及对所接收数据的确认帧都采用SIFS作为发送之前的等待时延。当结点要发送数据帧时，若载波监听到信道空闲，需等待DIFS后发送RTS预约信道，图中IFS1对应的是帧间间隔DIFS,时间最长，图中IFS2、IFS3、IFS4对应SIFS。</span><br></pre></td></tr></table></figure>
+
+<p>简答</p>
+<p>1.以太网使用的CSMA/CD协议是以争用方式接入共享信道的。与传统的时分复用(TDM)相比，其优缺，点如何？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CSMA/CD是一种动态的介质随机接入共享信道方式，而TDM是一种静态的信道划分方式，所以从对信道的利用率来说，	CSMA/CD用户共享信道，更灵活，信道利用率更高。</span><br><span class="line">TDM不同，它为用户按时隙固定分配信道，用户没有数据传送时，信道在用户时隙就浪费了：因为CSMA/CD让用户共享信道，因此同时有多个用户需要使用信道时会发生碰撞，从而降低信道的利用率；而在TDM中，用户在分配的时隙中不会与其他用户发生冲突。对局域网来说，连入信道的是相距较近的用户，因此通常信道带宽较大。使用TDM方式时，用户在自己的时隙中没有发送的情况更多，不利于信道的充分利用。</span><br><span class="line">对于计算机通信来讲，突发式的数据更不利于使用TDM方式。</span><br></pre></td></tr></table></figure>
+
+<p>2.长度为1km、数据传输速率为10Mb/s的CSMA/CD以太网，信号在电缆中的传播速率为200000k/s,试求能够使该网络正常运行的最小帧长.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对于1km长的电缆，单程传播时间为1/200000=5μs,来回路程传播时间为10μs=105s。</span><br><span class="line">为了使该网络能按照CSMA/CD工作，最小的发送时间不能小于10μs。以10Mb/s速率工作时，10^-5s内可以发送的比特数为(10×10^6b/s)×10^-5s=100。因此最小帧长为100比特。</span><br></pre></td></tr></table></figure>
+
+<p>3.10000个航空订票站在竞争使用单个时隙ALOHA通道，各站平均每小时做18次请求，一个时隙是125s。总通信负载约为多少？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">每个终端每3600/18=200s做一次请求，共有10000个终端，因此总负载是200s做10000次请求，平均每秒50次请求。每秒8000个时隙，平均每个时隙的发送次数是50/8000=1/160，即通信负载G=1/160=0.00625。</span><br></pre></td></tr></table></figure>
+
+<p>4.一组N个站，点共享一个56kb/s的纯AL0HA信道，每个站点平均每100s输出一个1000bit的顿，即使前一个帧未发送完也依旧进行。问N可取的最大值是多少？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于纯AL0HA协议，其信道利用率为0.184，因此可用带宽是0.184×56kb/s。每个站需要的带宽是1000/100=10b/s。因此，N可取的最大值是10304/10≈1030。</span><br></pre></td></tr></table></figure>
+
+<p>5.考虑建立一个CSMA/CD网，电缆长1km,不使用重发器，运行速率为1Gb/s,电缆中的信号速率是200000am/s,最小帧长度是多少？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于1km的电缆，单程传播时延是1200000=5×10^-6s,即5μs,往返传播时延是10μs。要能按照CSMA/CD工作，最小帧的发送时间不能小于10μs。以1Gb/s速率工作时，10μs内可以发送的比特数为(10×10^-6)/(1×10^-9)=10000，因此最小帧应是10000bit。</span><br></pre></td></tr></table></figure>
+
+<p>6.若构造一个CSMA/CD总线网，速率为100Mb/s,信号在电缆中的传播速率为2×10km/s,数据帧的最小长度为125字节。试求总线电缆的最大长度（假设总线电缆中无中继器）。</p>
+<blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010112917279.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010112917279.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221010112917279"></p>
+</blockquote>
+<p>7.在一个采用CSMA/CD协议的网络中，传输介质是一根完整的电筑，传输速率为1Gb/s.电缆中信号的传播速率是200000k/s。若最小数据帧长度减少800bit,则最远的两个站点之间的距离应至少变化多少才能保证网络正常工作？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	CSMA/CD方式要求帧的最短长度须满足条件：在发送帧的最后一位时，如果有冲突，那么发送方应能检测到冲突，即发送帧的时间至少是信号在最远两个端点之间往返传输的时间。现在的条件是帧的长度减少了800bit,即发送帧的时间减少了800b/(1Gb/s),所以信号在最远两个端点之间往返的时间必须减少800/(1Gb/s)。设减少的长度为x米，要计算往返传输的距</span><br><span class="line">离，有</span><br><span class="line">		2x/(200000×10^3)≥800/10^9</span><br></pre></td></tr></table></figure>
+
+<p>8.【2010统考真题】某局域网采用CSMA/CD协议实现介质访问控制，数据传输速率为10Mb/s,主机甲和主机乙之间的距离是2km,信号传播速率是200000m/s。请回答下列问题，要求说明理由或写出计算过程。<br>1)若主机甲和主机乙发送数据时发生冲突，则从开始发送数据的时刻起，到两台主机均检测到冲突为止，最短需要经过多长时间？最长需要经过多长时间（假设主机甲和主机乙在发送数据的过程中，其他主机不发送数据)？<br>2)若网络不存在任何冲突与差错，主机甲总是以标准的最长以太网数据帧（1518字节)向主机乙发送数据，主机乙每成功收到一个数据帧后立即向主机甲发送一个64字节的确认帧，主机甲收到确认帧后方可发送下一个数据帧。此时主机甲的有效数据传输速率是多少（不考虑以太网的前导码）？</p>
+<blockquote>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010113103806.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221010113103806.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221010113103806"></p>
+</blockquote>
+</blockquote>
+<h3 id="十-局域网基本概念和体系结构"><a href="#十-局域网基本概念和体系结构" class="headerlink" title="十.局域网基本概念和体系结构"></a>十.局域网基本概念和体系结构</h3><h4 id="1-局域网"><a href="#1-局域网" class="headerlink" title="1.局域网"></a>1.局域网</h4><p>局域网(Local Area Network)：简称<strong>LAN</strong>,是指在<strong>某一区域</strong>内由多台计算机互联成的计算机组，使用广播信道。</p>
+<h4 id="1-特点"><a href="#1-特点" class="headerlink" title="1.特点"></a>1.特点</h4><ol>
+<li>覆盖的地理范围较小，只在一个相对独立的局部范围内联，如一座或集中的建筑群内。</li>
+<li>使用专门铺设的传输介质（双绞线、同轴电缆）进行联网，数据传输速率高(10Mb/s~10Gb/s)。</li>
+<li>通信延迟时间短，误码率低，可靠性较高。</li>
+<li>各站为平等关系，共享传输信道。</li>
+<li>多采用分布式控制和广播式通信，能进行广播和组播。</li>
+</ol>
+<p>决定局域网的主要要素为：<strong>网络拓扑</strong>，<strong>传输介质</strong>与<strong>介质访问控制</strong>方法。</p>
+<h4 id="2-网络拓扑"><a href="#2-网络拓扑" class="headerlink" title="2.网络拓扑"></a>2.网络拓扑</h4><h5 id="1-2-1星型拓扑"><a href="#1-2-1星型拓扑" class="headerlink" title="1.2.1星型拓扑"></a>1.2.1星型拓扑</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006155341945.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006155341945.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006155341945"></p>
+<p>中心节点是控制中心，任意两个节点间的通信最多只需<strong>两步</strong>，传输速度快，并且网络构形简单、建网容易、便于控制和管理。但这种网络系统，网络可靠性低，网络共享能力差，有单点故障问题</p>
+<h5 id="1-2-2环形拓扑"><a href="#1-2-2环形拓扑" class="headerlink" title="1.2.2环形拓扑"></a>1.2.2环形拓扑</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006155509360.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006155509360.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006155509360"></p>
+<p>系统中通信设备和线路比较节省。有<strong>单点故障</strong>问题由于环路是封闭的，所以不便于扩充，系统响应延时长，且信息传输效率相对较低。</p>
+<h5 id="1-2-3总线型拓扑"><a href="#1-2-3总线型拓扑" class="headerlink" title="1.2.3总线型拓扑"></a>1.2.3总线型拓扑</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006155603530.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006155603530.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006155603530"></p>
+<p>网络可靠性高、网络节点间响应速度快、共享资源能力强、设备投入量少、成本低、安装使用方便，当某个工作站节点出现故障时，对整个网络系统影响小。</p>
+<h5 id="1-2-4树型拓扑"><a href="#1-2-4树型拓扑" class="headerlink" title="1.2.4树型拓扑"></a>1.2.4树型拓扑</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006160301105.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006160301105.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006160301105"></p>
+<p>易于拓展，易于隔离故障，也容易有<strong>单点故障</strong>。</p>
+<h4 id="3-局域网传输介质"><a href="#3-局域网传输介质" class="headerlink" title="3.局域网传输介质"></a>3.局域网传输介质</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006160356498.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006160356498.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006160356498"></p>
+<h4 id="4-局域网介质访问控制方法"><a href="#4-局域网介质访问控制方法" class="headerlink" title="4.局域网介质访问控制方法"></a>4.局域网介质访问控制方法</h4><p>1.CSMA/CD                           常用于<strong>总线型局域网</strong>，也用于树型网络</p>
+<p>2.令牌总线                             常用于<strong>总线型局域网</strong>，也用于树型网络<br>                                                它是把总线型或树型网络中的各个工作站按一定顺序如按接口地址大                                                小排列形成一个逻辑环。只有令牌持有者才能控制总线，才有发送信                                                息的权力。<br>3.令牌环                                 用于<strong>环形局域网</strong>，如令牌环网</p>
+<h4 id="5-局域网的分类"><a href="#5-局域网的分类" class="headerlink" title="5.局域网的分类"></a>5.局域网的分类</h4><p>1.<strong>以太网</strong>        以太网是应用最为广泛的局域网，包括标准以太网(10Mbps)、快速以太网                      (100Mbps)、千兆以太网(1000Mbps)和10G以太网，它们都符合IEEE802.3系列标准                      规范。逻辑拓扑总线型，物理拓扑是星型或拓展星型。使用CSMA/CD<br>2.<strong>令环网</strong>        物理上采用了星形拓扑结构，逻辑上是环形拓扑结构。已是“明日黄花”。<br>3.<strong>FDDI (Flber Distributed Data Interface)</strong>         物理上采用了双环拓扑结构，逻辑上是环形拓                                                                                      扑结构。<br>4.<strong>ATM(Asynchronous Transler Moe)</strong>                  较新型的单元交换技术，使用53字节固定长度                                                                                      的单元进行交换。<br>5.<strong>无线局网(Wireless Local Area Network;WLAN)</strong>        采用IEEE802.11标准。</p>
+<h4 id="6-IEEE-802标准"><a href="#6-IEEE-802标准" class="headerlink" title="6.IEEE 802标准"></a>6.IEEE 802标准</h4><p>IEEE 802系列标准是IEEE 802LAN/MAN标准委员会制定的局域网、城域网技术标准(1980年2月成立)。其中最广泛使用的有以太网、令牌环、无线局域网等。这一系列标准中的每一个子标准都由委员会中的一个专门工作组负责。</p>
+<h4 id="7-MAC子层和LLC子层"><a href="#7-MAC子层和LLC子层" class="headerlink" title="7.MAC子层和LLC子层"></a>7.MAC子层和LLC子层</h4><p>IEEE 802标准所描述的局域网参考模型只对应OS参考模型的<strong>数据链路层与物理层</strong>，它将数据链路层划分为逻辑链路层LLC子层和介质访问控制MAC子层。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006161613242.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006161613242.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006161613242"></p>
+<h3 id="十一-以太网"><a href="#十一-以太网" class="headerlink" title="十一.以太网"></a>十一.以太网</h3><h4 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h4><p>以太网(<strong>Ethernet</strong>)指的是由Xerox公司创建并由Xerox、Intel和DEC公司联合开发的<strong>基带总线局域网规范</strong>，是当今现有局域网采用的最通用的通信协议标准。以太网络使用<strong>CSMA/CD</strong>(载波监听多路访问及冲突检测)技术。</p>
+<p>以太网在局域网各种技术中占<strong>统治性</strong>地位：</p>
+<p>​                1.造价低廉（以太网网卡不到100块）；</p>
+<p>​                2.是应用最广泛的局域网技术：</p>
+<p>​                3.比令牌环网、ATM网便宜，简单；</p>
+<p>​                <strong>4.满足网络速率要求：10Mb/s~10Gb/s.</strong></p>
+<p><strong>以太网的两个标准</strong></p>
+<p>​                <strong>DIX Ethernet V2:第一个局域网产品（以太网)规约。</strong><br>​                <strong>IEEE802.3:IEEE802委员会802.3工作组制定的第一个EEE的以太网标准。</strong>（帧格式有一                丢丢改动）</p>
+<h4 id="2-以太网提供无连接、不可靠的服务"><a href="#2-以太网提供无连接、不可靠的服务" class="headerlink" title="2.以太网提供无连接、不可靠的服务"></a>2.以太网提供无连接、不可靠的服务</h4><p>无连接：发送方和接收方之间无“握手过程”。</p>
+<p>不可靠：不对发送方的数据帧<strong>编号</strong>，接收方不向发送方进行<strong>确认</strong>，差错帧直接丢弃，差错纠正由高层负责。</p>
+<p><strong>以太网只实现无差错接收，不实现可靠传输。</strong></p>
+<h4 id="3-以太网传输介质与拓扑结构的发展"><a href="#3-以太网传输介质与拓扑结构的发展" class="headerlink" title="3.以太网传输介质与拓扑结构的发展"></a>3.以太网传输介质与拓扑结构的发展</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006163616550.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006163616550.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006163616550"></p>
+<h4 id="4-10BASE-T以太网"><a href="#4-10BASE-T以太网" class="headerlink" title="4.10BASE-T以太网"></a>4.10BASE-T以太网</h4><p>10BASE-T是传送<strong>基带信号</strong>的双绞线以太网，T表示采用双绞线，现10BASE-T采用的是<strong>无屏蔽双绞线</strong>(UTP),传输速率是<strong>10Mb/s</strong>。</p>
+<p><strong>物理上采用星型拓扑，逻辑上总线型</strong>，每段双绞线最长为<strong>100m</strong>。</p>
+<p>采用<strong>曼彻斯特编码</strong>。</p>
+<p>采用<strong>CSMA/CD</strong>介质访问控制。</p>
+<h4 id="5-适配器与MAC地址"><a href="#5-适配器与MAC地址" class="headerlink" title="5.适配器与MAC地址"></a>5.适配器与MAC地址</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006170540603.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006170540603.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006170540603"></p>
+<h4 id="6-以太网MAC帧"><a href="#6-以太网MAC帧" class="headerlink" title="6.以太网MAC帧"></a>6.以太网MAC帧</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006183757223.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006183757223.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006183757223"></p>
+<h4 id="7-高速以太网"><a href="#7-高速以太网" class="headerlink" title="7.高速以太网"></a>7.高速以太网</h4><p>速率≥100Mb/s的以太网称为高速以太网。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006184017936.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006184017936.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006184017936"></p>
+<h3 id="十二-无线局域网"><a href="#十二-无线局域网" class="headerlink" title="十二.无线局域网"></a>十二.无线局域网</h3><h4 id="1-IEEE-802-11"><a href="#1-IEEE-802-11" class="headerlink" title="1.IEEE 802.11"></a>1.IEEE 802.11</h4><p>IEEE 802.11是<strong>无线局域网</strong>通用的标准，它是由IEEE所定义的无线网络通信的标准。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006220453361.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006220453361.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006220453361"></p>
+<h4 id="2-802-11的MAC帧头格式"><a href="#2-802-11的MAC帧头格式" class="headerlink" title="2.802.11的MAC帧头格式"></a>2.802.11的MAC帧头格式</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006220947670.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006220947670.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006220947670"></p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006221639151.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006221639151.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006221639151"></p>
+<h4 id="3-无线局域网的分类"><a href="#3-无线局域网的分类" class="headerlink" title="3.无线局域网的分类"></a>3.无线局域网的分类</h4><h5 id="3-1有固定基础设施无线局域网"><a href="#3-1有固定基础设施无线局域网" class="headerlink" title="3.1有固定基础设施无线局域网"></a>3.1有固定基础设施无线局域网</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006222126506.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006222126506.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006222126506"></p>
+<h5 id="3-2无面定基础设施无线局域网的自组织网络"><a href="#3-2无面定基础设施无线局域网的自组织网络" class="headerlink" title="3.2无面定基础设施无线局域网的自组织网络"></a>3.2无面定基础设施无线局域网的自组织网络</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006222145809.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006222145809.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006222145809"></p>
+<h3 id="习题-5"><a href="#习题-5" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>选择<br>1.【2012统考真题】以太网的MAC协议提供的是(A)。<br><strong>A.无连接的不可靠服务</strong><br>B.无连接的可靠服务<br>C.有连接的可靠服务<br>D.有连接的不可靠服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;考虑到局域网信道质量好，以太网采取了两项重要的措施来使通信更简单：①采用无连接的工作方式；②不对发送的数据帧进行编号，也不要求对方发回确认。因此，以太网提供的服务是不可靠的服务，即尽最大努力的交付。差错的纠正由高层完成。</span><br></pre></td></tr></table></figure>
+
+<p>2.以下关于以太网的说法中，正确的是（C)。<br>A.以太网的物理拓扑是总线形结构<br>B.以太网提供有确认的无连接服务<br><strong>C.以太网参考模型一般只包括物理层和数据链路层</strong><br>D.以太网必须使用CSMA/CD协议</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;以太网的逻辑拓扑是总线形结构，物理拓扑是星形或拓展星形结构，因此A错误。以太网采用两项措施简化通信：采用无连接的工作方式：不对发送的数据帧编号，也不要求接收方发送确认，因此B错误。从相关层次看；局域网仅工作在OSI参考模型的物理层和数据链路层，而广域网工作在OSI参考模型的下三层，而以太网是局域网的一种实现形式，因此C正确。只有当以太网工作于半双工方式下时，才需要CSMA/CD协议来应对冲突问题，速率小于等于1Gb/s的以太网可以工作于半双工或全双工方式，而速率大于等于10Gb/s的以太网只能工作于全双工方式下，因此没有争用问题，不使用CSMA/CD协议，因此D错误。</span><br></pre></td></tr></table></figure>
+
+<p>3.下列以太网中，采用双绞线作为传输介质的是（C)。<br>A.10BASE-2<br>B.10BASE-5<br><strong>C.10BASE-T</strong><br>D.10BASE-F</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;这里BASE前面的数字代表数据率，单位为Mb/s;“BASE”指介质上的信号为基带信号（即基带传输，采用曼彻斯特编码)：后面的5或2表示每段电缆的最长长度为500m或200m(实际为185m),T表示双绞线，F表示光纤。</span><br></pre></td></tr></table></figure>
+
+<p>4.10 BaseT以太网采用的传输介质是（A).<br><strong>A.双绞线</strong><br>B.同轴电缆<br>C.光纤<br>D.微波</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;局域网通常采用类似10 BaseT这样的方式来表示，其中第1部分的数字表示数据传输速率，如10表示10M6/s、100表示100Mb/s;第2部分的Base表示基带传输：第3部分如果是字母，那么表示传输介质，如T表示双绞线、F表示光纤，如果是数字，那么表示所支持的最大传输距离，如2表示200m、5表示500m。</span><br></pre></td></tr></table></figure>
+
+<p>5.如果使用5类UTP来设计一个鞭盖范围为200m的10BASE-T以太网，那么需要采用的设备是(B).<br>A.放大器<br><strong>B.中继器</strong><br>C.网桥<br>D.路由器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;5类无屏蔽双绞线(UTP)所能支持的最大长度是100m,因此若要覆盖范围为200m的以太网，则必须延长UTP所支持的长度。放大器是用来加强宽带信号（用于传输模拟信号）的设备（大</span><br><span class="line">&gt;多数以太网采用基带传输)：中继器是用来加强基带信号（用于传输数字信号）的设备。</span><br></pre></td></tr></table></figure>
+
+<p>6.网卡实现的主要功能在（A)。<br><strong>A.物理层和数据链路层</strong><br>B.数据链路层和网络层<br>C.物理层和网络层<br>D.数据链路层和应用层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;通常情况下，网卡是用来实现以太网协议的。网卡不仅能实现与局域网传输介质之间的物理连接和电信号匹配，还涉及帧的发送与接收、帧的封装与拆封、介质访问控制、数据的编码与解码及数据缓存等功能，因而实现的功能主要在物理层和数据链路层。</span><br></pre></td></tr></table></figure>
+
+<p>7.每个以太网卡都有自己的时钟，每个网卡在互相通信时为了知道什么时候一位结束、下一位开始，即具有同样的频率，它们采用了(B).<br>A.量化机制<strong>B.受彻斯特机制</strong>C.奇偶校验机制D.定时令牌机制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;10BASE-T以太网使用曼彻斯特编码。曼彻斯特编码提取每个比特中间的电平跳变作为收发双方的同步信号，无须额外的同步信号，因此是一种“自含时钟编码”的编码方式。</span><br></pre></td></tr></table></figure>
+
+<p>8.以下关于以太网地址的描述，错误的是()<br>A.以太网地址就是通常所说的MAC地址<br>B.MAC地址又称局域网硬件地址<br>C.MAC地址是通过域名解析查得的<br>D.以太网地址通常存储在网卡中<br>9.在以太网中，大量的广播信息会降低整个网络性能的原因是（B)<br>A.网络中的每台计算机都必须为每个广播信息发送一个确认信息<br><strong>B.网络中的每台计算机都必须处理每个广播信息</strong><br>C.广播信息被路由器自动路由到每个网段<br>D.广播信息不能直接自动传送到目的计算机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">域名解析用于把主机名解析成对应的P地址，它不涉及MAC地址。实际上，MAC地址通常是通过ARP协议查得的。</span><br><span class="line">另外，这些广播信息本身就占用整个网络的带宽，因此可能会形成“广播风暴”，严重影响网络性能。实际上，以太网的总带宽绝大部分都是由广播帧所消耗的。</span><br><span class="line">以太网提供无确认的无连接服务，每台计算机无须对广播信息确认，A错误。路由器可以隔离广播域，C错误。D选项的说法是正确的，但这并不是大量广播信息会降低网络性能的原因，</span><br><span class="line">&gt;因此也不选D。</span><br></pre></td></tr></table></figure>
+
+<p>10.同一局域网中的两个设备具有相同的静态MAC地址时，会发生（C)。<br>A首次引导的设备排他地使用该地址，第二个设备不能通信<br>B.最后引导的设备排他地使用该地址，另一个设备不能通信<br><strong>C.在网络上的这两个设备都不能正确通信</strong><br>D.两个设备都可以通信，因为它们可以读分组的整个内容，知道哪些分组是发给它们的，而不是发给其他站的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在使用静态地址的系统中，如果有重复的硬件地址，那么这两个设备都不能正常通官，原因是：第一，目的MAC地址等于本机MAC地址的帧是不会被发送到网络上去的：第二，其他设备的用户发送给一个设备的帧也会被另一个设备接收，其中必有一个设备必须处理不属于本设备的帧，浪费了资源；第三，正确实现的ARP软件都会禁止把同一个MAC地址绑定到两个不同的P地址，这就使得具有相同MAC地址的设备上的用户在会话时都发生时断时续的现象。</span><br></pre></td></tr></table></figure>
+
+<p>11.EEE8023标准规定，若采用同轴电缆作为传输介质，在无中继的情况下，传输介质的最大长度不能超过(A)。<br><strong>A.500m</strong><br>B.200m<br>C.100m<br>D.50m</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以太网常用的传输介质有4种：粗缆、细缆、双绞线和光纤。同轴电缆分50Ω基带电缆和75Ω宽带电缆两类。基带电缆又分细同轴电缆和粗同轴电缆。</span><br><span class="line">10Base5:粗缆以太网，数据率为10Mb/s,每段电缆最大长度为500m;使用特殊的收发器连接到电缆上，收发器完成载波监听和冲突检测的功能。</span><br><span class="line">10Base2:细缆以太网，数据率为10Mb/s,每段电缆最大长度为185m;使用BNC连接器形成T形连接，无源部件。</span><br></pre></td></tr></table></figure>
+
+<p>12.下面4种以太网中，只能工作在全双工模式下的是（D).<br>A.10BASE-T以太网<br>B.100BASE-T以太网<br>C.吉比特以太网<br><strong>D.10吉比特以太网</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;10BASE-T以太网、100BASE-T以太网、吉比特以太网都使用了CSMA/CD协议，因此可以工作在半双工模式下。10吉比特以太网只工作在全双工方式下，因此没有争用问题，也不使用</span><br><span class="line">&gt;CSMA/CD协议，且它只使用光纤作为传输介质。</span><br></pre></td></tr></table></figure>
+
+<p>13.IEEE802局域网标准对应OSI参考模型的（B).<br>A.数据链路层和网络层<br><strong>B.物理层和数据链路层</strong><br>C.物理层<br>D.数据链路层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;IEEE802为局域网制定的标准相当于OSI参考模型的数据链路层和物理层，其中的数据链路层又被进一步分为逻辑链路控制(LLC)和介质访问控制(MAC)两个子层。</span><br></pre></td></tr></table></figure>
+
+<p>14.802.3标准定义的以太网中，实现“给帧加序号”功能的层次是(C)<br>A.物理层<br>B.介质访问控制子层(MAC)<br><strong>C.逻辑链路控制子层(LLC)</strong><br>D.网络层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;以太网没有网络层。物理层的主要功能是：信号的编码和译码、比特的接收和传输：MAC子层的主要功能是：组帧和拆帧、比特差错检测、寻址、竞争处理：LLC子层的主要功能是：建立和释放数据链路层的逻辑连接、提供与高层的接口、差错控制、给帧加序号。</span><br></pre></td></tr></table></figure>
+
+<p>15.快速以太网仍然使用CSMA/CD协议，它采用（C)而将最大电缆长度减少到100m的方法，使以太网的数据传输速率提高至100Mb/s。<br>A.改变最短帧长<br>B。改变最长帧长<br><strong>C.保持最短帧长不变</strong><br>D.保持最长顿长不变</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;快速以太网使用的方法是保持最短帧长不变，将一个网段的最大长度减少到100m,以提高以太网的数据传输速率。</span><br></pre></td></tr></table></figure>
+
+<p>16.无线局域网不使用CSMA/CD而使用CSMA/CA的原因是，无线局域网(B)，<br>A。不能同时收发，无法在发送时接收信号<br><strong>B.不需要在发送过程中进行冲突检测</strong><br>C.无线信号的广播特性，使得不会出现冲突<br>D.覆盖范围很小，不进行冲突检测不影响正确性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;无线局域网不能简单地使用CSMA/CD协议，特别是碰撞检测部分，原因如下：第一，在无线局域网的适配器上，接收信号的强度往往远小于发送信号的强度，因此若要实现碰撞检测，那么硬件上的花费就会过大；第二，在无线局域网中，并非所有站点都能听见对方，由此引发了隐蔽站和暴露站问题，而“所有站点都能够听见对方”正是实现CSMA/CD协议必备的基础。</span><br></pre></td></tr></table></figure>
+
+<p>17.【2017统考真题】在下图所示的网络中，若主机H发送一个封装访问Internet的IP分组的IEEE 802.11数据帧F,则帧F的地址1、地址2和地址3分别是(B)。<br><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012095637051.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012095637051.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221012095637051"><br>A.00-12-34-56-78-9a,00-12-34-56-78-9b,00-12-34-56-78-9c<br><strong>B.00-12-34-56-78-9b,00-12-34-56-78-9a,00-12-34-56-78-9c</strong><br>C.00-12-34-56-78-9b,00-12-34-56-78-9c,00-12-34-56-78-9a<br>D.00-12-34-56-78-9a,00-12-34-56-78-9c,00-12-34-56-78-9b</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;IEEE 802.11数据帧有4种子类型，分别是IBSS、From AP、To AP和WDS。这里的数据帧F从笔记本电脑发送到接入点(AP),属于ToAP子类型。帧地址1是RA(BSSD),地址2是SA,地址3是DA。RA是Receiver Address的缩写，BSSD是Basic Service Set IDentifier的缩写，SA是Source Address的缩写，DA是Destination Address的缩写。因此地址1是AP的MAC,地址2是H的MAC,地址3是R的MAC,选B。</span><br></pre></td></tr></table></figure>
+
+<p>18.在一个以太网中，有A、B、C、D四台主机，若A向B发送数据，则(B)。<br>A.只有B可以接收到数据<br><strong>B.四台主机都能接收到数据</strong><br>C.只有B、C、D可以接收到数据<br>D.四台主机都不能接收到数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在以太网中，如果一个结点要发送数据，那么它将以“广播”方式把数据通过作为公共传翻介质的总线发送出去，连在总线上的所有结点（包括发送结点）都能“收听”到发送结点发送的数据信号。</span><br></pre></td></tr></table></figure>
+
+<p>19.下列关于吉比特以太网的说法中，错误的是().<br>A.支持流量控制机制<br><strong>B.采用曼彻斯特编码，利用光纤进行数据传输</strong><br>C.数据的传输时间主要受线路传输延迟的制约<br>D.同时支持全双工模式和半双工模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;吉比特以太网的物理层有两个标准：IEEE 802.3z和IEEE 802.3ab,前者采用光纤通道，后者采用4对UTP5类线。</span><br></pre></td></tr></table></figure>
+
+<p>20.下列关于令牌环网的说法中，不正确的是(C)。<br>A.媒体的利用率比较公平<br>B.重负载下信道利用率高<br><strong>C.结点可以一直持有令牌，直至所要发送的数据传输完毕</strong><br>D.令牌是指一种特殊的控制帧</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;令牌环网使用令牌在各个结点之间传递来分配信道的使用权，每个结点都可在一定的时间内(令牌持有时间)获得发送数据的权利，而并非无限制地持有令牌。</span><br></pre></td></tr></table></figure>
+
+<p>21.在令牌环网中，当所有站，点都有数据帧要发送时，一个站点在最坏情况下等待获得令牌和发送数据帧的时间等于(B)<br>A.所有站点传送令牌的时间总和<br><strong>B.所有站点传送令牌和发送顿的时间总和</strong><br>C.所有站点传送令牌的时间总和的一半<br>D.所有站点传送令牌和发送帧的时间总和的一半</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;令牌环网在逻辑上采用环状控制结构。由于令牌总沿着逻辑环单向逐站传送，结点总可在确定的时间内获得令牌并发送数据帧。在最坏情况下，即所有结点都要发送数据，一个结点获得令牌的等待时间等于逻辑环上所有其他结点依次获得令牌，并在令牌持有时间内发送数据帧的时间总和。</span><br></pre></td></tr></table></figure>
+
+<p>22.【2019统考真题】100 BaseT快速以太网使用的导向传输介质是(A)。<br><strong>A.双绞线</strong><br>B.单模光纤<br>C.多模光纤<br>D.同轴电缆</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;100Base-T是一种以速率1O0Mbps工作的局域网(LAN)标准，它通常被称为快速以太网标准，并使用两对UTP(非屏蔽双绞线)铜质电缆。100Base-T:100标识传输速率为100Mbps:base标识采用基带传输；T表示传输介质为双绞线（包括5类UTP或1类STP),为F时表示光纤。</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h3 id="十三-广域网"><a href="#十三-广域网" class="headerlink" title="十三.广域网"></a>十三.广域网</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><p>广域网(WAN,Wide Area Network),通常跨接很大的物理范围，所覆盖的范围从几十公里到几千公里，它能连接多个城市或国家，或横跨几个洲并能提供远距离通信，形成国际性的远程网络。</p>
+<p>广域网的通信子网主要使用<strong>分组交换</strong>技术。广域网的通信子网可以利用公用分组交换网、卫星通信网和无线分组交换网，它将分布在不同地区的<strong>局域网或计算机系统</strong>互连起来，达到<strong>资源共享</strong>的目的。如因特网(Internet)是世界范围内最大的广域网。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006222535982.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006222535982.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006222535982"></p>
+<h4 id="2-PPP协议"><a href="#2-PPP协议" class="headerlink" title="2.PPP协议"></a>2.PPP协议</h4><h5 id="2-1特点"><a href="#2-1特点" class="headerlink" title="2.1特点"></a>2.1特点</h5><p>点对点协议PPp(Point–to-Point Protocol)是目前使用最广泛的数据链路层协议，用户使用拨号电话接入因特网时一般都使用PPP协议。<br><strong>只支持全双工链路</strong></p>
+<h5 id="2-2PPP协议应满足的要求"><a href="#2-2PPP协议应满足的要求" class="headerlink" title="2.2PPP协议应满足的要求"></a>2.2PPP协议应满足的要求</h5><p><strong>简单</strong>                        对于链路层的帧，无需纠错，无需序号，无需流量控制。<br><strong>封装成帧</strong>                帧定界符<br><strong>透明传输</strong>                与帧定界符一样比特组合的数据应该如何处理：异步线路用字节填充，同步线                                路用比特填充。<br><strong>多种网络层协议</strong>    封装的P数据报可以采用多种协议。<br><strong>多种类型链路</strong>        串行/并行，同步/异步，电/光.…<br><strong>差错检测</strong>                错就丢弃。<br><strong>检测连接状态</strong>        链路是否正常工作。<br><strong>最大传送单元</strong>        数据部分最大长度MTU。<br><strong>网络层地址协商</strong>    知道通信双方的网络层地址。<br><strong>数据压缩协商</strong></p>
+<h5 id="2-3PPP协议无需满足的要求"><a href="#2-3PPP协议无需满足的要求" class="headerlink" title="2.3PPP协议无需满足的要求"></a>2.3PPP协议无需满足的要求</h5><p><strong>纠错</strong><br><strong>流量控制</strong><br><strong>序号</strong><br><strong>不支持多点线路</strong></p>
+<h5 id="2-3组成部分"><a href="#2-3组成部分" class="headerlink" title="2.3组成部分"></a>2.3组成部分</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223056019.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223056019.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006223056019"></p>
+<h5 id="2-4状态图"><a href="#2-4状态图" class="headerlink" title="2.4状态图"></a>2.4状态图</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223141592.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223141592.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006223141592"></p>
+<h5 id="2-5帧格式"><a href="#2-5帧格式" class="headerlink" title="2.5帧格式"></a>2.5帧格式</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223209420.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223209420.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006223209420"></p>
+<h4 id="3-HDLC协议"><a href="#3-HDLC协议" class="headerlink" title="3.HDLC协议"></a>3.HDLC协议</h4><h5 id="1-定义-1"><a href="#1-定义-1" class="headerlink" title="1.定义"></a>1.定义</h5><p>高级数据链路控制(High-Level Data Link Control或简称HDLC),是一个在同步网上传输数据、<strong>面向比特</strong>的数据链路层协议，它是由国际标准化组织(<strong>ISO</strong>)根据BM公司的sDLC(SynchronousData Link Control)协议扩展开发而成的.</p>
+<p>数据报文可透明传输，用于实现透明传输的“0比特插入法”易于硬件实现</p>
+<p><strong>采用全双工通信</strong></p>
+<p>所有帧采用<strong>CRC检验</strong>，对信息帧进行顺序<strong>编号</strong>，可防止漏收或重份，传输可靠性高。</p>
+<h5 id="2-HDLC的站"><a href="#2-HDLC的站" class="headerlink" title="2.HDLC的站"></a>2.HDLC的站</h5><p>主站、从站、复合站</p>
+<p>1.主站的主要功能是发送命令（包括数据信息）帧、接收响应帧，并负责对整个链路的控制系统的初启、流程的控制、差错检测或恢复等。</p>
+<p>2.从站的主要功能是接收由主站发来的命令帧，向主站发送响应帧，并且配合主站参与差错恢复等链路控制。</p>
+<p>3.复合站的主要功能是既能发送，又能接收命令帧和响应帧，并且负责整个链路的控制。</p>
+<p>三种数据操作方式：<br>1.正常响应方式<br>2.异步平衡方式<br>3.异步响应方式</p>
+<h5 id="3-帧格式"><a href="#3-帧格式" class="headerlink" title="3.帧格式"></a>3.帧格式</h5><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223646879.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223646879.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006223646879"></p>
+<h4 id="4-PPP协议＆HDLC协议"><a href="#4-PPP协议＆HDLC协议" class="headerlink" title="4.PPP协议＆HDLC协议"></a>4.PPP协议＆HDLC协议</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223715803.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221006223715803.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221006223715803"></p>
+<h3 id="习题-6"><a href="#习题-6" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>选择</p>
+<p>1.下列关于广域网和局域网的叙述中，正确的是(C)。<br>A.广域网和互联网类似，可以连接不同类型的网络<br>B.在OSI参考模型层次结构中，广城网和局域网均涉及物理层、数据链路层和网络层<br><strong>C.从互联网的角度看，广域网和局域网是平等的</strong><br>D.局域网即以太网，其逻料拓扑是总线形结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">广域网不等于互联网。互联网可以连接不同类型的网络（既可以连接局域网，又可以连接广域网)，通常使用路由器来连接。广域网是单一的网络，通常使用结点交换机连接各台主机（或路由器)，而不使用路由器连接网络。其中结点交换机在单个网络中转发分组，而路由器在多个网络构成的互联网中转发分组。因此选项A错误。根据广域网和局域网的区别可知选项B错误。</span><br><span class="line">尽管广域网的覆盖范围较大，.但从互联网的角度看，广域网和局域网之间并非包含关系，而是平等的关系。不管是在广域网中还是在局域网中，主机间在网内进行通信时，都只需使用其物理地址。因此选项C正确。</span><br><span class="line">以太网是局域网的一种实现形式，其他实现形式还有令牌环网、FDDI(光纤分布数字接口，EEE802.8)等。其中以太网的逻辑拓扑是总线形结构，物理拓扑是星形或拓展星形结构。令牌环网的逻辑拓扑是环形结构，物理拓扑是星形结构。FDDI逻辑拓扑是环形结构，物理拓扑是双环结构。因此选项D错误。</span><br></pre></td></tr></table></figure>
+
+<p>2.广域网覆蓝的地理范围从几十千米到几千千米，它的通信子网主要使用（B)。<br>A.报文交换技术<strong>B.分组交换技术</strong>C.文件交换技术D.电路交换技术</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;广域网的通信子网主要使用分组交换技术，将分布在不同地区的局域网或计算机系统互联起来，达到资源共享的目的。</span><br></pre></td></tr></table></figure>
+
+<p>3.广域网所使用的传输方式是(B)，<br>A.广播式<br><strong>B.存储转发式</strong><br>C.集中控制式<br>D.分布控制式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;广域网通常指覆盖范围很广的长距离网络，它由一些结点交换机及连接这些交换机的链路组成，其中结点交换机执行分组存储、转发功能。</span><br></pre></td></tr></table></figure>
+
+<p>4.下列协议中不属于TCP/P协议族的是（D)。<br>A.ICMP<br>B.TCP<br>C.FTP<br><strong>D.HDLC</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;TCPP协议族主要包括TCP、P、ICMP、IGMP、ARP、RARP、UDP、DNS、FTP、HTTP等。HDLC是ISO提出的一个面向比特型的数据链路层协议，它不属于TCPP协议族。</span><br></pre></td></tr></table></figure>
+
+<p>5.为实现透明传输（注：默认为异步线路)，PPP使用的填充方法是(B).<br>A.位填充<br><strong>B.字符填充</strong><br>C.对字特数据使用字符填充，对非字符数据使用位填充<br>D.对字符数据使用位填充，对非字符数据使用字符填充</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;PPP是一种面向字节的协议，¨所有的帧长度都是整数个字节，使用一种特殊的字符填充法完成数据的填充。</span><br></pre></td></tr></table></figure>
+
+<p>6.以下对PPP的说法中，错误的是（B).<br>A.具有差错控制能力<br><strong>B.仅支持P协议</strong><br>C.支持动态分配P地址<br>D.支持身份验证</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;PPP两端的网络层可以运行不同的网络层协议，但仍然能使用同一个PPP进行通信。因此选项B错误。PPP提供差错检测但不提供纠错功能，它是不可靠的传输协议，选项A正确。PPP支持两种认证：一种是PAP,一种是CHAP。相对来说，PAP的认证方式的安全性没有CHAP的高。PAP在传输密码时是明文，而CHAP在传输过程中不传输密码，取代密码的是hash(哈希)值。PAP认证通过两次握手实现，而CHAP认证通过3次握手实现。PAP认证由被叫方提出连接请求，主叫方响应：而CHAP认证则由主叫方发出请求，被叫方回复一个数据报，这个数据报中有主叫方发送的随机哈希值，主叫方在确认无误后发送一个连接成功的数据报连接，因此选项D正确。PPP可用于拨号连接，因此支持动态分配P地址，选项C正确。</span><br></pre></td></tr></table></figure>
+
+<p>7.PPP协议提供的功能有(D).<br>A.一种成帧方法<br>B.链路控制协议(LCP)<br>C.网络控制协议（NCP)<br><strong>D.A、B和C都是</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;PPP协议主要由3部分组成。</span><br><span class="line">&gt;1)链路控制协议(LCP)。一种扩展链路控制协议，用于建立、配置、测试和管理数据链路。</span><br><span class="line">&gt;2)网络控制协议(NCP)。PPP允许同时采用多种网络层协议，每个不同的网络层协议要用</span><br><span class="line">&gt;一个相应的NCP来配置，为网络层协议建立和配置逻辑连接。</span><br><span class="line">&gt;3)一个将P数据报封装到串行链路的方法。P数据报在PPP帧中就是其信息部分，这个信息部分的长度受最大传送单元(MTU)的限制。</span><br></pre></td></tr></table></figure>
+
+<p>8.PPP协议中的LCP帧的作用是(A)。<br><strong>A.在建立状态阶段协商数据链路协议的选项</strong><br>B.配置网络层协议<br>C.检查数据链路层的错误，并通知错误信息<br>D.安全控制，保护通信双方的数据安全</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;PPP协议帧在默认配置下，地址和控制域总是常量，所以CP提供了必要的机制，允许双方协商一个选项。在建立状态阶段，LC协商数据链路协议中的选项，它并不关心这些选项本身，只提供一个协商选择的机制。</span><br></pre></td></tr></table></figure>
+
+<p>9.下列关于PPP协议和HDLC协议的叙述中，正确的是(D).<br>A.PPP协议是网络层协议，而HDLC协议是数据链路层协议<br>B.PPP协议支持半双工或全双工通信<br>C.PPP协议两端的网络层必须运行相同的网络层协议<br><strong>D.PPP协议是面向字节的协议，而HDLC协议是面向比特的协议</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;PPP和HDLC协议均为数据链路层协议，选项A错误。其中HDLC协议是面向比特的数据链路层协议。根据PPP的特点可知选项B、C错误，选项D正确。</span><br></pre></td></tr></table></figure>
+
+<p>10.HDLC常用的操作方式中，传输过程只能由主站启动的是(C)。<br>A.异步平衡模式<br>B.异步响应模式<br><strong>C.正常响应模式</strong><br>D.A、B、C都可以</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在DLC的三种数据操作方式中，正常响应模式和异步响应模式属于非平衡配置方式。在正常响应模式中，主站向从站传输数据，从站响应传输，但是从站只能在收到主站的许可后才能进</span><br></pre></td></tr></table></figure>
+
+<p>11.HDLC协议为实现透明传输，采用的填充方法是（A)。<br><strong>A.比特填充的首尾标志法</strong><br>B.字符填充的首尾定界符法<br>C.字符计数法<br>D.物理层违规编码法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;HDLC采用零比特填充法来实现数据链路层的透明传输(PPP协议采用字节填充法来成帧)，即在两个标志字段之间不出现6个连续的“1”。具体做法是：在发送端，当一串比特流尚未加上标志字段时，先用硬件扫描整个帧，只要发现5个连续的“1”，就在其后插入1个“0”。而在接收端先找到F字段以确定帧边界，接着对其中的比特流进行扫描，每当发现5个连续的“1”，就将这5个连续的“1”后的一个“0”删除，进而还原成原来的比特流。</span><br></pre></td></tr></table></figure>
+
+<p>12.在一个DLC帧的数据中，若出现了000111111011这样的流，则在发送到信道上时它将会变成(C)。<br>A.0001 1111 1011 0<br>B.0001 1111 1101 1<br><strong>C.0001 1111 0101 1</strong><br>D.0000 1111 1101 1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;HDLC数据帧以位模式01111110标志每个顿的开始和结束，因此在数据流中只要出现连实的5个“1”，就在其后面插入一个“0”，选项C正确。</span><br></pre></td></tr></table></figure>
+
+<p>13.【2013统考真题】HDLC协议对0111110001111110组颅后，对应的比特串为(A).<br><strong>A.01111100 00111110 10</strong><br>B.01111100 01111101 01111110<br>C.01111100 01111101 0<br>D.01111100 01111110 01111101</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;HDLC协议对比特串进行组帧时，HDLC数据帧以位模式01111110标识每个帧的开始和结束，因此在帧数据中只要出现5个连续的位“1”，就会在输出的位流中填充一个“0”。因此组帧后的比特串为011111 _0 00011111 _0 10（下画线部分为新增的0）。</span><br></pre></td></tr></table></figure>
+
+<p>14.根据HDLC桢中控制字段前两位的取值，可将HDLC帧划分为三类，这三类不包括(C).<br>A,信息帧<br>B.监督帧<br><strong>C.确认帧</strong><br>D.无编号帧</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;根据控制字段最前面两位的取值，可将DLC帧划分为三类：信息帧(I帧)、监督帧(S帧)和无编号帧(U帧)。因此选C。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="十四-链路层设备"><a href="#十四-链路层设备" class="headerlink" title="十四.链路层设备"></a>十四.链路层设备</h3><h4 id="1-物理层扩展以太网"><a href="#1-物理层扩展以太网" class="headerlink" title="1.物理层扩展以太网"></a>1.物理层扩展以太网</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007085259297.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007085259297.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221007085259297"></p>
+<h4 id="2-链路层扩展以太网"><a href="#2-链路层扩展以太网" class="headerlink" title="2.链路层扩展以太网"></a>2.链路层扩展以太网</h4><p><strong>网桥</strong>根据<strong>MAC帧</strong>的目的<strong>地址</strong>对帧进行转发和<strong>过滤</strong>。当网桥收到一个帧时，并不向所有接口转发此帧，而是先检查此帧的目的MC地址，然后再确定将该帧转发到哪一个接口，或者是把它丢弃（即过滤）</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007085515886.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007085515886.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221007085515886"></p>
+<h4 id="3-网桥分类"><a href="#3-网桥分类" class="headerlink" title="3.网桥分类"></a>3.网桥分类</h4><h5 id="3-1透明网桥"><a href="#3-1透明网桥" class="headerlink" title="3.1透明网桥"></a>3.1透明网桥</h5><p><strong>透明网桥</strong>：“透明”指以太网上的站点并不知道所发送的帧将经过哪几个网桥，是一种即插即用设备一一自学习。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007090006198.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007090006198.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221007090006198"></p>
+<h5 id="3-2源路由网桥"><a href="#3-2源路由网桥" class="headerlink" title="3.2源路由网桥"></a>3.2源路由网桥</h5><p><strong>源路由网桥</strong>：在发送帧时，把详细的最佳路由信息（路由最少/时间最短）放在帧的首部中。<br><strong>方法</strong>：源站以广播方式向欲通信的目的站发送一个<strong>发现帧</strong>。</p>
+<h4 id="4-多接口网桥——以太网交换机"><a href="#4-多接口网桥——以太网交换机" class="headerlink" title="4.多接口网桥——以太网交换机"></a>4.多接口网桥——以太网交换机</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007091045986.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007091045986.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221007091045986"></p>
+<h4 id="5-以太网交换机的两种交换方式"><a href="#5-以太网交换机的两种交换方式" class="headerlink" title="5.以太网交换机的两种交换方式"></a>5.以太网交换机的两种交换方式</h4><h5 id="5-1直通式交换机"><a href="#5-1直通式交换机" class="headerlink" title="5.1直通式交换机"></a>5.1直通式交换机</h5><p>查完目的地址(6B)就立刻转发。</p>
+<p><strong>延迟小</strong>，可靠性低，无法支持具有不同速率的端口的交换。</p>
+<h5 id="5-2存储转发式交换机"><a href="#5-2存储转发式交换机" class="headerlink" title="5.2存储转发式交换机"></a>5.2存储转发式交换机</h5><p>将帧放入高速缓存，并检查否正确，正确则转发，错误则丢弃。</p>
+<p>延迟大，<strong>可靠性高，可以支持具有不同速率的端口的交换。</strong></p>
+<h4 id="6-冲突域和广播域"><a href="#6-冲突域和广播域" class="headerlink" title="6.冲突域和广播域"></a>6.冲突域和广播域</h4><p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007091152766.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007091152766.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221007091152766"></p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007091204330.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221007091204330.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221007091204330"></p>
+<h3 id="习题-7"><a href="#习题-7" class="headerlink" title="习题:"></a>习题:</h3><blockquote>
+<p>1.下列网络连接设备都工作在数据链路层的是(C)。<br>A.中继器和集线器<br>B.集线器和网桥<br><strong>C.网桥和局域网交换机</strong><br>D.集线器和局域网交换机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;中继器和集线器都属于物理层设备，网桥和局域网交换机属于数据链路层设备</span><br></pre></td></tr></table></figure>
+
+<p>2.下列关于数据链路层设备的叙述中，错误的是（D)。<br>A,网桥可隔离信息，将网络划分成多个网段，一个网段的故障不会影响到另一个网段的运行<br>B.网桥可互联不同的物理层、不同的MAC子层及不同速率的以太网<br>C.交换机的每个端口结点所占用的带宽不会因为端口结点数目的增加而减少，且整个交换机的总带宽会随着端口结点的增加而增加<br><strong>D.利用交换机可以实现虚拟局域网(VLAN),VLAN可以隔离冲突域，但不能隔离广播域</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;交换机的优点是每个端口结点所占用的带宽不会因为端口结点数目的增加而减少，且整个交换机的总带宽会随着端口结点的增加而增加。另外，利用交换机可以实现虚拟局域网(VLAN),VLAN不仅可以隔离冲突域，而且可以隔离广播域。因此选项C正确，选项D错误。</span><br></pre></td></tr></table></figure>
+
+<p>3.下列（D)不是使用网桥分割网络所带来的好处.<br>A.减少冲突域的范围<br>B.在一定条件下增加了网络的带宽<br>C.过滤网段之间的数据<br><strong>D.缩小了广播域的范围</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;网桥可以隔离信息，将网络划分成多个网段，隔离出安全网段，防止其他网段内的用户非法访问。由于网络的分段，各网段相对独立，一个网段的故障不会影响到另一个网段的运行。因此选项B、C正确。根据网桥的特点可知选项A正确，选项D错误。</span><br></pre></td></tr></table></figure>
+
+<p>4.下列关于网桥的描述中，错误的是（B).<br>A.网桥工作在数据链路层，可以对网络进行过滤和分段<br><strong>B.网桥可以对不需要传递的数据进行过滤并有效地阻止广播数据</strong><br>C.网桥传递所有的广播信息，因此难以避免广播风暴<br>D.网桥与集线器相比，需要处理接收到的数据，因此增加了时延</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;网桥只适合于用户数不多和通信蛩不大的局域网，否则有时会因传播过多的广播信息而产生网络拥塞，这就是所谓的广播风暴。第二层网络设备可以解决冲突域问题，却无法完全解决第三层网络设备才能解决的广播域的问题。</span><br></pre></td></tr></table></figure>
+
+<p>5.不同网络设备传输数据的延迟时间是不同的。下面设备中，传输时延最大的是（C)。<br>A.局域网交换机<br>B.网桥<br><strong>C.路由器</strong><br>D.集线器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;路由器具有较大的传输时延，因为它需要根据所接收的每个分组报头中的P地址决定是否转发分组。这种处理分组报头的任务一般由软件完成，将带来较长的处理时间，也会增加每个分组的传输时延。由于局域网交换机和网桥通常都由硬件进行帧的转发，而且不关心数据链路层以上的数据，因此都具有比路由器要小得多的传输时延。从数量级上看，如果局域网交换机的传输时延为几十傲秒，那么网桥的传输时延为几百馓秒，而路由器的传输时延为几千微秒。集线器的每个端口都具有收发功能，当某个端口收到信号时，立即向所有其他端口转发，因此其传输时延最小。</span><br></pre></td></tr></table></figure>
+
+<p>6.下列不能分割碰拉战的设备是（A)。<br><strong>A.集线器</strong><br>B.交换机<br>C.路由器<br>D.网桥</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;碰撞域是指共享同一信道的各个站点可能发生冲突的范围，又称冲突域。物理层设备集线器不能分割碰撞域，数据链路层设备交换机和网桥可以分割碰撞域，但不能分割广播域，而网络层设备路由器既可以分割碰撞域，又可以分割广播域。</span><br></pre></td></tr></table></figure>
+
+<p>7.局域网交换机实现的主要功能在（A)。<br><strong>A.物理层和数据链路层</strong><br>B.数据链路层和网络层<br>C.物理层和网络层<br>D.数据链路层和应用层</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;局域网交换机是数据链路层设备，能实现数据链路层和物理层的功能。</span><br></pre></td></tr></table></figure>
+
+<p>8.交换机比集线器提供更好的网给性能的原因是(A)<br><strong>A.交换机支持多对用户同时通信</strong><br>B.交换机使用差错控制减少出错率<br>C.交换机使网络的覆盖范围更大<br>D.交换机无须设置，使用更方便</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;交换机能隔离冲突域，工作在全双工状态，使网络中多对结点同时通信，提高了网络的利用率，这是交换机的优点。</span><br></pre></td></tr></table></figure>
+
+<p>9.【2009统考真题】以太网交换机进行转发决策时使用的PDU地址是(A)。<br><strong>A.目的物理地址</strong>B.目的IP地址C.源物理地址D.源IP地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;交换机实质上是一个多端口网桥，工作在数据链路层，数据链路层使用物理地址进行转发，而转发到目的地需要使用目的地址。因此PDU地址是目的物理地址。</span><br></pre></td></tr></table></figure>
+
+<p>10.通过交换机连接的一组工作站(B)。<br>A.组成一个冲突域，但不是一个广播域<br><strong>B.组成一个广播域，但不是一个冲突域</strong><br>C.既是一个冲突域，又是一个广播域<br>D.既不是冲突域，也不是广播域</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;交换机是数据链路层的设备，数据链路层的设备可以隔离冲突域，但不能隔离广播域，因此本题选B。另外，物理层设备（集线器等）既不能隔离冲突域，也不能隔离广播域；网络层设备(路由器)既可以隔离冲突域，又可以隔离广播域。</span><br></pre></td></tr></table></figure>
+
+<p>11.一个16端口的集线器的冲突域和广播域的个数分别是(C).<br>A.16,1<br>B.16,16<br><strong>C.1,1</strong><br>D.1,16</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;物理层设备（中继器和集线器）既不能分割冲突域又不能分割广播域，因此选C。</span><br></pre></td></tr></table></figure>
+
+<p>12.一个16个端口的以太网交换机，冲突域和广播域的个数分别是(D)。<br>A.1,1<br>B.16,16<br>C.1,16<br><strong>D.16,1</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;以太网交换机的各端口之间都是冲突域的终止点，但LAN交换机不隔离广播，所以冲突域的个数是16，广播域的个数是1。</span><br></pre></td></tr></table></figure>
+
+<p>13.对于由交换机连接的10Mbs的共享式以太网，若共有10个用户，则每个用户能够占有的带宽为(C)。<br>A.1Mb/s<br>B.2Mb/s<br><strong>C.10Mb/s</strong><br>D.100Mb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;对于普通的10Mbs共享式以太网，若共有N个用户，则每个用户占有的平均带宽只有总带宽的1/N。使用以太网交换机时，虽然在每个端口到主机的带宽还是10M6/s,但由于一个用户在通信时是独占而不是和其他用户共享传输媒体的带宽，因此每个用户仍然可以得到10M6/s的带宽，这正是交换机的最大优点。</span><br></pre></td></tr></table></figure>
+
+<p>14.若一个网络采用一个具有24个10Mb/s端口的半双工交换机作为连接设备，则每个连接点平均获得的带宽为（①D），该交换机的总容量为（②A）<br>①A.0.417Mb/sB.0.0417Mb/s<br>C.4.17Mb/s<br><strong>D.10Mb/s</strong><br>②<strong>A.120Mb/s</strong>B.240Mb/s<br>C.10Mb/s<br>D.24Mb/s</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1)在采用交换机作为连接设备的交换式局域网中，交换机能同时连通许多对端口，使每对相互通信的计算机都能像独占该通信媒体一样，进行无冲突的数据传输。另外，交换机的端口还可设计成支持两种工作模式，即半双工模式和全双工模式。对于10Mbs的端口，半双工端口带宽为10Mb/s,而全双工端口带宽为20M6/s。</span><br><span class="line">2)拥有N对10M6/s端口的交换机可同时支持N对结点同时进行半双工通信，所以它的总容量为N×10M6/s,本题中N=24/2=12,因此交换机总容量为120Mb/s。</span><br></pre></td></tr></table></figure>
+
+<p>15.【2013统考真题】对于100Mb/s的以太网交换机，当输出端口无排队，以直通交换(cut-through switching)方式转发一个以太网帧（不包括前导码)时，引入的转发时延<br>至少是(B)。<br>A.0μs<br><strong>B.0.48μs</strong><br>C.5.12μs<br>D.121.44μs</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;直通交换在输入端口检测到一个数据帧时，检查帧首部，获取帧的目的地址，启动内部的动态查找表转换成相应的输出端口，在输入与输出交叉处接通，·把数据帧直通到相应的端口，实现交换功能。直通交换方式只检查帧的目的地址，共6B,所以最短传输时延是6×8bit/100Mb/s=0.48s。</span><br></pre></td></tr></table></figure>
+
+<p>16.假设以太网A中80%的通信量在本局域网内进行，其余20%在本局域网与因特网之间进行，而局域网B正好相反。这两个局域网中，一个使用集线器，另一个使用交换机，则交换机应放置的局域网是(A)。<br><strong>A.以太网A</strong><br>B.以太网B<br>C.任一以太网<br>D.都不合适</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;交换机能隔离冲突域，而集线器连接的各网段属于一个冲突域。以太网A内的通信量很大，若使用集线器，则冲突域变大，使整个网络效率降低，必须要用交换机把不同网段的通信隔离开。</span><br></pre></td></tr></table></figure>
+
+<p>17.在使用以太网交换机的局域网中，以下(B)是正确的。<br>A.局域网中只包含一个冲突域<br><strong>B.交换机的多个端口可以并行传输</strong><br>C.交换机可以隔离广播域<br>D.交换机根据LLC目的地址转发</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;交换机的每个端口都有其自己的冲突域，所以交换机永远不会因为冲突而丢失帧，A错误。交换机不能隔离广播域，C错误。LLC是逻辑链路控制，它在MAC层上，用于向网络提供一个接口以隐藏各种802网络之间的差异，交换机应是按MAC地址转发的，D错误。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012160406684.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012160406684.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221012160406684"></p>
+<p>A.{3}和{1}<br><strong>B.{2,3}和{1}</strong><br>C.{2,3}和{1,2}<br>D.{1,2,3}和{1}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;主机00e1d5-00-23-al向00e1-d5-00-23c1发送数据帧时，交换机转发表中没有00-e1-d5-0023-c1这一项，所以向除1接口外的所有接口广播这一帧，即2、3端口会转发这帧，同时因为转发表中并没有00e1-d5-00-23-a1这一项，所以转发表会把（目的地址00e1-d5-00-23-al,端口1）这一项加入转发表。而当00e1-d5-00-23c1向00e1-d5-00-23-al发送确认帧时，由于转发表已经有00e1-d500-23-a1这一项，所以交换机只向1端口转发，选B。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012160504193.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012160504193.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221012160504193"></p>
+<p>​                                D</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012161817126.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012161817126.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221012161817126"></p>
+<p>20.【2015统考真题】下列关于交换机的叙述中，正确的是(A)。<br><strong>A.以太网交换机本质上是一种多端口网桥</strong><br>B.通过交换机互连的一组工作站构成一个冲突域<br>C.交换机每个端口所连网络构成一个独立的广播域<br>D.以太网交换机可实现采用不同网络层协议的网络互联</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;从本质上说，交换机就是一个多端口的网桥（A正确)，工作在数据链路层（因此不能实现不同网络层协议的网络互联，D错误)，交换机能经济地将网络分成小的冲突域(B错误)。广播域属于网络层概念，只有网络层设备（如路由器)才能分割广播域(C错误)。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Ch3-疑难总结"><a href="#Ch3-疑难总结" class="headerlink" title="Ch3.疑难总结"></a>Ch3.疑难总结</h2><blockquote>
+<p>1.“链路”和“数据链路”有何区别？“电路接通”与“数据链路接通”有何区别？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">所谓链路(Lik),是指从一个结点到相邻结点的一段物理线路，其中间没有其他任何的交换结点。在进行数据通信时，两台计算机之间的通信路径往往要经过许多段这样的链路。可见，链路只是一条路径的组成部分。</span><br><span class="line">数据链路(Data Link)则是另一个概念。因为在一条线路上传送数据时，除必须有一条物理线路外，还必须有一些通信协议来控制这些数据的传输。若把实现这些协议的硬件和软件加到链</span><br><span class="line">&gt;路上，就构成了数据链路。有时也把链路分为物理链路和逻辑链路。物理链路就是指上面所说的链路，逻辑链路就是上面的数据链路，即物理链路加上必要的通信协议。</span><br><span class="line">“电路接通”表示链路两端的结点交换机已经开机，物理连接已经能够传送比特流，但数据传输并不可靠，在物理连接基础上，再建立数据链路连接，才能说“数据链路接通”。此后，由</span><br><span class="line">&gt;于数据链路连接具有检测、确认和重传功能，才使得不太可靠的物理链路变成可靠的数据链路，进行可靠的数据传输。当数据链路断开连接时，物理电路连接不一定跟着断开连接。</span><br></pre></td></tr></table></figure>
+
+<p>2.在停止-等待协议中，确认帧为什么不需要序号（如用ACK0和ACK1)?</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;在停止等待协议中，发送方每发送一帧，都需要在收到接收方的确认帧后，才能进行下一帧的发送，而发送方收到的确认帧也一定是自己刚刚发出去的数据帧的确认帧，无须加序号标记。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012162305792.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012162305792.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221012162305792"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">举一个具体的例子进行说明。例如用3比特可编出8个不同的序号，因而发送窗口的最大值似乎应为8。但实际上，设置发送窗口为8将使协议在某些情况下无法工作。现在我们就来说明这一点。</span><br><span class="line">设发送窗口W_T=8，发送端发送完0~7号共8个数据帧。因发送窗口已满，发送暂停。假定这8个数据帧均已正确到达接收端，并且对每个数据帧，接收端都发送出确认顿。下面考虑两种不同的情况。</span><br><span class="line">第一种情况是：所有确认帧都正确到达了发送端，因而发送端接着又发送8个新的数据帧，其编号应是0~7。注意，序号是循环使用的。因此序号虽然相同，但8个帧都是新的帧。</span><br><span class="line">第二种情况是：所有确认帧都丢失了。经过一段由超时计时器控制的时间后，发送端重传这8个旧的数据顿，其编号仍为0一7。</span><br><span class="line">于是，当接收端第二次收到编号为0~7的8个数据帧时，就无法判定这是8个新的数据帧还是8个重传的旧数据帧。</span><br><span class="line">因此，将发送窗口设置为8显然是不行的。</span><br></pre></td></tr></table></figure>
+
+<p>4.证明：对于选择重传协议，若有n比特进行编号，则接收窗口的最大值为W_R≤2^(n-1)。</p>
+<p><img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012162559943.png" class="lazyload placeholder" data-srcset="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/00325/image-20221012162559943.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="image-20221012162559943"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;注意，如果题目没有特别说明，那么一般情况下选择重传协议的发送窗口和接收窗口的大小是相等的。大家试想一下，SR协议中接收窗口值大于1，接收窗口要等到接收范围内所有帧收到才能更新，发送窗口要等接收窗口更新后才会更新，那么发送窗口比接收窗口多出来的那部分窗口就没有意义了。</span><br></pre></td></tr></table></figure>
+
+<p>5.数据链路层使用PPP协议或CSMA/CD协议时，既然不保证可靠传输，为什么要对所传输的帧进行差错检验？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;当数据链路层使用PPP协议或CSMA/CD协议时，在数据链路层的接收端对所传输的帧进行差错检验是为了不将已发现有差错的帧（不管是什么原因造成的）接收下来。如果在接收端不进</span><br><span class="line">&gt;行差错检测，那么接收端上交给主机的帧就可能包括在传输中出了差错的帧，而这样的帧对接收端主机是没有用处的。换言之，接收端进行差错检测的目的是：“上交主机的帧都是没有传输差错的，有差错的都已经丢弃了”，或者更加严格地说：“我们以很接近于1的概率认为，凡是上交主机的帧都是没有传输差错的”。</span><br></pre></td></tr></table></figure>
+
+<p>6.为什么PPP协议不使用桢的编号和确认机制来实现可靠传输？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PPP不使用序号和确认机制是出于以下考虑：</span><br><span class="line">若使用能够实现可靠传输的数据链路层协议（如HDLC),开销就会增大。当数据链路层出现差错的概率不大时，使用比较简单的PPP较为合理。</span><br><span class="line">在因特网环境下，PPP的信息字段放入的数据是P数据报。假定我们采用了能实现可靠传输但十分复杂的数据链路层协议，当数据帧在路由器中从数据链路层上升到网络层后，仍有可能因网络拥塞而被丢弃。因此，数据链路层的可靠传输并不能保证网络层的传输也是可靠的。</span><br><span class="line">PPP在帧格式中有帧校验序列FCS字段。对于每个收到的帧，PPP都要使用硬件进行CRC检验。若发现有差错，则丢弃该帧（一定不能把有差错的帧交给上一层）。端到端的差错控制最后由高层协议负责。因此，PPP可以保证无差错接收。</span><br></pre></td></tr></table></figure>
+
+<p>7.两台计算机通过计算机网络传输一个文件时，有两种可行的确认策略。第一种是由发送端将文件分割成分组，接收端逐个确认分组；但就整体而言，文件并没有得到确认。第二种策略是接收端不确认单个分组，而是当文件全部收到后，对整个文件予以接收确认。试比较这两种方式的优缺点，以及它们各自适用的场合。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在计算机网络中，数据的传输过程可能会引起数据的丢失、出错等，因此一个可靠的传输需要一定的差错控制机制，确认是实现差错控制的一个辅助手段。上面的两种确认策略都是可行的，但它们的性能取决于所应用的网络环境。</span><br><span class="line">具体地说，当网络传输可靠性较低且分组容易丢失时，第一种策略即对每个分组逐一确认较好，此时仅需重传丢失或出错的分组。如果网络的传输可靠性较高，那么在不发生差错的情况下，仅对整个文件进行一次确认，从而减少了确认的次数，节省了网络带宽和网络资源；不过，即使有单个分组丢失或出错，也需要重传整个文件。</span><br></pre></td></tr></table></figure>
+
+<p>8.局域网、广域网和因特网之间的关系总结：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;为方便理解，可将广域网视为一个大的局域网，专业地讲，就是通过交换机连接多个局域网，组成更大的局域网，即广域网。因此，广域网仍然是一个网络。而因特网是多个网络之间的互联，即因特网由大局域网（广域网）和小局域网共同通过路由器相连。因此局域网可以通过广域网与另一个相隔很远的局域网进行通信。</span><br></pre></td></tr></table></figure>
+
+<p>9.EEE802局域网参考模型与OSI参考模型有何异同之处？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">局域网的体系结构只有OSI参考模型的下两层（物理层和数据链路层），而没有第三层以上的层次。即使是下两层，由于局域网是共享广播信道，而且产品的种类繁多，涉及多种媒体访问方法，所以两者存在明显的差别。</span><br><span class="line">在局域网中，与OSI多考模型的物理层相同的是：该层负责物理连接并在媒体上传输比特流，主要任务是描述传输媒体接口的一些特性。在局域网中，数据链路层的主要作用与OSI参考模型的数据链路层相同：都通过一些数据链路层协议，在不可靠的传输信道上实现可靠的数据传输：负责帧的传送与控制，但在局域网中，由于各站共享网络公共信道，因此数据链路层必须具有媒体访问控制功能（如何分配信道、如何避免或解决信道争用）。又由于局域网采用的拓扑结构与传输媒体多种多样，相应的媒体访问控制方法也有多种，因此在数据链路功能中应该将与传输媒体有关的部分和无关的部分分开。这样，正EE802局域网参考模型中的数据链路层就划分为两个子层：媒体访问控制(MAC)子层和逻辑链路控制(LLC)子层。</span><br><span class="line">与OSI参考模型不同的是：在IEEE 802局域网参考模型中没有网络层。局域网中，在任意两个结点之间只有唯一的一条链路，不需要进行路由选择和流量控制，所以在局域网中不单独设</span><br><span class="line">&gt;置网络层。</span><br><span class="line">由上面的分析可知，局域网的参考模型只相当于OSI参考模型的最低两层，且两者的物理层和数据链路层之间也有很大差别。在IEEE 802系列标准中，各个子标准的物理层和媒体访问控制(MAC)子层是有区别的，而逻辑链路控制(LLC)子层是相同的，也就是说，LLC子层实际上是高层协议与任何一种MAC子层之间的标准接口。</span><br></pre></td></tr></table></figure>
+
+<p>10.在EEE802.3标准以太网中，为什么说如果有冲突，那么冲突一定发生在冲突窗口内？或者说一个帧如果在冲突宙口内没有发生冲突，那么该桢就不会再发生冲突？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;结点发送数据时，先侦听信道是否有载波，如果有，表示信道忙，那么继续侦听，直至检测到空闲为止；一个数据帧在从结点A向最远的结点传输的过程中，如果有其他结点也正在发送数据，那么此时就会发生冲突，冲突后的信号需要经过冲突窗口时间后传回结点A,结点A会检测到冲突，所以说如果有冲突，那么一定发生在冲突窗口内，如果在冲突窗口内没有发生冲突，之后如果其他结点再要发送数据，那么就会侦听到信道忙，而不会发送数据，从而不会再发生冲突。</span><br></pre></td></tr></table></figure>
+
+<p>11.一个以太网的速率从10Mb/s升级到100Mb/s,满足CSMA/CD冲突条件.为使其正常工作，需做哪些调整？为什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;由于10BASE-T要比10BASE2和10BASE5的优越性更明显，因此所有快速以太网系统都使用集线器(Hub),而不使用同轴电缆。100BASE-TMAC与10Mb/s的经典以太网MAC几乎一样，唯一不同的参数就是帧际间隙时间，10M6/s以太网是9.6μs（最小值)，快速以太网(100Mb/s)是0.96s（最小值)。另外，为了维持最小分组尺寸不变，需要减小最大冲突域直径。所有这些调整的主要原因是速率提高到了原来以太网的10倍。</span><br></pre></td></tr></table></figure>
+
+<p>12.DLC协议是PPP协议的基础，它使用位填充来实现透明传输。但PPP协议却使用字符填充而不使用位填充，为什么？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;PPP被明确地设计成以软件形式实现，而不像HDLC协议那样几乎总以硬件形式实现。对于软件实现，完全用字节操作比用单个位操作简单得多。此外，PPP被设计成与调制解调器一道使</span><br><span class="line">&gt;用，而调制解调器是以一个字节而非一个比特为单元接收和发送数据的。</span><br></pre></td></tr></table></figure>
+
+<p>13.假定连接到透明网桥上的一台计算机把一个数据帧发给网络上的一个不存在的设备，网桥将如何处理这个帧？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;网桥不知道网络上是否存在该设备，它只知道在其转发表中没有这个设备的MAC地址。因此，当网桥收到这个目的地址未知的帧时，它将扩散该帧，即把该帧发送到所连接的除输入网段外的所有其他网段。</span><br></pre></td></tr></table></figure>
+
+<p>14.关于冲突域（碰撞域）和广播域辨析。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;一块网卡发送信息时，只要有可能和另一块网卡冲突，那么这些可能冲突的网卡就构成冲突域。一块网卡发出一个广播时，能收到这个广播的所有网卡的集合称为一个广播域。一般来说，一个网段就是一个冲突域，一个局域网就是一个广播域。</span><br></pre></td></tr></table></figure>
+
+<p>15.关于物理层、数据链路层、网络层设备对于隔离冲突域和广播域的总结。</p>
+<table>
+<thead>
+<tr>
+<th>设备名称</th>
+<th>能否隔离冲突域</th>
+<th>能否隔离广播域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>集线器</td>
+<td>不能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>中继器</td>
+<td>不能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>交换机</td>
+<td>能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>网桥</td>
+<td>能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>路由器</td>
+<td>能</td>
+<td>能</td>
+</tr>
+</tbody></table>
+<p>16.与传统共享式局域网相比，使用局域网交换机的交换式局域网为什么能改善网络的性能和股务质量？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;传统共享式局域网的核心设备是集线器，而交换式局域网的核心是以太网交换机。在使用共享式集线器的传统局域网中，在任何时刻只能有一个结点能够通过共享通信信道发送数据；在使用交换机的交换式局域网中，交换机可以在它的多个端口之间建立多个并发连接，从而实现结点之间数据的并发传输，有效地改善网络性能和服务质量。</span><br></pre></td></tr></table></figure>
+
+<p>17.试分析中继器、集线器、网桥和交换机这四种网络互联设备的区别与联系。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这四种设备都是用于互联、扩展局域网的连接设备，但它们工作的层次和实现的功能不同。</span><br><span class="line">中继器工作在物理层，用来连接两个速率相同且数据链路层协议也相同的网段，其功能是消除数字信号在基带传输中由于经过一长段电缆而造成的失真和衰减，使信号的波形和强度达到所需的要求；其原理是信号再生。</span><br><span class="line">集线器(Hb)也工作在物理层，相当于一个多接口的中继器，它可将多个结点连接成一个共享式的局域网，但任何时刻都只能有一个结点通过公共信道发送数据。</span><br><span class="line">网桥工作在数据链路层，可以互联不同的物理层、不同的MAC子层及不同速率的以太网。网桥具有过滤帧及存储转发帧的功能，可以隔离冲突域，但不能隔离广播域。</span><br><span class="line">交换机工作在数据链路层，相当于一个多端口的网桥，是交换式周域网的核心设备。它允许端口之间建立多个并发连接，实现多个结点之间的并发传输。因此，交换机的每个端口结点所占用的带宽不会因为端口结点数目的增加而减少，且整个交换机的总带宽会随着端口结点的增加而增加。交换机一般工作在全双工方式，有的局域网交换机采用存储转发方式进行转发，也有的交换机采用直通交换方式（即在收到帧的同时立即按帧的目的MAC地址决定该帧的转发端口，而不必先缓存再处理)。另外，利用交换机可以实现虚拟局域网(VLAN),VLAN不仅可以隔离冲突域，而且可以隔离广播域。</span><br></pre></td></tr></table></figure>
+
+<p>18.交换机和网桥的不同之处。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">尽管交换机也称多端口网桥，但两者仍有许多不同之处。主要包括以下3点：</span><br><span class="line">1)网桥的端口一般连接局域网，而交换机的端口一般直接与局域网的主机相连。</span><br><span class="line">2)交换机允许多对计算机同时通信，而网桥仅允许每个网段上的计算机同时通信。</span><br><span class="line">3)网桥采用存储转发进行转发，而以太网交换机还可以采用直通方式进行转发，且以太网交换机采用了专用的交换结构芯片，转发速度比网桥快。</span><br></pre></td></tr></table></figure>
+</blockquote>
 
       </div>
       <div class="post-tags-categories">
@@ -1019,6 +1540,7 @@
       
       <!-- <div class="content">
         Ds2.线性表
+一.线性表的定义和基本操作1.线性表的定义线性表是具有相同数据类型的n(n≥0)个数据元素的有限序列，其
       </div> -->
     </a>
   </div>
